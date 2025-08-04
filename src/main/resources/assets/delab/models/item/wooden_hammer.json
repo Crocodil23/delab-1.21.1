@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures":{
+    "layer0":"delab:item/wooden_hammer"
+  }
+}

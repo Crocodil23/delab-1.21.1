@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "delab:block/sea_workshop_bottom",
+    "side": "delab:block/sea_workshop_side",
+    "top": "delab:block/sea_workshop_top"
+  }
+}

@@ -1,0 +1,48 @@
+{
+    "language": "Russian",
+    "language.region": "Russia",
+    "language.code":"ru_ru",
+    "author":"_Crocodil_",
+	
+	"creativemodetab.delab_tab":"D.E.L.A.B.",
+	
+    "item.delab.recharge_crystal": "Кристалл Возобновления (WIP)",
+	
+	"item.delab.wooden_dagger": "Деревянный Кинжал",
+	"item.delab.stone_dagger": "Каменный Кинжал",
+	"item.delab.iron_dagger": "Железный Кинжал",
+	"item.delab.golden_dagger": "Золотой Кинжал",
+	"item.delab.diamond_dagger": "Алмазный Кинжал",
+	"item.delab.netherite_dagger": "Незеритовый Кинжал",
+	
+	"item.delab.wooden_spear": "Деревянное Копьё",
+	"item.delab.stone_spear": "Каменное Копьё",
+	"item.delab.iron_spear": "Железное Копьё",
+	"item.delab.golden_spear": "Золотое Копьё",
+	"item.delab.diamond_spear": "Алмазное Копьё",
+	"item.delab.netherite_spear": "Незеритовое Копьё",
+	
+	"item.delab.wooden_hammer": "Деревянный Молот",
+	"item.delab.stone_hammer": "Каменный Молот",
+	"item.delab.iron_hammer": "Железный Молот",
+	"item.delab.golden_hammer": "Золотой Молот",
+	"item.delab.diamond_hammer": "Алмазный Молот",
+	"item.delab.netherite_hammer": "Незеритовый Молот",
+	"block.delab.sea_workshop": "Морская Мастерская (WIP)",
+
+	"enchantment.delab.crushing": "Дробление",
+	"enchantment.delab.destroyer": "Разрушитель",
+	"enchantment.delab.earth_strike": "Удар по земле",
+	"enchantment.delab.powerful_throw": "Мощный бросок",
+	"enchantment.delab.cavalry_strike": "Кавалерийский удар",
+	"enchantment.delab.deadly_strike": "Смертоносный удар",
+	"enchantment.delab.double_strike": "Двойной удар",
+	"enchantment.delab.head_hunter": "Охотник за головами",
+
+	"entity.delab.thrown_wooden_spear":"Деревянное Копьё",
+	"entity.delab.thrown_stone_spear":"Каменное Копьё",
+	"entity.delab.thrown_iron_spear":"Железное Копьё",
+	"entity.delab.thrown_golden_spear":"Золотое Копьё",
+	"entity.delab.thrown_diamond_spear":"Алмазное Копьё",
+	"entity.delab.thrown_netherite_spear":"Незеритовое Копьё"
+}

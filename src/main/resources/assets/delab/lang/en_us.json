@@ -1,0 +1,49 @@
+{
+    "language": "English",
+    "language.region": "United States",
+    "language.code":"en_us",
+    "author":"_Crocodil_",
+	
+	"creativemodetab.delab_tab":"D.E.L.A.B.",
+	
+    "item.delab.recharge_crystal": "Recharge Crystal (WIP)",
+	
+	"item.delab.wooden_dagger": "Wooden Dagger",
+	"item.delab.stone_dagger": "Stone Dagger",
+	"item.delab.iron_dagger": "Iron Dagger",
+	"item.delab.golden_dagger": "Golden Dagger",
+	"item.delab.diamond_dagger": "Diamond Dagger",
+	"item.delab.netherite_dagger": "Netherite Dagger",
+	
+	"item.delab.wooden_spear": "Wooden Spear",
+	"item.delab.stone_spear": "Stone Spear",
+	"item.delab.iron_spear": "Iron Spear",
+	"item.delab.golden_spear": "Golden Spear",
+	"item.delab.diamond_spear": "Diamond Spear",
+	"item.delab.netherite_spear": "Netherite Spear",
+	
+	"item.delab.wooden_hammer": "Wooden Hammer",
+	"item.delab.stone_hammer": "Stone Hammer",
+	"item.delab.iron_hammer": "Iron Hammer",
+	"item.delab.golden_hammer": "Golden Hammer",
+	"item.delab.diamond_hammer": "Diamond Hammer",
+	"item.delab.netherite_hammer": "Netherite Hammer",
+
+	"enchantment.delab.crushing": "Crushing",
+	"enchantment.delab.destroyer": "Destroyer",
+	"enchantment.delab.earth_strike": "Earth Strike",
+	"enchantment.delab.powerful_throw": "Powerful throw",
+	"enchantment.delab.cavalry_strike": "Cavalry Strike",
+	"enchantment.delab.deadly_strike": "Deadly Strike",
+	"enchantment.delab.double_strike": "Double Strike",
+	"enchantment.delab.head_hunter": "Head Hunter",
+
+	"block.delab.sea_workshop": "Sea Workshop (WIP)",
+	
+	"entity.delab.thrown_wooden_spear":"Wooden Spear",
+	"entity.delab.thrown_stone_spear":"Stone Spear",
+	"entity.delab.thrown_iron_spear":"Iron Spear",
+	"entity.delab.thrown_golden_spear":"Golden Spear",
+	"entity.delab.thrown_diamond_spear":"Diamond Spear",
+	"entity.delab.thrown_netherite_spear":"Netherite Spear"
+}
