@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "delab:wooden_dagger",
+    "count": 1
+  },
+  "show_notification": true
+}

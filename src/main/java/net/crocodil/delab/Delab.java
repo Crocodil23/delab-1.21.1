@@ -41,32 +41,32 @@ public class Delab {
 
         NeoForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
+        DelabCreativeTabs.register(modEventBus);
         DelabItems.register(modEventBus);
+
+        modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
-    private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+    private void commonSetup(FMLCommonSetupEvent event)
+    {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+        if(event.getTabKey() == CreativeModeTabs.COMBAT)
+        {
+            event.accept(DelabItems.WOODEN_DAGGER);
+            event.accept(DelabItems.STONE_DAGGER);
+            event.accept(DelabItems.IRON_DAGGER);
+            event.accept(DelabItems.GOLDEN_DAGGER);
+            event.accept(DelabItems.DIAMOND_DAGGER);
+            event.accept(DelabItems.NETHERITE_DAGGER);
+        }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+    public void onServerStarting(ServerStartingEvent event)
+    {
     }
 }

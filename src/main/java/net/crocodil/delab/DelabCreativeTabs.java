@@ -1,0 +1,40 @@
+package net.crocodil.delab;
+
+import net.crocodil.delab.items.DelabItems;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class DelabCreativeTabs
+{
+    public static final DeferredRegister<CreativeModeTab> DELAB_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Delab.MODID);
+
+    public static final Supplier<CreativeModeTab> DELAB =
+            DELAB_TABS.register("delab_tab", () -> CreativeModeTab.builder()
+                    .icon(()-> new ItemStack(DelabItems.RECHARGE_CRYSTAL.get()))
+                    .title(Component.translatable("creativetab.delab.delab_tab"))
+                    .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(DelabItems.RECHARGE_CRYSTAL);
+                        output.accept(DelabItems.WOODEN_DAGGER);
+                        output.accept(DelabItems.STONE_DAGGER);
+                        output.accept(DelabItems.IRON_DAGGER);
+                        output.accept(DelabItems.GOLDEN_DAGGER);
+                        output.accept(DelabItems.DIAMOND_DAGGER);
+                        output.accept(DelabItems.NETHERITE_DAGGER);
+                    }).build());
+
+
+    public static void register(IEventBus bus)
+    {
+        DELAB_TABS.register(bus);
+    }
+}
