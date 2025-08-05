@@ -1,5 +1,6 @@
 package net.crocodil.delab;
 
+import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -30,6 +31,7 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.GOLDEN_DAGGER);
                         output.accept(DelabItems.DIAMOND_DAGGER);
                         output.accept(DelabItems.NETHERITE_DAGGER);
+                        output.accept(DelabBlocks.SEA_WORKSHOP);
                     }).build());
 
 

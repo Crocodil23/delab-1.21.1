@@ -1,7 +1,11 @@
 package net.crocodil.delab;
 
+import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.world.item.*;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -43,6 +47,7 @@ public class Delab {
 
         DelabCreativeTabs.register(modEventBus);
         DelabItems.register(modEventBus);
+        DelabBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -63,10 +68,25 @@ public class Delab {
             event.accept(DelabItems.DIAMOND_DAGGER);
             event.accept(DelabItems.NETHERITE_DAGGER);
         }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(DelabItems.RECHARGE_CRYSTAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)
+        {
+            event.accept(DelabBlocks.SEA_WORKSHOP);
+        }
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
+    }
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
     }
 }
