@@ -9,6 +9,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -27,7 +28,17 @@ public class delabDataGenerators
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        BlockTagsProvider blockTags = new DelabBlockTagProvider(out, lookupProvider, existingFileHelper);
+
         gen.addProvider(event.includeServer(), new LootTableProvider(out, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(DelabLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+                List.of(new LootTableProvider.SubProviderEntry(DelabLootTableProvider::new,
+                        LootContextParamSets.BLOCK)), lookupProvider));
+        gen.addProvider(event.includeServer(), blockTags);
+        gen.addProvider(event.includeServer(), new DelabItemTagsProvider(out,
+                lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        gen.addProvider(event.includeServer(), new DelabRecipeProvider(out, lookupProvider));
+
+        gen.addProvider(event.includeClient(), new DelabBlockStateProvider(out, existingFileHelper));
+        gen.addProvider(event.includeClient(), new DelabItemModelProvider(out, existingFileHelper));
     }
 }

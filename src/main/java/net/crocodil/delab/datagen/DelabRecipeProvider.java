@@ -1,4 +1,68 @@
 package net.crocodil.delab.datagen;
 
-public class DelabRecipeProvider {
+import mezz.jei.api.constants.Tags;
+import net.crocodil.delab.Delab;
+import net.crocodil.delab.items.DelabItems;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+
+import java.util.concurrent.CompletableFuture;
+
+public class DelabRecipeProvider extends RecipeProvider {
+
+    public DelabRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, registries);
+    }
+
+    @Override
+    protected void buildRecipes(RecipeOutput out) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_DAGGER)
+                .pattern("A")
+                .pattern("B")
+                .define('A', ItemTags.PLANKS)
+                .define('B', Items.STICK)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(out);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_DAGGER)
+                .pattern("A")
+                .pattern("B")
+                .define('A', ItemTags.STONE_TOOL_MATERIALS)
+                .define('B', Items.STICK)
+                .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
+                .save(out);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_DAGGER)
+                .pattern("A")
+                .pattern("B")
+                .define('A', Items.IRON_INGOT)
+                .define('B', Items.STICK)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(out);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_DAGGER)
+                .pattern("A")
+                .pattern("B")
+                .define('A', Items.GOLD_INGOT)
+                .define('B', Items.STICK)
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(out);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_DAGGER)
+                .pattern("A")
+                .pattern("B")
+                .define('A', Items.DIAMOND)
+                .define('B', Items.STICK)
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
+                .save(out);
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(DelabItems.DIAMOND_DAGGER.get()),
+                Ingredient.of(Items.NETHERITE_INGOT),
+                RecipeCategory.COMBAT,
+                DelabItems.NETHERITE_DAGGER.get())
+                .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(out, Delab.MODID + ":netherite_dagger");
+    }
 }
