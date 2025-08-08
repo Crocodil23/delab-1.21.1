@@ -1,10 +1,15 @@
 package net.crocodil.delab.datagen;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.DelabTags;
+import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -18,9 +23,24 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                                  CompletableFuture<TagsProvider.TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, Delab.MODID, existingFileHelper);
     }
-
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+           tag(DelabTags.Items.DAGGERS_ENCHANTABLE)
+                   .add(DelabItems.WOODEN_DAGGER.asItem())
+                   .add(DelabItems.STONE_DAGGER.asItem())
+                   .add(DelabItems.IRON_DAGGER.asItem())
+                   .add(DelabItems.GOLDEN_DAGGER.asItem())
+                   .add(DelabItems.DIAMOND_DAGGER.asItem())
+                   .add(DelabItems.NETHERITE_DAGGER.asItem());
+        tag(DelabTags.Items.MOB_BONUS_ENCHANTABLE)
+                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE)
+                .addTag(ItemTags.SWORD_ENCHANTABLE);
+
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE);
+        tag(ItemTags.WEAPON_ENCHANTABLE)
+                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE);
+
 
     }
 }

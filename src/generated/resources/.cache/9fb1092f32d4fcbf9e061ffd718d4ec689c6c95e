@@ -1,10 +1,10 @@
-// 1.21.1	2025-08-06T15:42:57.9409597	Recipes
+// 1.21.1	2025-08-07T14:54:22.0591917	Recipes
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
 d008e6d0215a0eff136261bb67f535498db146a6 data/delab/advancement/recipes/combat/golden_dagger.json
 f43902e06389c06cad039fef1b9788b6d6739bce data/delab/advancement/recipes/combat/iron_dagger.json
 b2042a1156ff144e6c5611a0138991812d25c1dd data/delab/advancement/recipes/combat/netherite_dagger.json
 b8f60fc871f52527b9c6b74c8215c16ee9505b17 data/delab/advancement/recipes/combat/stone_dagger.json
-cde5306079a37370a238fadcc55ed207c585638b data/delab/advancement/recipes/combat/wooden_dagger.json
+084670e4599148743927812fecb3287749394325 data/delab/advancement/recipes/combat/wooden_dagger.json
 900f52f96e8b32b034369f17e964f4403fc1e928 data/delab/recipe/diamond_dagger.json
 48667eaafc2d03188cc8705f9f51f1eeaa6adcb8 data/delab/recipe/golden_dagger.json
 83a0b8eb31bc9690859dac76f3633e5a07592fcc data/delab/recipe/iron_dagger.json

@@ -1,1 +1,5 @@
-// 1.21.1	2025-08-06T13:04:31.8934106	Tags for minecraft:item mod id delab
+// 1.21.1	2025-08-08T17:20:54.2772534	Tags for minecraft:item mod id delab
+f59e7f1a66720c9feeff84c9c3ea05a3c3806fe6 data/delab/tags/item/enchantable/dagger.json
+70c5e1ae396c17a168a110fed789e1b1bae6dc18 data/delab/tags/item/enchantable/mob_bonus.json
+38049549bdf3659fa186247353ed01a00593c6a0 data/minecraft/tags/item/enchantable/durability.json
+38049549bdf3659fa186247353ed01a00593c6a0 data/minecraft/tags/item/enchantable/weapon.json
