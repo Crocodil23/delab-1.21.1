@@ -1,12 +1,14 @@
 package net.crocodil.delab.datagen;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.enchants.DelabEnchantments;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EnchantmentTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,7 +21,11 @@ public class DelabEnchantmentTagsrovider extends EnchantmentTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        ResourceLocation id = DelabEnchantments.DOUBLE_STRIKE.location();
-        tag(EnchantmentTags.NON_TREASURE).addOptional(id);
+        tag(EnchantmentTags.NON_TREASURE)
+                .addOptional(DelabEnchantments.DOUBLE_STRIKE.location())
+                .addOptional(DelabEnchantments.HEAD_HUNTER.location());
+        tag(DelabTags.Enchantments.LOOTING_EXCLUSIVE)
+                .addOptional(Enchantments.LOOTING.location())
+                .addOptional(DelabEnchantments.HEAD_HUNTER.location());
     }
 }

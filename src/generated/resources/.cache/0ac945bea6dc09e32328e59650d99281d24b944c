@@ -1,2 +1,3 @@
-// 1.21.1	2025-08-09T10:50:29.8722039	Tags for minecraft:enchantment mod id delab
-4b7562f7a9a112feb3a4bd71691ca96fbcfcbd45 data/minecraft/tags/enchantment/non_treasure.json
+// 1.21.1	2025-08-09T13:55:24.0769269	Tags for minecraft:enchantment mod id delab
+7716210271ef4e9db1ea8548e574377f4dacf02b data/minecraft/tags/enchantment/exclusive_set/looting.json
+ed36e6db4efd9688ae66eb91251dd8c6a41da498 data/minecraft/tags/enchantment/non_treasure.json
