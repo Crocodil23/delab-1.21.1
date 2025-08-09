@@ -27,6 +27,8 @@ public class DelabDataGenerators
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+
+
         BlockTagsProvider blockTags = new DelabBlockTagProvider(out, lookupProvider, existingFileHelper);
 
         gen.addProvider(event.includeServer(), new LootTableProvider(out, Collections.emptySet(),
@@ -36,7 +38,7 @@ public class DelabDataGenerators
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(), new DelabItemTagsProvider(out,
                 lookupProvider, blockTags.contentsGetter(), existingFileHelper));
-        //gen.addProvider(event.includeServer(), new DelabEnchantmentTagsProvider(out, lookupProvider, existingFileHelper));
+        gen.addProvider(event.includeServer(), new DelabEnchantmentTagsrovider(out, lookupProvider, existingFileHelper));
         gen.addProvider(event.includeServer(), new DelabRecipeProvider(out, lookupProvider));
 
 
