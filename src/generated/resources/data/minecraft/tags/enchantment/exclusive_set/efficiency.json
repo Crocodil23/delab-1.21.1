@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "minecraft:efficiency",
+      "required": false
+    },
+    {
+      "id": "delab:destroyer",
+      "required": false
+    }
+  ]
+}

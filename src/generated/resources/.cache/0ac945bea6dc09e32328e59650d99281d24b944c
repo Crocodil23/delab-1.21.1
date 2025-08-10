@@ -1,4 +1,5 @@
-// 1.21.1	2025-08-09T22:22:57.9754929	Tags for minecraft:enchantment mod id delab
+// 1.21.1	2025-08-10T22:02:08.7383499	Tags for minecraft:enchantment mod id delab
 8b8609ef10d7d0b104b5641478983d83111c2688 data/minecraft/tags/enchantment/exclusive_set/damage.json
+1704dcef694f4b8173fdb7cd317aaf00b4afdf8a data/minecraft/tags/enchantment/exclusive_set/efficiency.json
 7716210271ef4e9db1ea8548e574377f4dacf02b data/minecraft/tags/enchantment/exclusive_set/looting.json
-a2b701e81f7f39c6bf84203791716272a51f90c0 data/minecraft/tags/enchantment/non_treasure.json
+b832fc87b1d8417200ccc3b561a895cfbd29cb01 data/minecraft/tags/enchantment/non_treasure.json

@@ -5,7 +5,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -39,7 +38,7 @@ public class DelabDataGenerators
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(), new DelabItemTagsProvider(out,
                 lookupProvider, blockTags.contentsGetter(), existingFileHelper));
-        gen.addProvider(event.includeServer(), new DelabEnchantmentTagsrovider(out, lookupProvider, existingFileHelper));
+        gen.addProvider(event.includeServer(), new DelabEnchantmentTagsprovider(out, lookupProvider, existingFileHelper));
         gen.addProvider(event.includeServer(), new DelabRecipeProvider(out, lookupProvider));
 
         gen.addProvider(event.includeClient(), new DelabBlockStateProvider(out, existingFileHelper));

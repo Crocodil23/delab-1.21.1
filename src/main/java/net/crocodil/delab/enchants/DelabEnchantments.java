@@ -8,7 +8,10 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
 public class DelabEnchantments {
 
@@ -18,13 +21,15 @@ public class DelabEnchantments {
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "head_hunter"));
     public static final ResourceKey<Enchantment> SHADOW_STRIKE = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "shadow_strike"));
+    public static final ResourceKey<Enchantment> DESTROYER = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(Delab.MODID, "destroyer"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
         var items = context.lookup(Registries.ITEM);
         register(context, DOUBLE_STRIKE, Enchantment.enchantment(Enchantment.definition(
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
                         10,
                         5,
                         Enchantment.dynamicCost(1, 11),
@@ -33,8 +38,8 @@ public class DelabEnchantments {
                         EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE)));
         register(context, HEAD_HUNTER, Enchantment.enchantment(Enchantment.definition(
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
                         2,
                         3,
                         Enchantment.dynamicCost(15, 9),
@@ -43,8 +48,8 @@ public class DelabEnchantments {
                         EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(enchantments.getOrThrow(DelabTags.Enchantments.LOOTING_EXCLUSIVE)));
         register(context, SHADOW_STRIKE, Enchantment.enchantment(Enchantment.definition(
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
-                        items.getOrThrow(DelabTags.Items.DAGGERS_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.DAGGER_ENCHANTABLE),
                         10,
                         5,
                         Enchantment.dynamicCost(1, 11),
@@ -52,6 +57,25 @@ public class DelabEnchantments {
                         2,
                         EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE)));
+        register(context, DESTROYER, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
+                        10,
+                        1,
+                        Enchantment.dynamicCost(1, 11),
+                        Enchantment.dynamicCost(21, 11),
+                        2,
+                        EquipmentSlotGroup.MAINHAND))
+                .withEffect(
+                        EnchantmentEffectComponents.ATTRIBUTES,
+                        new EnchantmentAttributeEffect(
+                                ResourceLocation.withDefaultNamespace("enchantment.efficiency"),
+                                Attributes.MINING_EFFICIENCY,
+                                new LevelBasedValue.LevelsSquared(-4.0F),
+                                AttributeModifier.Operation.ADD_VALUE
+                        )
+                )
+                .exclusiveWith(enchantments.getOrThrow(DelabTags.Enchantments.EFFICIENCY_EXCLUSIVE)));
     }
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key,
                                  Enchantment.Builder builder) {

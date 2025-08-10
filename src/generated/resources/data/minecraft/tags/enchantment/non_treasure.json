@@ -11,6 +11,10 @@
     {
       "id": "delab:shadow_strike",
       "required": false
+    },
+    {
+      "id": "delab:destroyer",
+      "required": false
     }
   ]
 }

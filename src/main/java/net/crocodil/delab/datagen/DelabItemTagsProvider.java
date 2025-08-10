@@ -25,22 +25,35 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-           tag(DelabTags.Items.DAGGERS_ENCHANTABLE)
-                   .add(DelabItems.WOODEN_DAGGER.asItem())
-                   .add(DelabItems.STONE_DAGGER.asItem())
-                   .add(DelabItems.IRON_DAGGER.asItem())
-                   .add(DelabItems.GOLDEN_DAGGER.asItem())
-                   .add(DelabItems.DIAMOND_DAGGER.asItem())
-                   .add(DelabItems.NETHERITE_DAGGER.asItem());
+        tag(DelabTags.Items.DAGGER_ENCHANTABLE)
+                .add(DelabItems.WOODEN_DAGGER.asItem())
+                .add(DelabItems.STONE_DAGGER.asItem())
+                .add(DelabItems.IRON_DAGGER.asItem())
+                .add(DelabItems.GOLDEN_DAGGER.asItem())
+                .add(DelabItems.DIAMOND_DAGGER.asItem())
+                .add(DelabItems.NETHERITE_DAGGER.asItem());
+        tag(DelabTags.Items.HAMMER_ENCHANTABLE)
+                .add(DelabItems.WOODEN_HAMMER.asItem())
+                .add(DelabItems.STONE_HAMMER.asItem())
+                .add(DelabItems.IRON_HAMMER.asItem())
+                .add(DelabItems.GOLDEN_HAMMER.asItem())
+                .add(DelabItems.DIAMOND_HAMMER.asItem())
+                .add(DelabItems.NETHERITE_HAMMER.asItem());
         tag(DelabTags.Items.MOB_BONUS_ENCHANTABLE)
-                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE)
-                .addTag(ItemTags.SWORD_ENCHANTABLE);
+                .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
+                .addTag(ItemTags.SWORD_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
 
         tag(ItemTags.DURABILITY_ENCHANTABLE)
-                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE);
+                .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
         tag(ItemTags.WEAPON_ENCHANTABLE)
-                .addTag(DelabTags.Items.DAGGERS_ENCHANTABLE);
-
+                .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+        tag(ItemTags.MINING_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+        tag(ItemTags.MINING_LOOT_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
 
     }
 }

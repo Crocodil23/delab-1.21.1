@@ -5,6 +5,9 @@ import io.netty.util.internal.ThreadLocalRandom;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
+import net.crocodil.delab.items.HammerItem;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,14 +16,22 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @EventBusSubscriber(modid = Delab.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class DelabEvents {
+
+    private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @SubscribeEvent
     public static void DoubleStrikeEvent(LivingDamageEvent.Pre event) {
@@ -29,7 +40,7 @@ public class DelabEvents {
             if ((direct instanceof Player player)) {
                 ItemStack main = player.getMainHandItem();
                 ItemStack off = player.getOffhandItem();
-                TagKey<Item> daggerTag = DelabTags.Items.DAGGERS_ENCHANTABLE;
+                TagKey<Item> daggerTag = DelabTags.Items.DAGGER_ENCHANTABLE;
                 if (main.is(daggerTag) && off.is(daggerTag)) {
                     int lvlMain = DelabEnchantmentHelper.getEnchantmentLvl(player.level(),
                             DelabEnchantments.DOUBLE_STRIKE,
@@ -57,11 +68,11 @@ public class DelabEvents {
                 ItemStack DaggerMain = player.getMainHandItem();
                 ItemStack DaggerOff = player.getOffhandItem();
                 boolean IsCanWork = false;
-                if(DaggerOff.is(DelabTags.Items.DAGGERS_ENCHANTABLE)) {
-                    if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+                if(DaggerOff.is(DelabTags.Items.DAGGER_ENCHANTABLE)) {
+                    if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
                         IsCanWork = true;
                 }
-                else if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+                else if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
                     IsCanWork = true;
 
                 if(IsCanWork)
@@ -99,11 +110,11 @@ public class DelabEvents {
                 ItemStack DaggerMain = player.getMainHandItem();
                 ItemStack DaggerOff = player.getOffhandItem();
                 boolean IsCanWork = false;
-                if(DaggerOff.is(DelabTags.Items.DAGGERS_ENCHANTABLE)) {
-                    if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+                if(DaggerOff.is(DelabTags.Items.DAGGER_ENCHANTABLE)) {
+                    if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
                         IsCanWork = true;
                 }
-                else if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+                else if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
                     IsCanWork = true;
                 int MainLvl = DelabEnchantmentHelper.getEnchantmentLvl(player.level(),
                         DelabEnchantments.SHADOW_STRIKE, DaggerMain);
@@ -131,6 +142,28 @@ public class DelabEvents {
             }
             LivingEntity target = event.getEntity();
             target.removeEffect(DelabMobEffects.SHADOW_STRIKE);
+        }
+    }
+    @SubscribeEvent
+    public static void DestroyerEvent(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        ItemStack mainHandItem = player.getMainHandItem();
+        int lvl = DelabEnchantmentHelper.getEnchantmentLvl(player.level(), DelabEnchantments.DESTROYER, mainHandItem);
+        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer
+        && lvl > 0) {
+            BlockPos initialBlockPos = event.getPos();
+            if(HARVESTED_BLOCKS.contains(initialBlockPos)) {
+                return;
+            }
+
+            for(BlockPos pos : HammerItem.getBlocksToBeDestroyed( initialBlockPos, serverPlayer)) {
+                if(pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
+                    continue;
+                }
+                HARVESTED_BLOCKS.add(pos);
+                serverPlayer.gameMode.destroyBlock(pos);
+                HARVESTED_BLOCKS.remove(pos);
+            }
         }
     }
 

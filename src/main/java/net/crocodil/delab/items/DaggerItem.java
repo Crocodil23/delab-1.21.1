@@ -82,11 +82,11 @@ public class DaggerItem extends TieredItem {
             result = DaggerOff;
 
         boolean IsCanWork = false;
-        if(DaggerOff.is(DelabTags.Items.DAGGERS_ENCHANTABLE)) {
-            if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+        if(DaggerOff.is(DelabTags.Items.DAGGER_ENCHANTABLE)) {
+            if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
                 IsCanWork = true;
         }
-        else if (DaggerMain.is(DelabTags.Items.DAGGERS_ENCHANTABLE))
+        else if (DaggerMain.is(DelabTags.Items.DAGGER_ENCHANTABLE))
             IsCanWork = true;
         int MainLvl = DelabEnchantmentHelper.getEnchantmentLvl(level, DelabEnchantments.SHADOW_STRIKE, DaggerMain);
         int OffLvl = DelabEnchantmentHelper.getEnchantmentLvl(level, DelabEnchantments.SHADOW_STRIKE, DaggerOff);
