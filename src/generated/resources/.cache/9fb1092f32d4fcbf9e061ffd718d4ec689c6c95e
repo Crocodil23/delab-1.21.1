@@ -1,13 +1,25 @@
-// 1.21.1	2025-08-07T14:54:22.0591917	Recipes
+// 1.21.1	2025-08-10T18:52:48.600531	Recipes
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
+3dc4443a94f35d1d142b6e754544e4680494c068 data/delab/advancement/recipes/combat/diamond_hammer.json
 d008e6d0215a0eff136261bb67f535498db146a6 data/delab/advancement/recipes/combat/golden_dagger.json
+b901d8c28f44583aead2f0070a1669133a301acc data/delab/advancement/recipes/combat/golden_hammer.json
 f43902e06389c06cad039fef1b9788b6d6739bce data/delab/advancement/recipes/combat/iron_dagger.json
+02865a9e1ae754939fdabfbc97ad88b08896b574 data/delab/advancement/recipes/combat/iron_hammer.json
 b2042a1156ff144e6c5611a0138991812d25c1dd data/delab/advancement/recipes/combat/netherite_dagger.json
+f463bd96f6df7ccdee734d8120ce2626d0c5e5d8 data/delab/advancement/recipes/combat/netherite_hammer.json
 b8f60fc871f52527b9c6b74c8215c16ee9505b17 data/delab/advancement/recipes/combat/stone_dagger.json
+ad0f05f6cd46955041911e28639ef46d10f2187f data/delab/advancement/recipes/combat/stone_hammer.json
 084670e4599148743927812fecb3287749394325 data/delab/advancement/recipes/combat/wooden_dagger.json
+a8840ff4699cf9dbc8bb33ed6a4f5c9aceabe4a8 data/delab/advancement/recipes/combat/wooden_hammer.json
 900f52f96e8b32b034369f17e964f4403fc1e928 data/delab/recipe/diamond_dagger.json
+f3d09f10f088721eba283e2359cda29835881a3d data/delab/recipe/diamond_hammer.json
 48667eaafc2d03188cc8705f9f51f1eeaa6adcb8 data/delab/recipe/golden_dagger.json
+0fc61aa018ca7aef7e98e61203a868d210fafe48 data/delab/recipe/golden_hammer.json
 83a0b8eb31bc9690859dac76f3633e5a07592fcc data/delab/recipe/iron_dagger.json
+18b58c29987f32e5454a0a58fa5b5e48a4ffad9e data/delab/recipe/iron_hammer.json
 2fa4bd760a8458600a80ec144ebd7e35f60e1b10 data/delab/recipe/netherite_dagger.json
+5e5514f3804ba83c45baf76cb1ce0355a9287758 data/delab/recipe/netherite_hammer.json
 81196083f9340445b883165fcd78f3395c7ca701 data/delab/recipe/stone_dagger.json
+c39eea6144aa8ba43ba2c14fa30bed2c436da19d data/delab/recipe/stone_hammer.json
 84bfe4ed92706088204d39206004659b180a5fd9 data/delab/recipe/wooden_dagger.json
+4cf978805471c76d609ca4c9d88dd49d85fd5cbf data/delab/recipe/wooden_hammer.json

@@ -14,6 +14,13 @@ public class DelabItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(DelabItems.RECHARGE_CRYSTAL.get());
+        handheldItem(DelabItems.WOODEN_HAMMER.asItem());
+        handheldItem(DelabItems.STONE_HAMMER.asItem());
+        handheldItem(DelabItems.IRON_HAMMER.asItem());
+        handheldItem(DelabItems.GOLDEN_HAMMER.asItem());
+        handheldItem(DelabItems.DIAMOND_HAMMER.asItem());
+        handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
+
 
     }
 }

@@ -30,7 +30,12 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.IRON_DAGGER);
                         output.accept(DelabItems.GOLDEN_DAGGER);
                         output.accept(DelabItems.DIAMOND_DAGGER);
-                        output.accept(DelabItems.NETHERITE_DAGGER);
+                        output.accept(DelabItems.WOODEN_HAMMER);
+                        output.accept(DelabItems.STONE_HAMMER);
+                        output.accept(DelabItems.IRON_HAMMER);
+                        output.accept(DelabItems.GOLDEN_HAMMER);
+                        output.accept(DelabItems.DIAMOND_HAMMER);
+                        output.accept(DelabItems.NETHERITE_HAMMER);
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                     }).build());
 

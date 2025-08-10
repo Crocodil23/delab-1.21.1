@@ -60,6 +60,13 @@ public class Delab {
             event.accept(DelabItems.GOLDEN_DAGGER);
             event.accept(DelabItems.DIAMOND_DAGGER);
             event.accept(DelabItems.NETHERITE_DAGGER);
+
+            event.accept(DelabItems.WOODEN_HAMMER);
+            event.accept(DelabItems.STONE_HAMMER);
+            event.accept(DelabItems.IRON_HAMMER);
+            event.accept(DelabItems.GOLDEN_HAMMER);
+            event.accept(DelabItems.DIAMOND_HAMMER);
+            event.accept(DelabItems.NETHERITE_HAMMER);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
