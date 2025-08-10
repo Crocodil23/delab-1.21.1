@@ -14,6 +14,9 @@
 	"item.delab.golden_dagger": "Golden Dagger",
 	"item.delab.diamond_dagger": "Diamond Dagger",
 	"item.delab.netherite_dagger": "Netherite Dagger",
+
+	"tooltip.delab.shift_down": "Press §eShift§r for more details",
+	"tooltip.delab.dagger_tooltip":"Can strike with the off-hand if both hands are holding daggers",
 	
 	"item.delab.wooden_spear": "Wooden Spear",
 	"item.delab.stone_spear": "Stone Spear",
@@ -29,13 +32,27 @@
 	"item.delab.diamond_hammer": "Diamond Hammer",
 	"item.delab.netherite_hammer": "Netherite Hammer",
 
-	"enchantment.delab.crushing": "Crushing",
 	"enchantment.delab.destroyer": "Destroyer",
 	"enchantment.delab.earth_strike": "Earth Strike",
 	"enchantment.delab.powerful_throw": "Powerful throw",
 	"enchantment.delab.cavalry_strike": "Cavalry Strike",
-	"enchantment.delab.deadly_strike": "Deadly Strike",
+	"enchantment.delab.shadow_strike": "Shadow Strike",
 	"enchantment.delab.double_strike": "Double Strike",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	"enchantment.delab.head_hunter": "Head Hunter",
 
 	"block.delab.sea_workshop": "Sea Workshop (WIP)",
@@ -45,5 +62,9 @@
 	"entity.delab.thrown_iron_spear":"Iron Spear",
 	"entity.delab.thrown_golden_spear":"Golden Spear",
 	"entity.delab.thrown_diamond_spear":"Diamond Spear",
-	"entity.delab.thrown_netherite_spear":"Netherite Spear"
+	"entity.delab.thrown_netherite_spear":"Netherite Spear",
+
+	"effect.delab.shadow_strike": "Shadow Strike",
+
+	"sounds.delab.shadow_strike_sound": "Someone is hiding in the shadows!!"
 }

@@ -14,35 +14,42 @@
 	"item.delab.golden_dagger": "Золотой кинжал",
 	"item.delab.diamond_dagger": "Алмазный кинжал",
 	"item.delab.netherite_dagger": "Незеритовый кинжал",
-	
-	"item.delab.wooden_spear": "Деревянное Копьё",
-	"item.delab.stone_spear": "Каменное Копьё",
-	"item.delab.iron_spear": "Железное Копьё",
-	"item.delab.golden_spear": "Золотое Копьё",
-	"item.delab.diamond_spear": "Алмазное Копьё",
-	"item.delab.netherite_spear": "Незеритовое Копьё",
-	
-	"item.delab.wooden_hammer": "Деревянный Молот",
-	"item.delab.stone_hammer": "Каменный Молот",
-	"item.delab.iron_hammer": "Железный Молот",
-	"item.delab.golden_hammer": "Золотой Молот",
-	"item.delab.diamond_hammer": "Алмазный Молот",
-	"item.delab.netherite_hammer": "Незеритовый Молот",
-	"block.delab.sea_workshop": "Морская Мастерская (WIP)",
 
-	"enchantment.delab.crushing": "Дробление",
+
+	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
+	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
+	
+	"item.delab.wooden_spear": "Деревянное rопьё",
+	"item.delab.stone_spear": "Каменное копьё",
+	"item.delab.iron_spear": "Железное копьё",
+	"item.delab.golden_spear": "Золотое копьё",
+	"item.delab.diamond_spear": "Алмазное копьё",
+	"item.delab.netherite_spear": "Незеритовое копьё",
+	
+	"item.delab.wooden_hammer": "Деревянный молот",
+	"item.delab.stone_hammer": "Каменный молот",
+	"item.delab.iron_hammer": "Железный молот",
+	"item.delab.golden_hammer": "Золотой молот",
+	"item.delab.diamond_hammer": "Алмазный молот",
+	"item.delab.netherite_hammer": "Незеритовый молот",
+	"block.delab.sea_workshop": "Морская мастерская (WIP)",
+
 	"enchantment.delab.destroyer": "Разрушитель",
 	"enchantment.delab.earth_strike": "Удар по земле",
 	"enchantment.delab.powerful_throw": "Мощный бросок",
 	"enchantment.delab.cavalry_strike": "Кавалерийский удар",
-	"enchantment.delab.deadly_strike": "Смертоносный удар",
+	"enchantment.delab.shadow_strike": "Теневой удар",
 	"enchantment.delab.double_strike": "Двойной удар",
 	"enchantment.delab.head_hunter": "Охотник за головами",
 
-	"entity.delab.thrown_wooden_spear":"Деревянное Копьё",
-	"entity.delab.thrown_stone_spear":"Каменное Копьё",
-	"entity.delab.thrown_iron_spear":"Железное Копьё",
-	"entity.delab.thrown_golden_spear":"Золотое Копьё",
-	"entity.delab.thrown_diamond_spear":"Алмазное Копьё",
-	"entity.delab.thrown_netherite_spear":"Незеритовое Копьё"
+	"entity.delab.thrown_wooden_spear":"Деревянное копьё",
+	"entity.delab.thrown_stone_spear":"Каменное копьё",
+	"entity.delab.thrown_iron_spear":"Железное копьё",
+	"entity.delab.thrown_golden_spear":"Золотое копьё",
+	"entity.delab.thrown_diamond_spear":"Алмазное копьё",
+	"entity.delab.thrown_netherite_spear":"Незеритовое копьё",
+
+	"effect.delab.shadow_strike": "Теневой удар",
+
+	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!"
 }

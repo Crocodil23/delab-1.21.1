@@ -1,0 +1,8 @@
+{
+  "shadow_strike_sound": {
+    "subtitle": "sounds.delab.shadow_strike_sound",
+    "sounds": [
+      "delab:shadow_strike_sound"
+    ]
+  }
+}

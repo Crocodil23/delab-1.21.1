@@ -2,6 +2,7 @@ package net.crocodil.delab;
 
 import net.crocodil.delab.blocks.DelabBlocks;
 
+import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantments;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.world.item.*;
@@ -38,6 +39,8 @@ public class Delab {
         DelabCreativeTabs.register(modEventBus);
         DelabItems.register(modEventBus);
         DelabBlocks.register(modEventBus);
+        DelabMobEffects.register(modEventBus);
+        DelabSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

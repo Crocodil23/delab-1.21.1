@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.crocodil.delab.client",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "HumanoidArmorLayerMixin",
+    "ItemInHandLayerMixin",
+    "StuckInBodyLayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

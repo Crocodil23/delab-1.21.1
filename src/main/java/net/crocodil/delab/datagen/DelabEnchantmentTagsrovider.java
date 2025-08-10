@@ -23,7 +23,13 @@ public class DelabEnchantmentTagsrovider extends EnchantmentTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(EnchantmentTags.NON_TREASURE)
                 .addOptional(DelabEnchantments.DOUBLE_STRIKE.location())
-                .addOptional(DelabEnchantments.HEAD_HUNTER.location());
+                .addOptional(DelabEnchantments.HEAD_HUNTER.location())
+                .addOptional(DelabEnchantments.SHADOW_STRIKE.location());
+
+        tag(EnchantmentTags.DAMAGE_EXCLUSIVE)
+                .addOptional(DelabEnchantments.DOUBLE_STRIKE.location())
+                .addOptional(DelabEnchantments.SHADOW_STRIKE.location());
+
         tag(DelabTags.Enchantments.LOOTING_EXCLUSIVE)
                 .addOptional(Enchantments.LOOTING.location())
                 .addOptional(DelabEnchantments.HEAD_HUNTER.location());
