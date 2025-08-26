@@ -15,6 +15,7 @@ public class DelabSounds
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, Delab.MODID);
 
     public static Supplier<SoundEvent> SHADOW_STRIKE_SOUND = registerSoundEvent("shadow_strike_sound");
+    public static Supplier<SoundEvent> EARTH_STRIKE_SOUND = registerSoundEvent("earth_strike_sound");
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Delab.MODID, name);

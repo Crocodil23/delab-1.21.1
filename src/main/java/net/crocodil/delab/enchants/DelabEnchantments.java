@@ -23,6 +23,9 @@ public class DelabEnchantments {
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "shadow_strike"));
     public static final ResourceKey<Enchantment> DESTROYER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "destroyer"));
+    public static final ResourceKey<Enchantment> EARTH_STRIKE = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(Delab.MODID, "earth_strike"));
+
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
@@ -60,11 +63,11 @@ public class DelabEnchantments {
         register(context, DESTROYER, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
                         items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
-                        10,
                         1,
-                        Enchantment.dynamicCost(1, 11),
-                        Enchantment.dynamicCost(21, 11),
-                        2,
+                        1,
+                        Enchantment.constantCost(15),
+                        Enchantment.constantCost(65),
+                        8,
                         EquipmentSlotGroup.MAINHAND))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -76,6 +79,16 @@ public class DelabEnchantments {
                         )
                 )
                 .exclusiveWith(enchantments.getOrThrow(DelabTags.Enchantments.EFFICIENCY_EXCLUSIVE)));
+        register(context, EARTH_STRIKE, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
+                        10,
+                        5,
+                        Enchantment.dynamicCost(1, 11),
+                        Enchantment.dynamicCost(21, 11),
+                        2,
+                        EquipmentSlotGroup.MAINHAND))
+                .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE)));
     }
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key,
                                  Enchantment.Builder builder) {

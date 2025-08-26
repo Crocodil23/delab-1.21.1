@@ -17,6 +17,8 @@
 
 	"tooltip.delab.shift_down": "Press §eShift§r for more details",
 	"tooltip.delab.dagger_tooltip":"Can strike with the off-hand if both hands are holding daggers",
+	"tooltip.delab.hammer_tooltip":"Hold RMB and release on block to deal area damage",
+
 	
 	"item.delab.wooden_spear": "Wooden Spear",
 	"item.delab.stone_spear": "Stone Spear",
@@ -38,21 +40,6 @@
 	"enchantment.delab.cavalry_strike": "Cavalry Strike",
 	"enchantment.delab.shadow_strike": "Shadow Strike",
 	"enchantment.delab.double_strike": "Double Strike",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	"enchantment.delab.head_hunter": "Head Hunter",
 
 	"block.delab.sea_workshop": "Sea Workshop (WIP)",
@@ -66,5 +53,6 @@
 
 	"effect.delab.shadow_strike": "Shadow Strike",
 
-	"sounds.delab.shadow_strike_sound": "Someone is hiding in the shadows!!"
+	"sounds.delab.shadow_strike_sound": "Someone is hiding in the shadows!",
+	"sounds.delab.earth_strike_sound": "Hammer strikes the ground"
 }

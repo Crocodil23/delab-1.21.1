@@ -18,6 +18,7 @@
 
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
 	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
+	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
 	
 	"item.delab.wooden_spear": "Деревянное rопьё",
 	"item.delab.stone_spear": "Каменное копьё",
@@ -51,5 +52,6 @@
 
 	"effect.delab.shadow_strike": "Теневой удар",
 
-	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!"
+	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!",
+	"sounds.delab.earth_strike_sound": "Удар молота по земле"
 }

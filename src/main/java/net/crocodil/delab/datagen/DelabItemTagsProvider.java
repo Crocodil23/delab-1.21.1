@@ -9,6 +9,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -32,6 +33,7 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .add(DelabItems.GOLDEN_DAGGER.asItem())
                 .add(DelabItems.DIAMOND_DAGGER.asItem())
                 .add(DelabItems.NETHERITE_DAGGER.asItem());
+
         tag(DelabTags.Items.HAMMER_ENCHANTABLE)
                 .add(DelabItems.WOODEN_HAMMER.asItem())
                 .add(DelabItems.STONE_HAMMER.asItem())
@@ -39,6 +41,7 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .add(DelabItems.GOLDEN_HAMMER.asItem())
                 .add(DelabItems.DIAMOND_HAMMER.asItem())
                 .add(DelabItems.NETHERITE_HAMMER.asItem());
+
         tag(DelabTags.Items.MOB_BONUS_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .addTag(ItemTags.SWORD_ENCHANTABLE)
@@ -47,13 +50,19 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.DURABILITY_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+
         tag(ItemTags.WEAPON_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+
         tag(ItemTags.MINING_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+
         tag(ItemTags.MINING_LOOT_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
 
+        tag(DelabTags.Items.CRUSHING_ENCHANTABLE)
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE)
+                .add(Items.MACE);
     }
 }

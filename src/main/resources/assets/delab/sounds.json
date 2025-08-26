@@ -4,5 +4,11 @@
     "sounds": [
       "delab:shadow_strike_sound"
     ]
+  },
+  "earth_strike_sound": {
+    "subtitle": "sounds.delab.earth_strike_sound",
+    "sounds": [
+      "delab:earth_strike_sound"
+    ]
   }
 }

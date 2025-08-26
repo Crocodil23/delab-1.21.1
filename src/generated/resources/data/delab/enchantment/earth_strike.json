@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.delab.earth_strike"
+  },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "max_cost": {
+    "base": 21,
+    "per_level_above_first": 11
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 11
+  },
+  "primary_items": "#delab:enchantable/hammer",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#delab:enchantable/hammer",
+  "weight": 10
+}

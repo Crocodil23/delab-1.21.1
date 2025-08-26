@@ -1,5 +1,5 @@
 {
-  "anvil_cost": 2,
+  "anvil_cost": 8,
   "description": {
     "translate": "enchantment.delab.destroyer"
   },
@@ -18,18 +18,18 @@
   },
   "exclusive_set": "#minecraft:exclusive_set/efficiency",
   "max_cost": {
-    "base": 21,
-    "per_level_above_first": 11
+    "base": 65,
+    "per_level_above_first": 0
   },
   "max_level": 1,
   "min_cost": {
-    "base": 1,
-    "per_level_above_first": 11
+    "base": 15,
+    "per_level_above_first": 0
   },
   "primary_items": "#delab:enchantable/hammer",
   "slots": [
     "mainhand"
   ],
   "supported_items": "#delab:enchantable/hammer",
-  "weight": 10
+  "weight": 1
 }
