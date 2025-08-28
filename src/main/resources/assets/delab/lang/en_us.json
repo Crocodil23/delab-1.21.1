@@ -18,6 +18,7 @@
 	"tooltip.delab.shift_down": "Press §eShift§r for more details",
 	"tooltip.delab.dagger_tooltip":"Can strike with the off-hand if both hands are holding daggers",
 	"tooltip.delab.hammer_tooltip":"Hold RMB and release on block to deal area damage",
+	"tooltip.delab.spear_tooltip": "Can be thrown",
 
 	
 	"item.delab.wooden_spear": "Wooden Spear",

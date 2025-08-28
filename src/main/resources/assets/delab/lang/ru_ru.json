@@ -19,6 +19,7 @@
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
 	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
 	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
+	"tooltip.delab.spear_tooltip": "Можно метать",
 	
 	"item.delab.wooden_spear": "Деревянное rопьё",
 	"item.delab.stone_spear": "Каменное копьё",
