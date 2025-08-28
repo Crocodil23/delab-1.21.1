@@ -2,6 +2,7 @@ package net.crocodil.delab.Enityes.Spears;
 
 import net.crocodil.delab.Enityes.DelabEntities;
 import net.crocodil.delab.items.DelabItems;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -27,6 +28,8 @@ public class ThrowingSpear extends AbstractArrow {
             SynchedEntityData.defineId(ThrowingSpear.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Byte> ID_LOYALTY =
             SynchedEntityData.defineId(ThrowingSpear.class, EntityDataSerializers.BYTE);
+    private static final EntityDataAccessor<Boolean> ID_FOIL =
+            SynchedEntityData.defineId(ThrowingSpear.class, EntityDataSerializers.BOOLEAN);
     private boolean dealtDamage;
     public int clientSideReturnTridentTickCount;
 
@@ -39,6 +42,7 @@ public class ThrowingSpear extends AbstractArrow {
     public ThrowingSpear(Level level, LivingEntity shooter, ItemStack pickupItemStack, float dmg, SpearMaterial material) {
         super(DelabEntities.THROWING_SPEAR.get(), shooter, level, pickupItemStack, (ItemStack)null);
         this.entityData.set(ID_LOYALTY, this.getLoyaltyFromItem(pickupItemStack));
+        this.entityData.set(ID_FOIL, pickupItemStack.hasFoil());
         setBaseDamage(dmg);
         setMaterial(material);
     }
@@ -47,6 +51,7 @@ public class ThrowingSpear extends AbstractArrow {
         setBaseDamage(dmg);
         setMaterial(material);
         this.entityData.set(ID_LOYALTY, this.getLoyaltyFromItem(pickupItemStack));
+        this.entityData.set(ID_FOIL, pickupItemStack.hasFoil());
         this.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 
     }
@@ -138,6 +143,7 @@ public class ThrowingSpear extends AbstractArrow {
         super.defineSynchedData(builder);
         builder.define(MATERIAL, 0);
         builder.define(ID_LOYALTY, (byte)0);
+        builder.define(ID_FOIL, false);
     }
 
     private int getTypeMaterial() {
@@ -177,6 +183,9 @@ public class ThrowingSpear extends AbstractArrow {
         }
 
         return var10000;
+    }
+    public boolean isFoil() {
+        return (Boolean)this.entityData.get(ID_FOIL);
     }
 
 }

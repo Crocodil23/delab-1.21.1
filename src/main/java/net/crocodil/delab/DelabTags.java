@@ -22,6 +22,8 @@ public class DelabTags {
         public static final TagKey<Item> HAMMER_ENCHANTABLE = createTag("enchantable/hammer");
         public static final TagKey<Item> MOB_BONUS_ENCHANTABLE = createTag("enchantable/mob_bonus");
         public static final TagKey<Item> CRUSHING_ENCHANTABLE = createTag("enchantable/crushing");
+        public static final TagKey<Item> LOYALTY_ENCHANTABLE = createTag("enchantable/loyalty");
+        public static final TagKey<Item> SPEAR_ENCHANTABLE = createTag("enchantable/spear");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Delab.MODID, name));

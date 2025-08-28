@@ -41,18 +41,29 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .add(DelabItems.DIAMOND_HAMMER.asItem())
                 .add(DelabItems.NETHERITE_HAMMER.asItem());
 
+        tag(DelabTags.Items.SPEAR_ENCHANTABLE)
+                .add(DelabItems.WOODEN_SPEAR.asItem())
+                .add(DelabItems.STONE_SPEAR.asItem())
+                .add(DelabItems.IRON_SPEAR.asItem())
+                .add(DelabItems.GOLDEN_SPEAR.asItem())
+                .add(DelabItems.DIAMOND_SPEAR.asItem())
+                .add(DelabItems.NETHERITE_SPEAR.asItem());
+
         tag(DelabTags.Items.MOB_BONUS_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .addTag(ItemTags.SWORD_ENCHANTABLE)
-                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE)
+                .addTag(DelabTags.Items.SPEAR_ENCHANTABLE);
 
         tag(ItemTags.DURABILITY_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
-                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE)
+                .addTag(DelabTags.Items.SPEAR_ENCHANTABLE);
 
         tag(ItemTags.WEAPON_ENCHANTABLE)
                 .addTag(DelabTags.Items.DAGGER_ENCHANTABLE)
-                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
+                .addTag(DelabTags.Items.HAMMER_ENCHANTABLE)
+                .addTag(DelabTags.Items.SPEAR_ENCHANTABLE);
 
         tag(ItemTags.MINING_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE);
@@ -63,5 +74,9 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
         tag(DelabTags.Items.CRUSHING_ENCHANTABLE)
                 .addTag(DelabTags.Items.HAMMER_ENCHANTABLE)
                 .add(Items.MACE);
+
+        tag(DelabTags.Items.LOYALTY_ENCHANTABLE)
+                .addTag(DelabTags.Items.SPEAR_ENCHANTABLE)
+                .add(Items.TRIDENT);
     }
 }

@@ -2,6 +2,7 @@
   "values": [
     "#delab:enchantable/dagger",
     "#minecraft:enchantable/sword",
-    "#delab:enchantable/hammer"
+    "#delab:enchantable/hammer",
+    "#delab:enchantable/spear"
   ]
 }
