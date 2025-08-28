@@ -2,6 +2,8 @@ package net.crocodil.delab.items;
 
 import net.crocodil.delab.Enityes.Spears.SpearMaterial;
 import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
+import net.crocodil.delab.enchants.DelabEnchantmentHelper;
+import net.crocodil.delab.enchants.DelabEnchantments;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -100,8 +102,8 @@ public class SpearItem extends TieredItem
                         material = SpearMaterial.DIAMOND;
                     else if(tier == Tiers.NETHERITE)
                         material = SpearMaterial.NETHERITE;
-
-                    ThrowingSpear throwingSpear = new ThrowingSpear(level, player, stack, tier.getAttackDamageBonus() + 3, material);
+                    int PTlvl = DelabEnchantmentHelper.getEnchantmentLvl(level, DelabEnchantments.POWERFUL_THROW, stack);
+                    ThrowingSpear throwingSpear = new ThrowingSpear(level, player, stack, tier.getAttackDamageBonus() + 3 + PTlvl, material);
                     throwingSpear.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F, 1.0F);
                     if (player.hasInfiniteMaterials()) {
                         throwingSpear.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;

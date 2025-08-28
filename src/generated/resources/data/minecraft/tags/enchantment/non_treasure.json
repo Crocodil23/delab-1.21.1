@@ -19,6 +19,10 @@
     {
       "id": "delab:earth_strike",
       "required": false
+    },
+    {
+      "id": "delab:powerful_throw",
+      "required": false
     }
   ]
 }

@@ -25,6 +25,8 @@ public class DelabEnchantments {
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "destroyer"));
     public static final ResourceKey<Enchantment> EARTH_STRIKE = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "earth_strike"));
+    public static final ResourceKey<Enchantment> POWERFUL_THROW = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(Delab.MODID, "powerful_throw"));
 
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
@@ -82,6 +84,16 @@ public class DelabEnchantments {
         register(context, EARTH_STRIKE, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
                         items.getOrThrow(DelabTags.Items.HAMMER_ENCHANTABLE),
+                        10,
+                        5,
+                        Enchantment.dynamicCost(1, 11),
+                        Enchantment.dynamicCost(21, 11),
+                        2,
+                        EquipmentSlotGroup.MAINHAND))
+                .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE)));
+        register(context, POWERFUL_THROW, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(DelabTags.Items.SPEAR_ENCHANTABLE),
+                        items.getOrThrow(DelabTags.Items.SPEAR_ENCHANTABLE),
                         10,
                         5,
                         Enchantment.dynamicCost(1, 11),

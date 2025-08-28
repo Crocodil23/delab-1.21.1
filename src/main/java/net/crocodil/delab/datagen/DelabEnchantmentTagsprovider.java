@@ -25,13 +25,15 @@ public class DelabEnchantmentTagsprovider extends EnchantmentTagsProvider {
                 .addOptional(DelabEnchantments.HEAD_HUNTER.location())
                 .addOptional(DelabEnchantments.SHADOW_STRIKE.location())
                 .addOptional(DelabEnchantments.DESTROYER.location())
-                .addOptional(DelabEnchantments.EARTH_STRIKE.location());
+                .addOptional(DelabEnchantments.EARTH_STRIKE.location())
+                .addOptional(DelabEnchantments.POWERFUL_THROW.location());;
 
 
         tag(EnchantmentTags.DAMAGE_EXCLUSIVE)
                 .addOptional(DelabEnchantments.DOUBLE_STRIKE.location())
                 .addOptional(DelabEnchantments.SHADOW_STRIKE.location())
-                .addOptional(DelabEnchantments.EARTH_STRIKE.location());
+                .addOptional(DelabEnchantments.EARTH_STRIKE.location())
+                .addOptional(DelabEnchantments.POWERFUL_THROW.location());
 
         tag(DelabTags.Enchantments.LOOTING_EXCLUSIVE)
                 .addOptional(Enchantments.LOOTING.location())
