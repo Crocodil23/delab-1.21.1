@@ -1,4 +1,4 @@
-package net.crocodil.delab.client;
+package net.crocodil.delab.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.crocodil.delab.effects.DelabMobEffects;

@@ -1,14 +1,24 @@
 package net.crocodil.delab;
 
+import net.crocodil.delab.Enityes.DelabEntities;
+import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
 import net.crocodil.delab.blocks.DelabBlocks;
 
+import net.crocodil.delab.client.render.SpearItemRenderer;
+import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
-import net.crocodil.delab.enchants.DelabEnchantments;
 import net.crocodil.delab.items.DelabItems;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,6 +51,7 @@ public class Delab {
         DelabBlocks.register(modEventBus);
         DelabMobEffects.register(modEventBus);
         DelabSounds.register(modEventBus);
+        DelabEntities.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -67,6 +78,13 @@ public class Delab {
             event.accept(DelabItems.GOLDEN_HAMMER);
             event.accept(DelabItems.DIAMOND_HAMMER);
             event.accept(DelabItems.NETHERITE_HAMMER);
+
+            event.accept(DelabItems.WOODEN_SPEAR);
+            event.accept(DelabItems.STONE_SPEAR);
+            event.accept(DelabItems.IRON_SPEAR);
+            event.accept(DelabItems.GOLDEN_SPEAR);
+            event.accept(DelabItems.DIAMOND_SPEAR);
+            event.accept(DelabItems.NETHERITE_SPEAR);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
@@ -86,7 +104,94 @@ public class Delab {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(DelabEntities.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.WOODEN_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.STONE_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.IRON_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.GOLDEN_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.DIAMOND_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
+            event.enqueueWork(() -> {
+                ItemProperties.register(
+                        DelabItems.NETHERITE_SPEAR.get(),
+                        ResourceLocation.withDefaultNamespace("throwing"),
+                        (stack, level, entity, seed) -> {
+                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
+                                return 1.0F;
+                            }
+                            return 0.0F;
+                        }
+                );
+            });
 
         }
+        @SubscribeEvent
+        public static void onClientExtensions(RegisterClientExtensionsEvent event) {
+            event.registerItem( new IClientItemExtensions() {
+                @Override
+                public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                    return new SpearItemRenderer(
+                            Minecraft.getInstance().getBlockEntityRenderDispatcher(),
+                            Minecraft.getInstance().getEntityModels()
+                    );
+                }
+            }, DelabItems.WOODEN_SPEAR, DelabItems.STONE_SPEAR, DelabItems.IRON_SPEAR,
+                    DelabItems.GOLDEN_SPEAR, DelabItems.DIAMOND_SPEAR, DelabItems.NETHERITE_SPEAR);
+        }
+
     }
 }

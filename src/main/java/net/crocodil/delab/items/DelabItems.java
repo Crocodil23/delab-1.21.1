@@ -40,6 +40,33 @@ public class DelabItems
             () -> new HammerItem(Tiers.NETHERITE, new Item.Properties().fireResistant()
                     .attributes(HammerItem.createAttributes(Tiers.NETHERITE, 5, -3.0F))));
 
+    public  static final  DeferredItem<SpearItem> WOODEN_SPEAR = ITEMS.register("wooden_spear",
+            () -> new SpearItem(Tiers.WOOD, new DaggerItem.Properties().attributes(SpearItem.createAttributes(Tiers.WOOD, 2, -2.6F))));
+    public  static final  DeferredItem<SpearItem> STONE_SPEAR = ITEMS.register("stone_spear",
+            () -> new SpearItem(Tiers.STONE, new Item.Properties().attributes(SpearItem.createAttributes(Tiers.STONE, 2, -2.6F))));
+    public  static final  DeferredItem<SpearItem> IRON_SPEAR = ITEMS.register("iron_spear",
+            () -> new SpearItem(Tiers.IRON, new Item.Properties().attributes(SpearItem.createAttributes(Tiers.IRON, 2, -2.6F))));
+    public  static final  DeferredItem<SpearItem> GOLDEN_SPEAR = ITEMS.register("golden_spear",
+            () -> new SpearItem(Tiers.GOLD, new Item.Properties().attributes(SpearItem.createAttributes(Tiers.GOLD, 2, -2.6F))));
+    public  static final  DeferredItem<SpearItem> DIAMOND_SPEAR = ITEMS.register("diamond_spear",
+            () -> new SpearItem(Tiers.DIAMOND, new Item.Properties().attributes(SpearItem.createAttributes(Tiers.DIAMOND, 2, -2.6F))));
+    public  static final  DeferredItem<SpearItem> NETHERITE_SPEAR = ITEMS.register("netherite_spear",
+            () -> new SpearItem(Tiers.NETHERITE, new Item.Properties().fireResistant()
+                    .attributes(SpearItem.createAttributes(Tiers.NETHERITE, 2, -2.6F))));
+
+    public static final DeferredItem<Item> WOODEN_SPEAR_INVENTORY = ITEMS.register("wooden_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> STONE_SPEAR_INVENTORY = ITEMS.register("stone_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IRON_SPEAR_INVENTORY = ITEMS.register("iron_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GOLDEN_SPEAR_INVENTORY = ITEMS.register("golden_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DIAMOND_SPEAR_INVENTORY = ITEMS.register("diamond_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NETHERITE_SPEAR_INVENTORY = ITEMS.register("netherite_spear_inventory",
+            ()-> new Item(new Item.Properties()));
+
     public static void register(IEventBus bus)
     {
         ITEMS.register(bus);

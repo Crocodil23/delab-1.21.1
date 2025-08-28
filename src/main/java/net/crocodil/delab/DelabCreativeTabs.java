@@ -25,17 +25,27 @@ public class DelabCreativeTabs
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(DelabItems.RECHARGE_CRYSTAL);
+
                         output.accept(DelabItems.WOODEN_DAGGER);
                         output.accept(DelabItems.STONE_DAGGER);
                         output.accept(DelabItems.IRON_DAGGER);
                         output.accept(DelabItems.GOLDEN_DAGGER);
                         output.accept(DelabItems.DIAMOND_DAGGER);
+                        output.accept(DelabItems.NETHERITE_DAGGER);
+
                         output.accept(DelabItems.WOODEN_HAMMER);
                         output.accept(DelabItems.STONE_HAMMER);
                         output.accept(DelabItems.IRON_HAMMER);
                         output.accept(DelabItems.GOLDEN_HAMMER);
                         output.accept(DelabItems.DIAMOND_HAMMER);
                         output.accept(DelabItems.NETHERITE_HAMMER);
+
+                        output.accept(DelabItems.WOODEN_SPEAR);
+                        output.accept(DelabItems.STONE_SPEAR);
+                        output.accept(DelabItems.IRON_SPEAR);
+                        output.accept(DelabItems.GOLDEN_SPEAR);
+                        output.accept(DelabItems.DIAMOND_SPEAR);
+
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                     }).build());
 

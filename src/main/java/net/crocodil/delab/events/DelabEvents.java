@@ -1,7 +1,9 @@
-package net.crocodil.delab;
+package net.crocodil.delab.events;
 
 
 import io.netty.util.internal.ThreadLocalRandom;
+import net.crocodil.delab.Delab;
+import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
@@ -16,16 +18,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @EventBusSubscriber(modid = Delab.MODID, bus = EventBusSubscriber.Bus.GAME)

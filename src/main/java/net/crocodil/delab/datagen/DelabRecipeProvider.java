@@ -29,6 +29,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_stick", has(Items.STICK))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_DAGGER)
                 .pattern("A")
                 .pattern("B")
@@ -36,6 +37,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_DAGGER)
                 .pattern("A")
                 .pattern("B")
@@ -43,6 +45,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_DAGGER)
                 .pattern("A")
                 .pattern("B")
@@ -50,6 +53,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_DAGGER)
                 .pattern("A")
                 .pattern("B")
@@ -57,6 +61,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_diamond", has(Items.DIAMOND))
                 .save(out);
+
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.of(DelabItems.DIAMOND_DAGGER.get()),
                 Ingredient.of(Items.NETHERITE_INGOT),
@@ -64,6 +69,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 DelabItems.NETHERITE_DAGGER.get())
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(out, Delab.MODID + ":netherite_dagger");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_HAMMER)
                 .pattern("AAA")
                 .pattern("ABA")
@@ -72,6 +78,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_stick", has(Items.STICK))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_HAMMER)
                 .pattern("AAA")
                 .pattern("ABA")
@@ -80,6 +87,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_HAMMER)
                 .pattern("AAA")
                 .pattern("ABA")
@@ -88,6 +96,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_HAMMER)
                 .pattern("AAA")
                 .pattern("ABA")
@@ -96,6 +105,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
                 .save(out);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_HAMMER)
                 .pattern("AAA")
                 .pattern("ABA")
@@ -104,6 +114,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('B', Items.STICK)
                 .unlockedBy("has_diamond", has(Items.DIAMOND))
                 .save(out);
+
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(DelabItems.DIAMOND_HAMMER.get()),
                         Ingredient.of(Items.NETHERITE_INGOT),
@@ -111,5 +122,58 @@ public class DelabRecipeProvider extends RecipeProvider {
                         DelabItems.NETHERITE_HAMMER.get())
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(out, Delab.MODID + ":netherite_hammer");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_SPEAR)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', ItemTags.PLANKS)
+                .define('B', Items.STICK)
+                .unlockedBy("has_stick", has(Items.STICK))
+                .save(out);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_SPEAR)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', ItemTags.STONE_TOOL_MATERIALS)
+                .define('B', Items.STICK)
+                .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
+                .save(out);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_SPEAR)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', Items.IRON_INGOT)
+                .define('B', Items.STICK)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(out);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_SPEAR)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', Items.GOLD_INGOT)
+                .define('B', Items.STICK)
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(out);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_SPEAR)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', Items.DIAMOND)
+                .define('B', Items.STICK)
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
+                .save(out);
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(DelabItems.DIAMOND_SPEAR.get()),
+                        Ingredient.of(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.NETHERITE_SPEAR.get())
+                .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(out, Delab.MODID + ":netherite_spear");
     }
 }

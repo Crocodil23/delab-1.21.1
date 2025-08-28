@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.crocodil.delab.client",
+  "package": "net.crocodil.delab.mixin",
   "compatibilityLevel": "JAVA_16",
   "client": [
     "HumanoidArmorLayerMixin",
