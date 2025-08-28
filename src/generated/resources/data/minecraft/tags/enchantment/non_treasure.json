@@ -23,6 +23,10 @@
     {
       "id": "delab:powerful_throw",
       "required": false
+    },
+    {
+      "id": "delab:cavalry_strike",
+      "required": false
     }
   ]
 }

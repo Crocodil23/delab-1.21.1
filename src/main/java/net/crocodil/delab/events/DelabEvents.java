@@ -165,5 +165,25 @@ public class DelabEvents {
             }
         }
     }
+    @SubscribeEvent
+    public static void CavalryStrikeEvent(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            Entity direct = event.getSource().getDirectEntity();
+            if ((direct instanceof Player player)) {
+                ItemStack spear = player.getMainHandItem();
+                TagKey<Item> daggerTag = DelabTags.Items.SPEAR_ENCHANTABLE;
+                if (spear.is(daggerTag) && player.isPassenger()) {
+                    int CSlvl = DelabEnchantmentHelper.getEnchantmentLvl(player.level(),
+                            DelabEnchantments.CAVALRY_STRIKE,
+                            spear);
+                    if (CSlvl >= 0) {
+                        float OrigDmg = event.getOriginalDamage();
+                        float NewDmg = OrigDmg + 1.5F * CSlvl;
+                        event.setNewDamage(NewDmg);
+                    }
+                }
+            }
+        }
+    }
 
 }
