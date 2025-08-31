@@ -4,10 +4,15 @@ import net.crocodil.delab.Enityes.DelabEntities;
 import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
 import net.crocodil.delab.blocks.DelabBlocks;
 
+import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
 import net.crocodil.delab.client.render.SpearItemRenderer;
 import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
+import net.crocodil.delab.gui.AlloysFurnace.AlloyFurnaceMenu;
+import net.crocodil.delab.gui.AlloysFurnace.AlloysFurnaceScreen;
+import net.crocodil.delab.gui.DelabMenuTypes;
 import net.crocodil.delab.items.DelabItems;
+import net.crocodil.delab.recipes.DelabRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -17,6 +22,7 @@ import net.minecraft.world.item.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import org.slf4j.Logger;
@@ -49,9 +55,12 @@ public class Delab {
         DelabCreativeTabs.register(modEventBus);
         DelabItems.register(modEventBus);
         DelabBlocks.register(modEventBus);
+        DelabBlockEntityes.register(modEventBus);
+        DelabMenuTypes.register(modEventBus);
         DelabMobEffects.register(modEventBus);
         DelabSounds.register(modEventBus);
         DelabEntities.register(modEventBus);
+        DelabRecipes.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -192,6 +201,9 @@ public class Delab {
             }, DelabItems.WOODEN_SPEAR, DelabItems.STONE_SPEAR, DelabItems.IRON_SPEAR,
                     DelabItems.GOLDEN_SPEAR, DelabItems.DIAMOND_SPEAR, DelabItems.NETHERITE_SPEAR);
         }
-
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(DelabMenuTypes.ALLOYS_FURNACE_MENU.get(), AlloysFurnaceScreen::new);
+        }
     }
 }

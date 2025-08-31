@@ -24,6 +24,7 @@ public class DelabLootTableProvider extends BlockLootSubProvider
     @Override
     protected void generate() {
         dropSelf(DelabBlocks.SEA_WORKSHOP.get());
+        dropSelf(DelabBlocks.ALLOYS_FURNACE.get());
     }
     @Override
     protected Iterable<Block> getKnownBlocks() {

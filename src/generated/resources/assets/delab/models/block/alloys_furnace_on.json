@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "delab:block/alloys_furnace_front_on",
+    "side": "delab:block/alloys_furnace_side",
+    "top": "delab:block/alloys_furnace_top"
+  }
+}

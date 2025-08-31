@@ -1,6 +1,7 @@
 package net.crocodil.delab.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.crocodil.delab.effects.DelabMobEffects;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
 import net.minecraft.world.effect.MobEffects;
@@ -27,7 +28,7 @@ public abstract class ItemInHandLayerMixin<T extends LivingEntity, M, A> {
                           CallbackInfo ci) {
         if (entity == null) return;
 
-        boolean invisibleByPotion = entity.hasEffect(MobEffects.INVISIBILITY);
+        boolean invisibleByPotion = entity.hasEffect(DelabMobEffects.SHADOW_STRIKE);
         if (entity.isInvisible() || invisibleByPotion) {
             ci.cancel();
         }

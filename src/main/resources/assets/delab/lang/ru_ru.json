@@ -21,7 +21,7 @@
 	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
 	"tooltip.delab.spear_tooltip": "Можно метать",
 	
-	"item.delab.wooden_spear": "Деревянное rопьё",
+	"item.delab.wooden_spear": "Деревянное копьё",
 	"item.delab.stone_spear": "Каменное копьё",
 	"item.delab.iron_spear": "Железное копьё",
 	"item.delab.golden_spear": "Золотое копьё",
@@ -34,7 +34,9 @@
 	"item.delab.golden_hammer": "Золотой молот",
 	"item.delab.diamond_hammer": "Алмазный молот",
 	"item.delab.netherite_hammer": "Незеритовый молот",
+
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
+	"block.delab.alloys_furnace": "Печь для сплавов",
 
 	"enchantment.delab.destroyer": "Разрушитель",
 	"enchantment.delab.earth_strike": "Удар по земле",
@@ -44,12 +46,7 @@
 	"enchantment.delab.double_strike": "Двойной удар",
 	"enchantment.delab.head_hunter": "Охотник за головами",
 
-	"entity.delab.thrown_wooden_spear":"Деревянное копьё",
-	"entity.delab.thrown_stone_spear":"Каменное копьё",
-	"entity.delab.thrown_iron_spear":"Железное копьё",
-	"entity.delab.thrown_golden_spear":"Золотое копьё",
-	"entity.delab.thrown_diamond_spear":"Алмазное копьё",
-	"entity.delab.thrown_netherite_spear":"Незеритовое копьё",
+	"entity.delab.thrown_spear":"Копье",
 
 	"effect.delab.shadow_strike": "Теневой удар",
 

@@ -1,6 +1,7 @@
 package net.crocodil.delab.datagen;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -20,6 +21,8 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.GOLDEN_HAMMER.asItem());
         handheldItem(DelabItems.DIAMOND_HAMMER.asItem());
         handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
+
+        simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 
 
     }

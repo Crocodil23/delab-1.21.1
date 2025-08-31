@@ -44,13 +44,9 @@
 	"enchantment.delab.head_hunter": "Head Hunter",
 
 	"block.delab.sea_workshop": "Sea Workshop (WIP)",
+	"block.delab.alloys_furnace": "Alloys furnace",
 	
-	"entity.delab.thrown_wooden_spear":"Wooden Spear",
-	"entity.delab.thrown_stone_spear":"Stone Spear",
-	"entity.delab.thrown_iron_spear":"Iron Spear",
-	"entity.delab.thrown_golden_spear":"Golden Spear",
-	"entity.delab.thrown_diamond_spear":"Diamond Spear",
-	"entity.delab.thrown_netherite_spear":"Netherite Spear",
+	"entity.delab.thrown_spear":"Spear",
 
 	"effect.delab.shadow_strike": "Shadow Strike",
 

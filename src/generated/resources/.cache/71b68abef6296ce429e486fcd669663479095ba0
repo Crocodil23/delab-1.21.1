@@ -1,4 +1,7 @@
-// 1.21.1	2025-08-06T12:36:15.5188872	Block States: delab
+// 1.21.1	2025-08-31T07:37:35.6602112	Block States: delab
+4e8fdea468a1cd96dc3961719c823e6743bd5b9a assets/delab/blockstates/alloys_furnace.json
 6d11440cf69601a9e7619ee4705ffd4fbf13331d assets/delab/blockstates/sea_workshop.json
+83687b7fcc192ee7b69d94b76afc4f8fa1e07a4b assets/delab/models/block/alloys_furnace.json
+a911022a5af701ff0ce06dde9bd354664e143658 assets/delab/models/block/alloys_furnace_on.json
 3fefff2ed35432bb158cbd8bb3b4dfc3c80ebea5 assets/delab/models/block/sea_workshop.json
 f3482ea47a0e52ebfbcd50338fd41f422a2ce3e3 assets/delab/models/item/sea_workshop.json

@@ -16,12 +16,20 @@ import java.util.function.Supplier;
 public class DelabBlocks
 {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Delab.MODID);
-
     public static final DeferredBlock<Block> SEA_WORKSHOP = registerBlock("sea_workshop",
              ()-> new Block(BlockBehaviour.Properties.of()
                      .strength(2.0F, 5.0F)
                      .sound(SoundType.STONE)
                      .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<AlloysFurnaceBlock> ALLOYS_FURNACE = registerBlock("alloys_furnace",
+            ()-> new AlloysFurnaceBlock(BlockBehaviour.Properties.of()
+                    .strength(2.0F, 5.0F)
+                    .sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(AlloysFurnaceBlock.LIT) ? 13 : 0)
+                    .requiresCorrectToolForDrops()));
+
+
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
         DeferredBlock<T> tmp = BLOCKS.register(name, block);

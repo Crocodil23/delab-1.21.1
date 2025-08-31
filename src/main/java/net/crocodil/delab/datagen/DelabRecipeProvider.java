@@ -2,15 +2,19 @@ package net.crocodil.delab.datagen;
 
 import mezz.jei.api.constants.Tags;
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -175,5 +179,15 @@ public class DelabRecipeProvider extends RecipeProvider {
                         DelabItems.NETHERITE_SPEAR.get())
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(out, Delab.MODID + ":netherite_spear");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DelabBlocks.ALLOYS_FURNACE)
+                .pattern("ABA")
+                .pattern("BCB")
+                .pattern("ABA")
+                .define('A', Items.COPPER_BLOCK)
+                .define('B', Items.STONE_BRICKS)
+                .define('C', Items.FURNACE)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .save(out);
     }
 }
