@@ -25,7 +25,7 @@ public abstract class StuckInBodyLayerMixin<T extends LivingEntity> {
                           float netHeadYaw,
                           float headPitch,
                           CallbackInfo ci) {
-        if (entity != null && (entity.isInvisible() || entity.hasEffect(DelabMobEffects.SHADOW_STRIKE))) {
+        if (entity != null &&  entity.hasEffect(DelabMobEffects.SHADOW_STRIKE)) {
             ci.cancel();
         }
     }

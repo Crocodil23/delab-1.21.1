@@ -28,8 +28,8 @@ public abstract class ItemInHandLayerMixin<T extends LivingEntity, M, A> {
                           CallbackInfo ci) {
         if (entity == null) return;
 
-        boolean invisibleByPotion = entity.hasEffect(DelabMobEffects.SHADOW_STRIKE);
-        if (entity.isInvisible() || invisibleByPotion) {
+
+        if (entity.hasEffect(DelabMobEffects.SHADOW_STRIKE)) {
             ci.cancel();
         }
     }

@@ -5,6 +5,7 @@ import net.crocodil.delab.items.DelabItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -24,7 +25,7 @@ public class DelabBlocks
 
     public static final DeferredBlock<AlloysFurnaceBlock> ALLOYS_FURNACE = registerBlock("alloys_furnace",
             ()-> new AlloysFurnaceBlock(BlockBehaviour.Properties.of()
-                    .strength(2.0F, 5.0F)
+                    .strength(3.5F)
                     .sound(SoundType.STONE)
                     .lightLevel(state -> state.getValue(AlloysFurnaceBlock.LIT) ? 13 : 0)
                     .requiresCorrectToolForDrops()));

@@ -33,14 +33,14 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M, A> {
                           CallbackInfo ci) {
 
         if (entity == null) return;
-
+        /*
         // Most robust: check both the potion effect and the entity invisibility flag
         boolean invisibleByPotion = false;
         try {
             invisibleByPotion = entity.hasEffect(DelabMobEffects.SHADOW_STRIKE);
-        } catch (Throwable ignored) { /* method name may differ in your mappings */ }
+        } catch (Throwable ignored) { /* method name may differ in your mappings */
 
-        if (entity.isInvisible() || invisibleByPotion) {
+        if (entity.hasEffect(DelabMobEffects.SHADOW_STRIKE)) {
             ci.cancel();
         }
     }
