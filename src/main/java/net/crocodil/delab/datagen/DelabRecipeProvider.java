@@ -3,6 +3,7 @@ package net.crocodil.delab.datagen;
 import mezz.jei.api.constants.Tags;
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.blocks.DelabBlocks;
+import net.crocodil.delab.datagen.builder.AlloysFurnaceRecipeBuilder;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -189,5 +190,13 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .define('C', Items.FURNACE)
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(out);
+        /*
+        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(Items.NETHERITE_INGOT)
+                .addIngredient(Items.COPPER_INGOT)
+                .addIngredient(Items.IRON_INGOT)
+                .addIngredient(Items.GOLD_INGOT)
+                .build(out);
+
+         */
     }
 }

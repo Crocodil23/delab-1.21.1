@@ -15,10 +15,6 @@ public class AlloysFurnaceScreen extends AbstractContainerScreen<AlloyFurnaceMen
 
     private static final ResourceLocation GUI_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "textures/gui/alloys_furnace.png");
-    private static final ResourceLocation ARROW_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(Delab.MODID, "textures/gui/burn_progress.png");
-    private static final ResourceLocation LIT_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(Delab.MODID, "textures/gui/lit_progress.png");
 
     public AlloysFurnaceScreen(AlloyFurnaceMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -50,16 +46,14 @@ public class AlloysFurnaceScreen extends AbstractContainerScreen<AlloyFurnaceMen
     }
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(ARROW_TEXTURE,x + 68, y + 26, 0, 0, menu.getScaledArrowProgress(), 48, 31, 48);
+            guiGraphics.blit(GUI_TEXTURE, x + 68, y + 26, 177, 0, menu.getScaledArrowProgress(), 48);
         }
     }
     private void renderLitProgress(GuiGraphics guiGraphics, int x, int y)
     {
         if(menu.blockEntity.isLit()) {
             int scaled = menu.getBurnScale();
-            guiGraphics.blit(LIT_TEXTURE, x + 15, y + 47 + (14 - scaled),
-                    0, 14 - scaled, 14, scaled,
-                    14, 14);
+            guiGraphics.blit(GUI_TEXTURE, x + 15, y + 47 + (14 - scaled), 177, 49 + (14 - scaled), 14, scaled);
         }
     }
 

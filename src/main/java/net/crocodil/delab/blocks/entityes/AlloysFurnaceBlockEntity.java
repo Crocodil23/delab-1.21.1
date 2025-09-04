@@ -116,6 +116,23 @@ public class AlloysFurnaceBlockEntity extends BlockEntity implements MenuProvide
     }
     public void tick(Level level1, BlockPos blockPos, BlockState blockState)
     {
+        if(hasRecipe()) {
+            if(isLit())
+            {
+                progress++;
+                if(progress == progress_max) {
+                    craftItem();
+                    progress = 0;
+                }
+            } else {
+                progress -= 2;
+                if (progress <= 0 )
+                    progress = 0;
+            }
+
+        } else {
+            progress = 0;
+        }
         if(isLit())
             lit--;
         else
@@ -128,22 +145,6 @@ public class AlloysFurnaceBlockEntity extends BlockEntity implements MenuProvide
             }
 
         }
-        if(hasRecipe()) {
-            if(isLit())
-            {
-                progress++;
-                if(progress == progress_max) {
-                    craftItem();
-                    progress = 0;
-                }
-            } else
-                progress -= 2;
-
-        } else {
-            progress = 0;
-        }
-
-
         level1.setBlock(blockPos, blockState.setValue(AlloysFurnaceBlock.LIT, isLit()), 3);
         setChanged(level1, blockPos, blockState);
 
@@ -159,34 +160,6 @@ public class AlloysFurnaceBlockEntity extends BlockEntity implements MenuProvide
         itemHandler.extractItem(INGREDIENT_THREE, 1, false);
         itemHandler.setStackInSlot(RESULT, new ItemStack(output.getItem(),
                 itemHandler.getStackInSlot(RESULT).getCount() + output.getCount()));
-    }
-
-    private boolean IsCorrectIngredients()
-    {
-        ItemStack[] stacks = new ItemStack[3];
-        stacks[0] = itemHandler.getStackInSlot(INGREDIENT_ONE);
-        stacks[1] = itemHandler.getStackInSlot(INGREDIENT_TWO);
-        stacks[2] = itemHandler.getStackInSlot(INGREDIENT_THREE);
-
-        Item[] items = new Item[3];
-        items[0] = Items.COPPER_INGOT;
-        items[1] = Items.IRON_INGOT;
-        items[2] = Items.GOLD_INGOT;
-
-        for (int i = 0; i < 3; i++) {
-            boolean isCorrect = false;
-            for (int j = 0; j < 3; j++) {
-                if(stacks[j].is(items[i]))
-                {
-                    isCorrect = true;
-                    break;
-                }
-            }
-            if (!isCorrect)
-                return false;
-        }
-        return true;
-
     }
     private boolean hasRecipe() {
         Optional<RecipeHolder<AlloysFurnaceRecipe>> recipe = getCurrentRecipe();

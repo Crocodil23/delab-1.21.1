@@ -85,7 +85,6 @@ public class AlloysFurnaceBlock extends BaseEntityBlock {
 
             Direction direction = (Direction)state.getValue(FACING);
             Direction.Axis direction$axis = direction.getAxis();
-            double d3 = 0.52;
             double d4 = random.nextDouble() * 0.6 - 0.3;
             double d5 = direction$axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52 : d4;
             double d6 = random.nextDouble() * (double)11.0F / (double)18.0F;

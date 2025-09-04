@@ -1,0 +1,13 @@
+{
+  "values": {
+    "delab:wooden_dagger": {
+      "burn_time": 200
+    },
+    "delab:wooden_hammer": {
+      "burn_time": 200
+    },
+    "delab:wooden_spear": {
+      "burn_time": 200
+    }
+  }
+}

@@ -40,6 +40,8 @@ public class DelabDataGenerators
                 lookupProvider, blockTags.contentsGetter(), existingFileHelper));
         gen.addProvider(event.includeServer(), new DelabEnchantmentTagsprovider(out, lookupProvider, existingFileHelper));
         gen.addProvider(event.includeServer(), new DelabRecipeProvider(out, lookupProvider));
+        gen.addProvider(event.includeServer(),new DelabDataMaProvider(out, lookupProvider));
+
 
         gen.addProvider(event.includeClient(), new DelabBlockStateProvider(out, existingFileHelper));
         gen.addProvider(event.includeClient(), new DelabItemModelProvider(out, existingFileHelper));
