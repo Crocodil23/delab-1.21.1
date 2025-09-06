@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:mud"
+    },
+    {
+      "item": "delab:abomination_dust"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "delab:mud_ball"
+  }
+}

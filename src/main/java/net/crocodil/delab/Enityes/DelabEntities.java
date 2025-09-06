@@ -18,6 +18,9 @@ public class DelabEntities {
     public static final Supplier<EntityType<ThrowingSpear>> THROWING_SPEAR =
             ENTITIES.register("throwing_spear", () -> EntityType.Builder.<ThrowingSpear>of(ThrowingSpear::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("throwing_spear"));
+    public static final Supplier<EntityType<MudBall>> MUD_BALL =
+            ENTITIES.register("mud_ball", () -> EntityType.Builder.<MudBall>of(MudBall::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("mud_ball"));
 
 
     public static void register(IEventBus bus) {

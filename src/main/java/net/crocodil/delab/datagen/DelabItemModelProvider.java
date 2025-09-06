@@ -18,6 +18,7 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.get());
         basicItem(DelabItems.ABOMINATION_DUST.get());
         basicItem(DelabItems.ABOMINATION_INGOT.get());
+        basicItem(DelabItems.MUD_BALL.get());
 
         handheldItem(DelabItems.WOODEN_HAMMER.asItem());
         handheldItem(DelabItems.STONE_HAMMER.asItem());

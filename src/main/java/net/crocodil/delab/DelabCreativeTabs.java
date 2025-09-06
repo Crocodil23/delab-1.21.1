@@ -50,6 +50,8 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.DIAMOND_SPEAR);
                         output.accept(DelabItems.NETHERITE_SPEAR);
 
+                        output.accept(DelabItems.MUD_BALL);
+
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                         output.accept(DelabBlocks.ALLOYS_FURNACE);
                     }).build());

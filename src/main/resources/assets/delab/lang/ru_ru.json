@@ -21,12 +21,6 @@
 	"item.delab.golden_dagger": "Золотой кинжал",
 	"item.delab.diamond_dagger": "Алмазный кинжал",
 	"item.delab.netherite_dagger": "Незеритовый кинжал",
-
-
-	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
-	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
-	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
-	"tooltip.delab.spear_tooltip": "Можно метать",
 	
 	"item.delab.wooden_spear": "Деревянное копьё",
 	"item.delab.stone_spear": "Каменное копьё",
@@ -42,6 +36,13 @@
 	"item.delab.diamond_hammer": "Алмазный молот",
 	"item.delab.netherite_hammer": "Незеритовый молот",
 
+	"item.delab.mud_ball": "Шарик грязи",
+
+	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
+	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
+	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
+	"tooltip.delab.spear_tooltip": "Можно метать",
+
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
 	"block.delab.alloys_furnace": "Печь для сплавов",
 
@@ -56,6 +57,7 @@
 	"entity.delab.thrown_spear":"Копье",
 
 	"effect.delab.shadow_strike": "Теневой удар",
+	"effect.delab.in_mud": "В грязи",
 
 	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!",
 	"sounds.delab.earth_strike_sound": "Удар молота по земле"

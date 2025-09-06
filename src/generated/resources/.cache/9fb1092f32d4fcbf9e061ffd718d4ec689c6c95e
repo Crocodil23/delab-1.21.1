@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-06T07:48:24.073606	Recipes
+// 1.21.1	2025-09-06T20:14:39.819833	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
 19243c15c2eda585ae86da2e3dfbf31d0b034d4f data/delab/advancement/recipes/combat/adventure_upgrade_smithing_template.json
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
@@ -10,6 +10,7 @@ cdf50700937aed9a659998c4206988dabafc3bc3 data/delab/advancement/recipes/combat/g
 f43902e06389c06cad039fef1b9788b6d6739bce data/delab/advancement/recipes/combat/iron_dagger.json
 02865a9e1ae754939fdabfbc97ad88b08896b574 data/delab/advancement/recipes/combat/iron_hammer.json
 097ae1347e6905f906a4c270dfcf2cc95569a8e6 data/delab/advancement/recipes/combat/iron_spear.json
+d6d4f181d225891073a4b721d88e8d146905d108 data/delab/advancement/recipes/combat/mud_ball.json
 b2042a1156ff144e6c5611a0138991812d25c1dd data/delab/advancement/recipes/combat/netherite_dagger.json
 f463bd96f6df7ccdee734d8120ce2626d0c5e5d8 data/delab/advancement/recipes/combat/netherite_hammer.json
 028c6b2a9c6f7dfb5324c5a3e6f79b70610c30a6 data/delab/advancement/recipes/combat/netherite_spear.json
@@ -32,6 +33,7 @@ a5fcaf343fdd52fb37125255f1680b4d82e941c5 data/delab/recipe/golden_spear.json
 83a0b8eb31bc9690859dac76f3633e5a07592fcc data/delab/recipe/iron_dagger.json
 18b58c29987f32e5454a0a58fa5b5e48a4ffad9e data/delab/recipe/iron_hammer.json
 bea99adad5a0d0cba8f2b75ceda85f85e3f86ef7 data/delab/recipe/iron_spear.json
+e7408b8d83ca66b51fd601e05ac5013f5faf43b1 data/delab/recipe/mud_ball.json
 2fa4bd760a8458600a80ec144ebd7e35f60e1b10 data/delab/recipe/netherite_dagger.json
 5e5514f3804ba83c45baf76cb1ce0355a9287758 data/delab/recipe/netherite_hammer.json
 193fafa13ffa26bc826b5201a7d7cf7b1a2fbb85 data/delab/recipe/netherite_spear.json

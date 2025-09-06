@@ -14,6 +14,9 @@ import net.crocodil.delab.recipes.DelabRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ItemEntityRenderer;
+import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -92,6 +95,8 @@ public class Delab {
             event.accept(DelabItems.GOLDEN_SPEAR);
             event.accept(DelabItems.DIAMOND_SPEAR);
             event.accept(DelabItems.NETHERITE_SPEAR);
+
+            event.accept(DelabItems.MUD_BALL);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
@@ -116,6 +121,8 @@ public class Delab {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(DelabEntities.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
+            EntityRenderers.register(DelabEntities.MUD_BALL.get(), ThrownItemRenderer::new);
+
             event.enqueueWork(() -> {
                 ItemProperties.register(
                         DelabItems.WOODEN_SPEAR.get(),

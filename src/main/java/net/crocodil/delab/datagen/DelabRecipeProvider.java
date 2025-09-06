@@ -196,6 +196,11 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_adventure_upgrade_smithing_template", has(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE))
                 .save(out);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.MUD_BALL, 8)
+                .requires(Items.MUD)
+                .requires(DelabItems.ABOMINATION_DUST)
+                .unlockedBy("has_abomination_dust", has(DelabItems.ABOMINATION_DUST))
+                .save(out);
 
         AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
                 .addIngredient(Items.IRON_INGOT)
