@@ -1,21 +1,16 @@
 package net.crocodil.delab.datagen;
 
-import mezz.jei.api.constants.Tags;
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.datagen.builder.AlloysFurnaceRecipeBuilder;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -182,21 +177,31 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .save(out, Delab.MODID + ":netherite_spear");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DelabBlocks.ALLOYS_FURNACE)
-                .pattern("ABA")
-                .pattern("BCB")
+                .pattern("ACA")
+                .pattern("BBB")
                 .pattern("ABA")
                 .define('A', Items.COPPER_BLOCK)
                 .define('B', Items.STONE_BRICKS)
                 .define('C', Items.FURNACE)
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(out);
-        /*
-        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(Items.NETHERITE_INGOT)
-                .addIngredient(Items.COPPER_INGOT)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE, 2)
+                .pattern("ACA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.COPPER_INGOT)
+                .define('B', DelabTags.Items.ALLOYS_TIER_1)
+                .define('C',DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE)
+                .unlockedBy("has_adventure_upgrade_smithing_template", has(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE))
+                .save(out);
+
+
+        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
                 .addIngredient(Items.IRON_INGOT)
-                .addIngredient(Items.GOLD_INGOT)
+                .addIngredient(DelabItems.ABOMINATION_DUST)
+                .addIngredient(Items.SLIME_BALL)
                 .build(out);
 
-         */
     }
 }

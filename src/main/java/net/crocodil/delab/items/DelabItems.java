@@ -13,6 +13,15 @@ public class DelabItems
 
     public static final DeferredItem<Item> RECHARGE_CRYSTAL = ITEMS.register("recharge_crystal",
             ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ABOMINATION_DUST = ITEMS.register("abomination_dust",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ABOMINATION_INGOT = ITEMS.register("abomination_ingot",
+            ()-> new Item(new Item.Properties()));
+
+
+    public static final DeferredItem<Item> ADVENTURE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("adventure_upgrade_smithing_template",
+            DelabSmithingTemplateItem::createAdventureUpgradeTemplate);
+
     public  static final  DeferredItem<DaggerItem> WOODEN_DAGGER = ITEMS.register("wooden_dagger",
             () -> new DaggerItem(Tiers.WOOD, new DaggerItem.Properties().attributes(DaggerItem.createAttributes(Tiers.WOOD, 1, -2F))));
     public  static final  DeferredItem<DaggerItem> STONE_DAGGER = ITEMS.register("stone_dagger",

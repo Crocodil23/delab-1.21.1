@@ -1,0 +1,16 @@
+{
+  "type": "delab:alloys_furnace",
+  "ingredient_1": {
+    "item": "minecraft:iron_ingot"
+  },
+  "ingredient_2": {
+    "item": "delab:abomination_dust"
+  },
+  "ingredient_3": {
+    "item": "minecraft:slime_ball"
+  },
+  "result": {
+    "count": 1,
+    "id": "delab:abomination_ingot"
+  }
+}

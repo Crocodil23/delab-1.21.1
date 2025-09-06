@@ -18,6 +18,8 @@ public class DelabTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> ALLOYS_TIER_1 = createTag("alloys_tier_1");
+
         public static final TagKey<Item> DAGGER_ENCHANTABLE = createTag("enchantable/dagger");
         public static final TagKey<Item> HAMMER_ENCHANTABLE = createTag("enchantable/hammer");
         public static final TagKey<Item> MOB_BONUS_ENCHANTABLE = createTag("enchantable/mob_bonus");

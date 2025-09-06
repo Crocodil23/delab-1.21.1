@@ -5,8 +5,15 @@
     "author":"_Crocodil_",
 	
 	"creativetab.delab.delab_tab":"D.E.L.A.B.",
-	
+
+	"item.delab.abomination_dust": "Abomination Dust",
+	"item.delab.abomination_ingot": "Abomination Ingot",
     "item.delab.recharge_crystal": "Recharge Crystal (WIP)",
+
+	"item.delab.adventure_upgrade_smithing_template": "Smithing Template",
+	"upgrade.delab.adventure_upgrade": "Adventure Upgrade",
+	"item.delab.smithing_template.adventure_upgrade.applies_to": "Iron Equipment",
+	"item.delab.smithing_template.adventure_upgrade.ingredients": "Alloys Tier I",
 	
 	"item.delab.wooden_dagger": "Wooden Dagger",
 	"item.delab.stone_dagger": "Stone Dagger",

@@ -13,8 +13,8 @@
     }
   },
   "pattern": [
-    "ABA",
-    "BCB",
+    "ACA",
+    "BBB",
     "ABA"
   ],
   "result": {

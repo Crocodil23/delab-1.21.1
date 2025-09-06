@@ -1,14 +1,12 @@
 package net.crocodil.delab;
 
 import net.crocodil.delab.Enityes.DelabEntities;
-import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
 import net.crocodil.delab.blocks.DelabBlocks;
 
 import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
 import net.crocodil.delab.client.render.SpearItemRenderer;
 import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
-import net.crocodil.delab.gui.AlloysFurnace.AlloyFurnaceMenu;
 import net.crocodil.delab.gui.AlloysFurnace.AlloysFurnaceScreen;
 import net.crocodil.delab.gui.DelabMenuTypes;
 import net.crocodil.delab.items.DelabItems;
@@ -97,6 +95,10 @@ public class Delab {
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
+            event.accept(DelabItems.ABOMINATION_DUST);
+            event.accept(DelabItems.ABOMINATION_INGOT);
+
+            event.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
             event.accept(DelabItems.RECHARGE_CRYSTAL);
         }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)

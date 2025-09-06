@@ -8,7 +8,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -24,6 +23,10 @@ public class DelabCreativeTabs
                     .title(Component.translatable("creativetab.delab.delab_tab"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(DelabItems.ABOMINATION_DUST);
+                        output.accept(DelabItems.ABOMINATION_INGOT);
+                        output.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(DelabItems.RECHARGE_CRYSTAL);
 
                         output.accept(DelabItems.WOODEN_DAGGER);

@@ -25,6 +25,10 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        tag(DelabTags.Items.ALLOYS_TIER_1)
+                .add(DelabItems.ABOMINATION_INGOT.asItem());
+
         tag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .add(DelabItems.WOODEN_DAGGER.asItem())
                 .add(DelabItems.STONE_DAGGER.asItem())
