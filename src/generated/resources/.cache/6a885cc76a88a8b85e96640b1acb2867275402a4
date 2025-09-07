@@ -1,8 +1,8 @@
-// 1.21.1	2025-09-06T07:45:01.0511052	Tags for minecraft:item mod id delab
+// 1.21.1	2025-09-07T07:56:45.4862614	Tags for minecraft:item mod id delab
 1fbda7a6d3c1cfb276d650cd88f1b7b80138935b data/delab/tags/item/alloys_tier_1.json
 41db568a63c908bae748696c650d41965cbaa44e data/delab/tags/item/enchantable/crushing.json
 f59e7f1a66720c9feeff84c9c3ea05a3c3806fe6 data/delab/tags/item/enchantable/dagger.json
-6760b0d8efa7f5e7640f8054f3385535453ddbab data/delab/tags/item/enchantable/hammer.json
+bf031ade7e4e2db5341c25288ac446b74971ca04 data/delab/tags/item/enchantable/hammer.json
 84160f90840b50b4e4960dc04146a2cbd27687e3 data/delab/tags/item/enchantable/loyalty.json
 17df061b402bdb218e3b2609cccdc0a27aa32e22 data/delab/tags/item/enchantable/mob_bonus.json
 4f227d91f06ae13d0b25c76226a61d9060bd4df2 data/delab/tags/item/enchantable/spear.json

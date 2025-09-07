@@ -123,6 +123,15 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(out, Delab.MODID + ":netherite_hammer");
 
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(DelabItems.IRON_HAMMER.get()),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_HAMMER.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_hammer");
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_SPEAR)
                 .pattern("  A")
                 .pattern(" B ")
@@ -186,7 +195,7 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(out);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE, 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE, 2)
                 .pattern("ACA")
                 .pattern("ABA")
                 .pattern("AAA")

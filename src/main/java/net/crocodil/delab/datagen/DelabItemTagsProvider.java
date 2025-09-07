@@ -43,7 +43,8 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .add(DelabItems.IRON_HAMMER.asItem())
                 .add(DelabItems.GOLDEN_HAMMER.asItem())
                 .add(DelabItems.DIAMOND_HAMMER.asItem())
-                .add(DelabItems.NETHERITE_HAMMER.asItem());
+                .add(DelabItems.NETHERITE_HAMMER.asItem())
+                .add(DelabItems.ABOMINATION_HAMMER.asItem());
 
         tag(DelabTags.Items.SPEAR_ENCHANTABLE)
                 .add(DelabItems.WOODEN_SPEAR.asItem())

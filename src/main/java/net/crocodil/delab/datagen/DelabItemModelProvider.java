@@ -26,6 +26,7 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.GOLDEN_HAMMER.asItem());
         handheldItem(DelabItems.DIAMOND_HAMMER.asItem());
         handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
+        handheldItem(DelabItems.ABOMINATION_HAMMER.asItem());
 
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 

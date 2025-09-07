@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "delab:abomination_ingot"
+  },
+  "base": {
+    "item": "delab:iron_hammer"
+  },
+  "result": {
+    "count": 1,
+    "id": "delab:abomination_hammer"
+  },
+  "template": {
+    "item": "delab:adventure_upgrade_smithing_template"
+  }
+}

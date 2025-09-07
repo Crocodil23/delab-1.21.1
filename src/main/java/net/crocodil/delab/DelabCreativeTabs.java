@@ -42,6 +42,7 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.GOLDEN_HAMMER);
                         output.accept(DelabItems.DIAMOND_HAMMER);
                         output.accept(DelabItems.NETHERITE_HAMMER);
+                        output.accept(DelabItems.ABOMINATION_HAMMER);
 
                         output.accept(DelabItems.WOODEN_SPEAR);
                         output.accept(DelabItems.STONE_SPEAR);

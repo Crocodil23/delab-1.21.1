@@ -88,6 +88,7 @@ public class Delab {
             event.accept(DelabItems.GOLDEN_HAMMER);
             event.accept(DelabItems.DIAMOND_HAMMER);
             event.accept(DelabItems.NETHERITE_HAMMER);
+            event.accept(DelabItems.ABOMINATION_HAMMER);
 
             event.accept(DelabItems.WOODEN_SPEAR);
             event.accept(DelabItems.STONE_SPEAR);

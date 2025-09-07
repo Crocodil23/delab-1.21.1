@@ -1,6 +1,8 @@
 package net.crocodil.delab.items;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.items.Hammers.AbominationHammerItem;
+import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
@@ -50,6 +52,10 @@ public class DelabItems
     public  static final  DeferredItem<HammerItem> NETHERITE_HAMMER = ITEMS.register("netherite_hammer",
             () -> new HammerItem(Tiers.NETHERITE, new Item.Properties().fireResistant()
                     .attributes(HammerItem.createAttributes(Tiers.NETHERITE, 5, -3.0F))));
+
+    public  static final  DeferredItem<AbominationHammerItem> ABOMINATION_HAMMER = ITEMS.register("abomination_hammer",
+            () -> new AbominationHammerItem(Tiers.NETHERITE, new Item.Properties().fireResistant()
+                    .attributes(AbominationHammerItem.createAttributes(DelabToolTiers.ABOMINATION_INGOT, 5, -3.0F))));
 
     public  static final  DeferredItem<SpearItem> WOODEN_SPEAR = ITEMS.register("wooden_spear",
             () -> new SpearItem(Tiers.WOOD, new DaggerItem.Properties().attributes(SpearItem.createAttributes(Tiers.WOOD, 2, -2.6F))));

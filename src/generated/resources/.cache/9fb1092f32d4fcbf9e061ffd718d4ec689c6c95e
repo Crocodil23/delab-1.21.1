@@ -1,6 +1,6 @@
-// 1.21.1	2025-09-06T20:14:39.819833	Recipes
+// 1.21.1	2025-09-07T07:59:36.8255632	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
-19243c15c2eda585ae86da2e3dfbf31d0b034d4f data/delab/advancement/recipes/combat/adventure_upgrade_smithing_template.json
+b853601beec82c7975af19087579e4a8f94fffb4 data/delab/advancement/recipes/combat/abomination_hammer.json
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
 3dc4443a94f35d1d142b6e754544e4680494c068 data/delab/advancement/recipes/combat/diamond_hammer.json
 310295dace625497aeeb322993d96713b44d04e0 data/delab/advancement/recipes/combat/diamond_spear.json
@@ -20,8 +20,10 @@ ad0f05f6cd46955041911e28639ef46d10f2187f data/delab/advancement/recipes/combat/s
 084670e4599148743927812fecb3287749394325 data/delab/advancement/recipes/combat/wooden_dagger.json
 a8840ff4699cf9dbc8bb33ed6a4f5c9aceabe4a8 data/delab/advancement/recipes/combat/wooden_hammer.json
 3a042cf2ed08911041871bc1798f43dfe823ab46 data/delab/advancement/recipes/combat/wooden_spear.json
+19243c15c2eda585ae86da2e3dfbf31d0b034d4f data/delab/advancement/recipes/misc/adventure_upgrade_smithing_template.json
 528ae2a4f74459a89f029b603ca789d991b502d5 data/delab/advancement/recipes/misc/alloys_furnace.json
-68705a166ceba34111101db86d7e85fdb9d08946 data/delab/recipe/adventure_upgrade_smithing_template.json
+8f9591a45cf757ddcbbad2a245da1547663e09be data/delab/recipe/abomination_hammer.json
+17ce92190fbec0baa576efa8c2d4fda4cf232c2c data/delab/recipe/adventure_upgrade_smithing_template.json
 652a779ec698b135ea1aa65515c1487687b74058 data/delab/recipe/alloys/abomination_ingot.json
 8904af5d092cc620cdb86401207d30417e6ec5fd data/delab/recipe/alloys_furnace.json
 900f52f96e8b32b034369f17e964f4403fc1e928 data/delab/recipe/diamond_dagger.json

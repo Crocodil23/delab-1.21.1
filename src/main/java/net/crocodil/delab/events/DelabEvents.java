@@ -7,7 +7,8 @@ import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
-import net.crocodil.delab.items.HammerItem;
+import net.crocodil.delab.items.DelabItems;
+import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
@@ -171,8 +172,8 @@ public class DelabEvents {
             Entity direct = event.getSource().getDirectEntity();
             if ((direct instanceof Player player)) {
                 ItemStack spear = player.getMainHandItem();
-                TagKey<Item> daggerTag = DelabTags.Items.SPEAR_ENCHANTABLE;
-                if (spear.is(daggerTag) && player.isPassenger()) {
+                TagKey<Item> spearTag = DelabTags.Items.SPEAR_ENCHANTABLE;
+                if (spear.is(spearTag) && player.isPassenger()) {
                     int CSlvl = DelabEnchantmentHelper.getEnchantmentLvl(player.level(),
                             DelabEnchantments.CAVALRY_STRIKE,
                             spear);
@@ -186,4 +187,19 @@ public class DelabEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void HammerMudBonusEvent(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            Entity direct = event.getSource().getDirectEntity();
+            Entity entity = event.getEntity();
+            if ((direct instanceof Player player && entity instanceof LivingEntity living)) {
+                ItemStack hammer = player.getMainHandItem();
+                if (hammer.is(DelabItems.ABOMINATION_HAMMER) && living.hasEffect(DelabMobEffects.IN_MUD)) {
+                    float OrigDmg = event.getOriginalDamage();
+                    float NewDmg = OrigDmg + 2;
+                    event.setNewDamage(NewDmg);
+                }
+            }
+        }
+    }
 }

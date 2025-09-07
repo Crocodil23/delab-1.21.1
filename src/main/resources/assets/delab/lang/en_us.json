@@ -14,6 +14,8 @@
 	"upgrade.delab.adventure_upgrade": "Adventure Upgrade",
 	"item.delab.smithing_template.adventure_upgrade.applies_to": "Iron Equipment",
 	"item.delab.smithing_template.adventure_upgrade.ingredients": "Alloys Tier I",
+	"item.delab.smithing_template.adventure_upgrade.adventure_upgrade.base_slot_description": "Add iron armor, weapon or tool",
+	"item.delab.smithing_template.adventure_upgrade.additions_slot_description": "Add alloy Tier I",
 	
 	"item.delab.wooden_dagger": "Wooden Dagger",
 	"item.delab.stone_dagger": "Stone Dagger",
@@ -35,6 +37,7 @@
 	"item.delab.golden_hammer": "Golden Hammer",
 	"item.delab.diamond_hammer": "Diamond Hammer",
 	"item.delab.netherite_hammer": "Netherite Hammer",
+	"item.delab.abomination_hammer": "Abomination Hammer",
 
 	"item.delab.mud_ball": "Mudball",
 
