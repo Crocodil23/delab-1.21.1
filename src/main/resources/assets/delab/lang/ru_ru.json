@@ -38,6 +38,13 @@
 	"item.delab.diamond_hammer": "Алмазный молот",
 	"item.delab.netherite_hammer": "Незеритовый молот",
 
+	"item.delab.abomination_hammer": "Мерзостный молот",
+
+	"item.delab.abomination_helmet": "Мерзостный шлем",
+	"item.delab.abomination_chestplate": "Мерзостный нагрудник",
+	"item.delab.abomination_leggings": "Мерзостные поножи",
+	"item.delab.abomination_boots": "Мерзостные ботинки",
+
 	"item.delab.mud_ball": "Шарик грязи",
 
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",

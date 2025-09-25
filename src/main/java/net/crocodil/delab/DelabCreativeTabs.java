@@ -53,6 +53,10 @@ public class DelabCreativeTabs
 
                         output.accept(DelabItems.MUD_BALL);
 
+                        output.accept(DelabItems.ABOMINATION_HELMET);
+                        output.accept(DelabItems.ABOMINATION_CHESTPLATE);
+                        output.accept(DelabItems.ABOMINATION_LEGGINGS);
+
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                         output.accept(DelabBlocks.ALLOYS_FURNACE);
                     }).build());

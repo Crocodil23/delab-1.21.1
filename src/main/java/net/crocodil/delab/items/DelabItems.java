@@ -3,6 +3,7 @@ package net.crocodil.delab.items;
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.items.Hammers.AbominationHammerItem;
 import net.crocodil.delab.items.Hammers.HammerItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
@@ -83,6 +84,22 @@ public class DelabItems
             ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NETHERITE_SPEAR_INVENTORY = ITEMS.register("netherite_spear_inventory",
             ()-> new Item(new Item.Properties()));
+
+
+    public static final DeferredItem<ArmorItem> ABOMINATION_HELMET = ITEMS.register("abomination_helmet",
+            () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> ABOMINATION_CHESTPLATE = ITEMS.register("abomination_chestplate",
+            () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> ABOMINATION_LEGGINGS = ITEMS.register("abomination_leggings",
+            () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ABOMINATION_BOOTS = ITEMS.register("abomination_boots",
+            () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     public static void register(IEventBus bus)
     {

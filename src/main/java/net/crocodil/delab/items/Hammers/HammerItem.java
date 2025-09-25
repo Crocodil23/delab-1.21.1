@@ -197,6 +197,7 @@ public class HammerItem extends PickaxeItem {
         float base = super.getDestroySpeed(stack, state);
         return base * 0.70F;
     }
+
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
     {

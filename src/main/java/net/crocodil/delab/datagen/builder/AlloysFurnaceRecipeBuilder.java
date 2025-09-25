@@ -3,8 +3,6 @@ package net.crocodil.delab.datagen.builder;
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.recipes.alloysFurnace.AlloysFurnaceRecipe;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementRequirements;
-import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.core.NonNullList;

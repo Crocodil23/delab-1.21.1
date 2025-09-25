@@ -41,7 +41,7 @@ public class AbominationHammerItem extends HammerItem
                                 LivingEntity.class,aabb);
                         for (LivingEntity target : targets) {
                             if (target == player) continue;
-                            target.addEffect(new MobEffectInstance(DelabMobEffects.IN_MUD, 160, 0));
+                            DelabMobEffects.addMudInMudMobeEffect(target, player, 160);
                         }
                     }
                 }

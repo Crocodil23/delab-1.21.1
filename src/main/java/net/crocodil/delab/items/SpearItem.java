@@ -4,9 +4,7 @@ import net.crocodil.delab.Enityes.Spears.SpearMaterial;
 import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -23,9 +21,6 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.common.ItemAbilities;
-import net.neoforged.neoforge.common.ItemAbility;
 
 import java.util.List;
 

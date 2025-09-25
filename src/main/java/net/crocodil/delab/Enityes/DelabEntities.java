@@ -3,9 +3,9 @@ package net.crocodil.delab.Enityes;
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
 import net.minecraft.core.registries.Registries;
-import net.neoforged.bus.api.IEventBus;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;

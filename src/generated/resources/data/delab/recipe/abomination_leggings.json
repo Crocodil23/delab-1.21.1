@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "delab:abomination_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "delab:abomination_leggings"
+  },
+  "template": {
+    "item": "delab:adventure_upgrade_smithing_template"
+  }
+}

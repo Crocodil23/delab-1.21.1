@@ -1,6 +1,10 @@
-// 1.21.1	2025-09-07T07:59:36.8255632	Recipes
+// 1.21.1	2025-09-07T16:44:45.9157654	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
+f105e74642b396ae6bf45c65eb776687a77423e8 data/delab/advancement/recipes/combat/abomination_boots.json
+84f2a3f7a4b33d4d007153c834e3bb91bd54c178 data/delab/advancement/recipes/combat/abomination_chestplate.json
 b853601beec82c7975af19087579e4a8f94fffb4 data/delab/advancement/recipes/combat/abomination_hammer.json
+eba8aa1072e30a7670f010372a8068299b159c38 data/delab/advancement/recipes/combat/abomination_helmet.json
+6d93e9dd77fd820bb1b3a4710f3ceaf21d60194e data/delab/advancement/recipes/combat/abomination_leggings.json
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
 3dc4443a94f35d1d142b6e754544e4680494c068 data/delab/advancement/recipes/combat/diamond_hammer.json
 310295dace625497aeeb322993d96713b44d04e0 data/delab/advancement/recipes/combat/diamond_spear.json
@@ -22,7 +26,11 @@ a8840ff4699cf9dbc8bb33ed6a4f5c9aceabe4a8 data/delab/advancement/recipes/combat/w
 3a042cf2ed08911041871bc1798f43dfe823ab46 data/delab/advancement/recipes/combat/wooden_spear.json
 19243c15c2eda585ae86da2e3dfbf31d0b034d4f data/delab/advancement/recipes/misc/adventure_upgrade_smithing_template.json
 528ae2a4f74459a89f029b603ca789d991b502d5 data/delab/advancement/recipes/misc/alloys_furnace.json
+1e77433723b90a342a4461cc2007e39b569d3bcf data/delab/recipe/abomination_boots.json
+2d164ce28ebdcb359fa70a314d968b729664baac data/delab/recipe/abomination_chestplate.json
 8f9591a45cf757ddcbbad2a245da1547663e09be data/delab/recipe/abomination_hammer.json
+5a4865d8b125ad2f385089b5646d306cc32f44a1 data/delab/recipe/abomination_helmet.json
+d5812d7c0e61d3c910de09a3f476204b5dae8bb2 data/delab/recipe/abomination_leggings.json
 17ce92190fbec0baa576efa8c2d4fda4cf232c2c data/delab/recipe/adventure_upgrade_smithing_template.json
 652a779ec698b135ea1aa65515c1487687b74058 data/delab/recipe/alloys/abomination_ingot.json
 8904af5d092cc620cdb86401207d30417e6ec5fd data/delab/recipe/alloys_furnace.json

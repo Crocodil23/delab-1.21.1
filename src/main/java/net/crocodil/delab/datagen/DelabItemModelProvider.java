@@ -20,6 +20,11 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.ABOMINATION_INGOT.get());
         basicItem(DelabItems.MUD_BALL.get());
 
+        basicItem(DelabItems.ABOMINATION_HELMET.get());
+        basicItem(DelabItems.ABOMINATION_CHESTPLATE.get());
+        basicItem(DelabItems.ABOMINATION_LEGGINGS.get());
+        basicItem(DelabItems.ABOMINATION_BOOTS.get());
+
         handheldItem(DelabItems.WOODEN_HAMMER.asItem());
         handheldItem(DelabItems.STONE_HAMMER.asItem());
         handheldItem(DelabItems.IRON_HAMMER.asItem());

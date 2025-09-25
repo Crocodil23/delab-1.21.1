@@ -7,18 +7,18 @@ import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
+import net.crocodil.delab.items.DelabArmorMaterials;
 import net.crocodil.delab.items.DelabItems;
 import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -26,7 +26,10 @@ import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+
+
 
 @EventBusSubscriber(modid = Delab.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class DelabEvents {
@@ -202,4 +205,21 @@ public class DelabEvents {
             }
         }
     }
+    @SubscribeEvent
+    public static void ArmorDamageBonusEffect(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            Entity direct = event.getSource().getDirectEntity();
+            Entity entity = event.getEntity();
+            if ((direct instanceof Player player && entity instanceof LivingEntity)) {
+                ItemStack hammer = player.getMainHandItem();
+                if (hammer.is(DelabTags.Items.HAMMER_ENCHANTABLE) &&
+                        DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, player)) {
+                    float OrigDmg = event.getOriginalDamage();
+                    float NewDmg = OrigDmg + 0.5F;
+                    event.setNewDamage(NewDmg);
+                }
+            }
+        }
+    }
+
 }

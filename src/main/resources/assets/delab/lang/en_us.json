@@ -39,6 +39,11 @@
 	"item.delab.netherite_hammer": "Netherite Hammer",
 	"item.delab.abomination_hammer": "Abomination Hammer",
 
+	"item.delab.abomination_helmet": "Abomination helmet",
+	"item.delab.abomination_chestplate": "Abomination chestplate",
+	"item.delab.abomination_leggings": "Abomination leggins",
+	"item.delab.abomination_boots": "Abomination boots",
+
 	"item.delab.mud_ball": "Mudball",
 
 	"tooltip.delab.shift_down": "Press §eShift§r for more details",

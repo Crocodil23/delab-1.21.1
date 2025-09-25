@@ -1,15 +1,7 @@
 package net.crocodil.delab.Enityes.Spears;
 
-import com.google.common.collect.Maps;
-import net.crocodil.delab.Delab;
-import net.minecraft.Util;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
-
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Map;
 
 public enum SpearMaterial {
     WOODEN(0),

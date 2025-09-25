@@ -211,6 +211,40 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_abomination_dust", has(DelabItems.ABOMINATION_DUST))
                 .save(out);
 
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_HELMET),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_HELMET.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_helmet");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_CHESTPLATE),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_CHESTPLATE.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_chestplate");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_LEGGINGS),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_LEGGINGS.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_leggings");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_BOOTS),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_BOOTS.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_boots");
+
+
         AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
                 .addIngredient(Items.IRON_INGOT)
                 .addIngredient(DelabItems.ABOMINATION_DUST)

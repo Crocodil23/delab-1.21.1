@@ -1,14 +1,18 @@
 package net.crocodil.delab.effects;
 
 import net.crocodil.delab.Delab;
-
+import net.crocodil.delab.items.DelabArmorMaterials;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -41,5 +45,11 @@ public class DelabMobEffects
     public static void register(IEventBus bus)
     {
         DELAB_EFFECTS.register(bus);
+    }
+    public static void addMudInMudMobeEffect(LivingEntity living, LivingEntity source_living, int duration)
+    {
+        if (DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, source_living))
+            duration *= 1.5;
+        living.addEffect(new MobEffectInstance(DelabMobEffects.IN_MUD, duration));
     }
 }

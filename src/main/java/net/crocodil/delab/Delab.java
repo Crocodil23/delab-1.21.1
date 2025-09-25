@@ -1,44 +1,41 @@
 package net.crocodil.delab;
 
+import com.mojang.logging.LogUtils;
 import net.crocodil.delab.Enityes.DelabEntities;
 import net.crocodil.delab.blocks.DelabBlocks;
-
 import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
+import net.crocodil.delab.client.render.AbominationClientExtensions;
 import net.crocodil.delab.client.render.SpearItemRenderer;
 import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.gui.AlloysFurnace.AlloysFurnaceScreen;
 import net.crocodil.delab.gui.DelabMenuTypes;
+import net.crocodil.delab.items.DelabArmorMaterials;
 import net.crocodil.delab.items.DelabItems;
 import net.crocodil.delab.recipes.DelabRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.ItemEntityRenderer;
-import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Delab.MODID)
@@ -62,6 +59,7 @@ public class Delab {
         DelabSounds.register(modEventBus);
         DelabEntities.register(modEventBus);
         DelabRecipes.register(modEventBus);
+        DelabArmorMaterials.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -98,6 +96,12 @@ public class Delab {
             event.accept(DelabItems.NETHERITE_SPEAR);
 
             event.accept(DelabItems.MUD_BALL);
+
+            event.accept(DelabItems.ABOMINATION_HELMET);
+            event.accept(DelabItems.ABOMINATION_CHESTPLATE);
+            event.accept(DelabItems.ABOMINATION_LEGGINGS);
+            event.accept(DelabItems.ABOMINATION_BOOTS);
+
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
@@ -197,6 +201,7 @@ public class Delab {
                 );
             });
 
+
         }
         @SubscribeEvent
         public static void onClientExtensions(RegisterClientExtensionsEvent event) {
@@ -210,6 +215,13 @@ public class Delab {
                 }
             }, DelabItems.WOODEN_SPEAR, DelabItems.STONE_SPEAR, DelabItems.IRON_SPEAR,
                     DelabItems.GOLDEN_SPEAR, DelabItems.DIAMOND_SPEAR, DelabItems.NETHERITE_SPEAR);
+
+            event.registerItem(new AbominationClientExtensions(),
+                    DelabItems.ABOMINATION_CHESTPLATE,
+                    DelabItems.ABOMINATION_HELMET,
+                    DelabItems.ABOMINATION_LEGGINGS,
+                    DelabItems.ABOMINATION_BOOTS);
+
         }
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
