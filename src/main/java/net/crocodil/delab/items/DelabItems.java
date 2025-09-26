@@ -4,6 +4,7 @@ import net.crocodil.delab.Delab;
 import net.crocodil.delab.items.Hammers.AbominationHammerItem;
 import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
@@ -85,6 +86,8 @@ public class DelabItems
     public static final DeferredItem<Item> NETHERITE_SPEAR_INVENTORY = ITEMS.register("netherite_spear_inventory",
             ()-> new Item(new Item.Properties()));
 
+    public  static final DeferredItem<TieredBowItem> ABOMINATION_BOW = ITEMS.register("abomination_bow",
+            ()-> new TieredBowItem(new Item.Properties(), DelabToolTiers.ABOMINATION_INGOT));
 
     public static final DeferredItem<ArmorItem> ABOMINATION_HELMET = ITEMS.register("abomination_helmet",
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.HELMET,

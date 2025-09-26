@@ -18,7 +18,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -218,6 +220,25 @@ public class DelabEvents {
                     float NewDmg = OrigDmg + 0.5F;
                     event.setNewDamage(NewDmg);
                 }
+            }
+        }
+    }
+    @SubscribeEvent
+    public static void AbominationBowDamageBonus(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            Entity direct = event.getSource().getDirectEntity();
+            LivingEntity living = event.getEntity();
+            if ((direct instanceof AbstractArrow arrow)) {
+                if(arrow.getOwner() instanceof LivingEntity owner)
+                {
+                    ItemStack bow = owner.getMainHandItem();
+                    if (bow.is(DelabItems.ABOMINATION_BOW) && living.hasEffect(DelabMobEffects.IN_MUD)) {
+                        float OrigDmg = event.getOriginalDamage();
+                        float NewDmg = OrigDmg + 0.5F;
+                        event.setNewDamage(1000);
+                    }
+                }
+
             }
         }
     }

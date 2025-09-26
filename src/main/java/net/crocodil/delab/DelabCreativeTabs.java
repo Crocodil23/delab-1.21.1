@@ -51,11 +51,14 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.DIAMOND_SPEAR);
                         output.accept(DelabItems.NETHERITE_SPEAR);
 
-                        output.accept(DelabItems.MUD_BALL);
-
                         output.accept(DelabItems.ABOMINATION_HELMET);
                         output.accept(DelabItems.ABOMINATION_CHESTPLATE);
                         output.accept(DelabItems.ABOMINATION_LEGGINGS);
+                        output.accept(DelabItems.ABOMINATION_BOOTS);
+
+                        output.accept(DelabItems.MUD_BALL);
+                        output.accept(DelabItems.ABOMINATION_BOW);
+
 
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                         output.accept(DelabBlocks.ALLOYS_FURNACE);

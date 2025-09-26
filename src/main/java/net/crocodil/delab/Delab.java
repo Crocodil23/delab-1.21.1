@@ -11,6 +11,7 @@ import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.gui.AlloysFurnace.AlloysFurnaceScreen;
 import net.crocodil.delab.gui.DelabMenuTypes;
 import net.crocodil.delab.items.DelabArmorMaterials;
+import net.crocodil.delab.items.DelabItemProperties;
 import net.crocodil.delab.items.DelabItems;
 import net.crocodil.delab.recipes.DelabRecipes;
 import net.minecraft.client.Minecraft;
@@ -95,12 +96,13 @@ public class Delab {
             event.accept(DelabItems.DIAMOND_SPEAR);
             event.accept(DelabItems.NETHERITE_SPEAR);
 
-            event.accept(DelabItems.MUD_BALL);
-
             event.accept(DelabItems.ABOMINATION_HELMET);
             event.accept(DelabItems.ABOMINATION_CHESTPLATE);
             event.accept(DelabItems.ABOMINATION_LEGGINGS);
             event.accept(DelabItems.ABOMINATION_BOOTS);
+
+            event.accept(DelabItems.MUD_BALL);
+            event.accept(DelabItems.ABOMINATION_BOW);
 
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
@@ -127,79 +129,7 @@ public class Delab {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(DelabEntities.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
             EntityRenderers.register(DelabEntities.MUD_BALL.get(), ThrownItemRenderer::new);
-
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.WOODEN_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.STONE_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.IRON_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.GOLDEN_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.DIAMOND_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
-            event.enqueueWork(() -> {
-                ItemProperties.register(
-                        DelabItems.NETHERITE_SPEAR.get(),
-                        ResourceLocation.withDefaultNamespace("throwing"),
-                        (stack, level, entity, seed) -> {
-                            if (entity != null && entity.isUsingItem() && entity.getUseItem() == stack) {
-                                return 1.0F;
-                            }
-                            return 0.0F;
-                        }
-                );
-            });
+            DelabItemProperties.CreateCustomProperties();
 
 
         }
