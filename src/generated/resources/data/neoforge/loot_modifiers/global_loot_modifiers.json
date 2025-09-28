@@ -1,0 +1,10 @@
+{
+  "entries": [
+    "delab:adventure_upgrade_smithing_template_from_stray",
+    "delab:adventure_upgrade_smithing_template_from_bogged",
+    "delab:abomination_dust_from_bogged",
+    "delab:adventure_upgrade_smithing_template_from_drowned",
+    "delab:adventure_upgrade_smithing_template_from_husk"
+  ],
+  "replace": false
+}

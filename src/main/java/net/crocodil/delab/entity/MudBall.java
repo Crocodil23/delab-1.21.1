@@ -1,11 +1,10 @@
-package net.crocodil.delab.Enityes;
+package net.crocodil.delab.entity;
 
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,11 +21,11 @@ public class MudBall extends ThrowableItemProjectile {
     }
 
     public MudBall(Level level, LivingEntity shooter) {
-        super(DelabEntities.MUD_BALL.get(), shooter, level);
+        super(DelabEntityTypes.MUD_BALL.get(), shooter, level);
     }
 
     public MudBall(Level level, double x, double y, double z) {
-        super(DelabEntities.MUD_BALL.get(), x, y, z, level);
+        super(DelabEntityTypes.MUD_BALL.get(), x, y, z, level);
     }
 
     protected Item getDefaultItem() {

@@ -1,6 +1,6 @@
 package net.crocodil.delab.items;
 
-import net.crocodil.delab.Enityes.MudBall;
+import net.crocodil.delab.entity.MudBall;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
 import net.minecraft.sounds.SoundEvents;

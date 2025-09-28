@@ -1,13 +1,12 @@
 package net.crocodil.delab.items;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.items.Hammers.AbominationHammerItem;
 import net.crocodil.delab.items.Hammers.HammerItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -104,6 +103,9 @@ public class DelabItems
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
+    public static final DeferredItem<Item> MUDAUR_SPAWN_EGG = ITEMS.register("mudaur_spawn_egg",
+            () -> new DeferredSpawnEggItem(DelabEntityTypes.MUDAUR, 0x874b0f, 7969893,
+                    new Item.Properties()));
     public static void register(IEventBus bus)
     {
         ITEMS.register(bus);

@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-07T07:56:45.4862614	Tags for minecraft:item mod id delab
+// 1.21.1	2025-09-28T12:51:29.6408593	Tags for minecraft:item mod id delab
 1fbda7a6d3c1cfb276d650cd88f1b7b80138935b data/delab/tags/item/alloys_tier_1.json
 41db568a63c908bae748696c650d41965cbaa44e data/delab/tags/item/enchantable/crushing.json
 f59e7f1a66720c9feeff84c9c3ea05a3c3806fe6 data/delab/tags/item/enchantable/dagger.json
@@ -6,7 +6,12 @@ bf031ade7e4e2db5341c25288ac446b74971ca04 data/delab/tags/item/enchantable/hammer
 84160f90840b50b4e4960dc04146a2cbd27687e3 data/delab/tags/item/enchantable/loyalty.json
 17df061b402bdb218e3b2609cccdc0a27aa32e22 data/delab/tags/item/enchantable/mob_bonus.json
 4f227d91f06ae13d0b25c76226a61d9060bd4df2 data/delab/tags/item/enchantable/spear.json
+2d14791321815299ab0dba800a403e2a0a703a0e data/minecraft/tags/item/chest_armor.json
 872cb1589863a26ede124f6cc3a0a9fa3dbd5a1c data/minecraft/tags/item/enchantable/durability.json
 e8cbf6fccc4df9af169671060c1d3dbb1c4d37d9 data/minecraft/tags/item/enchantable/mining.json
 e8cbf6fccc4df9af169671060c1d3dbb1c4d37d9 data/minecraft/tags/item/enchantable/mining_loot.json
 872cb1589863a26ede124f6cc3a0a9fa3dbd5a1c data/minecraft/tags/item/enchantable/weapon.json
+8ecef93b770912f9123ff873fc1640e23e239611 data/minecraft/tags/item/foot_armor.json
+eeeba3dfcf364314bf76e7da20eb47593c1bd42a data/minecraft/tags/item/head_armor.json
+f3188ebdb42116a15b9380d4d8725229649cb372 data/minecraft/tags/item/leg_armor.json
+dceb5b98de09005476540c089ce678fa5d6838fe data/minecraft/tags/item/trimmable_armor.json

@@ -1,7 +1,7 @@
 package net.crocodil.delab.items;
 
-import net.crocodil.delab.Enityes.Spears.SpearMaterial;
-import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
+import net.crocodil.delab.entity.Spears.SpearMaterial;
+import net.crocodil.delab.entity.Spears.ThrowingSpear;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
 import net.minecraft.client.gui.screens.Screen;

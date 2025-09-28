@@ -18,7 +18,6 @@ import java.util.HashMap;
 public class DelabEnchantmentHelper
 {
 
-    public static HashMap<String, ItemStack> cachedPlayerHeadsMap = new HashMap<>();
     public static int getEnchantmentLvl(Level level, ResourceKey<Enchantment> enchantment, ItemStack stack)
     {
         Registry<Enchantment> enchRegistry = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT);

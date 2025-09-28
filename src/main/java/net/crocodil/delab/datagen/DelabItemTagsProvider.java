@@ -81,5 +81,19 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
         tag(DelabTags.Items.LOYALTY_ENCHANTABLE)
                 .addTag(DelabTags.Items.SPEAR_ENCHANTABLE)
                 .add(Items.TRIDENT);
+        tag(ItemTags.HEAD_ARMOR)
+                .add(DelabItems.ABOMINATION_HELMET.get());
+        tag(ItemTags.CHEST_ARMOR)
+                .add(DelabItems.ABOMINATION_CHESTPLATE.get());
+        tag(ItemTags.LEG_ARMOR)
+                .add(DelabItems.ABOMINATION_LEGGINGS.get());
+        tag(ItemTags.FOOT_ARMOR)
+                .add(DelabItems.ABOMINATION_BOOTS.get());
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .remove(DelabItems.ABOMINATION_BOOTS.get())
+                .remove(DelabItems.ABOMINATION_CHESTPLATE.get())
+                .remove(DelabItems.ABOMINATION_LEGGINGS.get())
+                .remove(DelabItems.ABOMINATION_HELMET.get());
+
     }
 }

@@ -1,19 +1,16 @@
 package net.crocodil.delab.datagen;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.datagen.loot.DelabLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 @SuppressWarnings("unused")
 @EventBusSubscriber(modid = Delab.MODID, bus = EventBusSubscriber.Bus.MOD)
@@ -31,9 +28,7 @@ public class DelabDataGenerators
 
         BlockTagsProvider blockTags = new DelabBlockTagProvider(out, lookupProvider, existingFileHelper);
 
-        gen.addProvider(event.includeServer(), new LootTableProvider(out, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(DelabLootTableProvider::new,
-                        LootContextParamSets.BLOCK)), lookupProvider));
+        gen.addProvider(event.includeServer(), new DelabLootTableProvider(out, lookupProvider));
         gen.addProvider(event.includeServer(), new DelabDataPackProvider(out, lookupProvider));
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(), new DelabItemTagsProvider(out,
@@ -41,6 +36,7 @@ public class DelabDataGenerators
         gen.addProvider(event.includeServer(), new DelabEnchantmentTagsprovider(out, lookupProvider, existingFileHelper));
         gen.addProvider(event.includeServer(), new DelabRecipeProvider(out, lookupProvider));
         gen.addProvider(event.includeServer(),new DelabDataMaProvider(out, lookupProvider));
+        gen.addProvider(event.includeServer(), new DelabGlobalLootModifierProvider(out, lookupProvider));
 
 
         gen.addProvider(event.includeClient(), new DelabBlockStateProvider(out, existingFileHelper));

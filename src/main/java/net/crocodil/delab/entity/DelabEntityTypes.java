@@ -1,29 +1,35 @@
-package net.crocodil.delab.Enityes;
+package net.crocodil.delab.entity;
 
 import net.crocodil.delab.Delab;
-import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
+import net.crocodil.delab.entity.Spears.ThrowingSpear;
+import net.minecraft.client.renderer.entity.ZombieRenderer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.monster.Zombie;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
 
-public class DelabEntities {
-    public static final DeferredRegister<EntityType<?>> ENTITIES =
+public class DelabEntityTypes {
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(Registries.ENTITY_TYPE, Delab.MODID);
 
     public static final Supplier<EntityType<ThrowingSpear>> THROWING_SPEAR =
-            ENTITIES.register("throwing_spear", () -> EntityType.Builder.<ThrowingSpear>of(ThrowingSpear::new, MobCategory.MISC)
+            ENTITY_TYPES.register("throwing_spear", () -> EntityType.Builder.<ThrowingSpear>of(ThrowingSpear::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("throwing_spear"));
     public static final Supplier<EntityType<MudBall>> MUD_BALL =
-            ENTITIES.register("mud_ball", () -> EntityType.Builder.<MudBall>of(MudBall::new, MobCategory.MISC)
+            ENTITY_TYPES.register("mud_ball", () -> EntityType.Builder.<MudBall>of(MudBall::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("mud_ball"));
+
+    public static final Supplier<EntityType<Mudaur>> MUDAUR =
+            ENTITY_TYPES.register("mudaur", () -> EntityType.Builder.of(Mudaur::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.95F).eyeHeight(1.74F).build("mudaur"));
 
 
     public static void register(IEventBus bus) {
-        ENTITIES.register(bus);
+        ENTITY_TYPES.register(bus);
     }
 }

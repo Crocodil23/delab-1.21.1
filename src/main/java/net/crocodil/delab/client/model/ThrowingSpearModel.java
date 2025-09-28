@@ -4,7 +4,7 @@ package net.crocodil.delab.client.model;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.crocodil.delab.Delab;
-import net.crocodil.delab.Enityes.Spears.ThrowingSpear;
+import net.crocodil.delab.entity.Spears.ThrowingSpear;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

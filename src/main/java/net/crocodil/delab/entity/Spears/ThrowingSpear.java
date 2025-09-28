@@ -1,6 +1,6 @@
-package net.crocodil.delab.Enityes.Spears;
+package net.crocodil.delab.entity.Spears;
 
-import net.crocodil.delab.Enityes.DelabEntities;
+import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -39,14 +39,14 @@ public class ThrowingSpear extends AbstractArrow {
 
     }
     public ThrowingSpear(Level level, LivingEntity shooter, ItemStack pickupItemStack, float dmg, SpearMaterial material) {
-        super(DelabEntities.THROWING_SPEAR.get(), shooter, level, pickupItemStack, (ItemStack)null);
+        super(DelabEntityTypes.THROWING_SPEAR.get(), shooter, level, pickupItemStack, (ItemStack)null);
         this.entityData.set(ID_LOYALTY, this.getLoyaltyFromItem(pickupItemStack));
         this.entityData.set(ID_FOIL, pickupItemStack.hasFoil());
         setBaseDamage(dmg);
         setMaterial(material);
     }
     public ThrowingSpear(double x, double y, double z, Level level, ItemStack pickupItemStack, float dmg, SpearMaterial material) {
-        super(DelabEntities.THROWING_SPEAR.get(), x, y, z, level, pickupItemStack, pickupItemStack);
+        super(DelabEntityTypes.THROWING_SPEAR.get(), x, y, z, level, pickupItemStack, pickupItemStack);
         setBaseDamage(dmg);
         setMaterial(material);
         this.entityData.set(ID_LOYALTY, this.getLoyaltyFromItem(pickupItemStack));

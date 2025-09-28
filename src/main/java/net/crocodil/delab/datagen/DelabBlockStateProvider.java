@@ -30,16 +30,6 @@ public class DelabBlockStateProvider extends BlockStateProvider {
                 getTexture(name +"_top")
 
         ));
-        /*
-        name = getBlockName(DelabBlocks.ALLOYS_FURNACE.get());
-        horizontalBlock(DelabBlocks.ALLOYS_FURNACE.get(), models().orientable(
-                name,
-                getTexture(name +"_side"),
-                getTexture(name +"_front"),
-                getTexture(name +"_top")
-
-        ));
-        */
         createFurnace(DelabBlocks.ALLOYS_FURNACE.get());
 
     }

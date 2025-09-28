@@ -1,10 +1,11 @@
 package net.crocodil.delab;
 
 import com.mojang.logging.LogUtils;
-import net.crocodil.delab.Enityes.DelabEntities;
+import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
 import net.crocodil.delab.client.render.AbominationClientExtensions;
+import net.crocodil.delab.client.render.MudaurRenderer;
 import net.crocodil.delab.client.render.SpearItemRenderer;
 import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
@@ -13,13 +14,12 @@ import net.crocodil.delab.gui.DelabMenuTypes;
 import net.crocodil.delab.items.DelabArmorMaterials;
 import net.crocodil.delab.items.DelabItemProperties;
 import net.crocodil.delab.items.DelabItems;
+import net.crocodil.delab.loot.DelabLootModifiers;
 import net.crocodil.delab.recipes.DelabRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -58,9 +58,10 @@ public class Delab {
         DelabMenuTypes.register(modEventBus);
         DelabMobEffects.register(modEventBus);
         DelabSounds.register(modEventBus);
-        DelabEntities.register(modEventBus);
+        DelabEntityTypes.register(modEventBus);
         DelabRecipes.register(modEventBus);
         DelabArmorMaterials.register(modEventBus);
+        DelabLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -117,6 +118,10 @@ public class Delab {
         {
             event.accept(DelabBlocks.SEA_WORKSHOP);
         }
+        if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
+        {
+            event.accept(DelabItems.MUDAUR_SPAWN_EGG);
+        }
     }
 
     @SubscribeEvent
@@ -127,8 +132,11 @@ public class Delab {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(DelabEntities.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
-            EntityRenderers.register(DelabEntities.MUD_BALL.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.MUD_BALL.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.MUDAUR.get(), MudaurRenderer::new);
+
+
             DelabItemProperties.CreateCustomProperties();
 
 

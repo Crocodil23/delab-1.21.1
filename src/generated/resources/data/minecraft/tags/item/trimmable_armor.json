@@ -1,0 +1,9 @@
+{
+  "remove": [
+    "delab:abomination_boots",
+    "delab:abomination_chestplate",
+    "delab:abomination_leggings",
+    "delab:abomination_helmet"
+  ],
+  "values": []
+}

@@ -33,6 +33,8 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
         handheldItem(DelabItems.ABOMINATION_HAMMER.asItem());
 
+        withExistingParent(DelabItems.MUDAUR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 
 

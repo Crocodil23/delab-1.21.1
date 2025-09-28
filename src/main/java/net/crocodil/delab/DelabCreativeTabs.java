@@ -62,6 +62,8 @@ public class DelabCreativeTabs
 
                         output.accept(DelabBlocks.SEA_WORKSHOP);
                         output.accept(DelabBlocks.ALLOYS_FURNACE);
+
+                        output.accept(DelabItems.MUDAUR_SPAWN_EGG);
                     }).build());
 
 

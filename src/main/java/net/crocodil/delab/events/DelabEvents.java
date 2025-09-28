@@ -7,22 +7,31 @@ import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
+import net.crocodil.delab.entity.DelabEntityTypes;
+import net.crocodil.delab.entity.Mudaur;
 import net.crocodil.delab.items.DelabArmorMaterials;
 import net.crocodil.delab.items.DelabItems;
 import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
@@ -193,17 +202,19 @@ public class DelabEvents {
     }
 
     @SubscribeEvent
-    public static void HammerMudBonusEvent(LivingDamageEvent.Pre event) {
+    public static void MudDamageBonusEvent(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
             Entity direct = event.getSource().getDirectEntity();
-            Entity entity = event.getEntity();
-            if ((direct instanceof Player player && entity instanceof LivingEntity living)) {
-                ItemStack hammer = player.getMainHandItem();
-                if (hammer.is(DelabItems.ABOMINATION_HAMMER) && living.hasEffect(DelabMobEffects.IN_MUD)) {
-                    float OrigDmg = event.getOriginalDamage();
-                    float NewDmg = OrigDmg + 2;
-                    event.setNewDamage(NewDmg);
-                }
+            LivingEntity living = event.getEntity();
+            if ((direct instanceof LivingEntity direct_living)
+                    && living.hasEffect(DelabMobEffects.IN_MUD)) {
+                ItemStack hammer = direct_living.getMainHandItem();
+                float NewDmg = event.getOriginalDamage();
+                if (hammer.is(DelabItems.ABOMINATION_HAMMER))
+                    NewDmg +=2;
+                else if(direct_living instanceof Mudaur)
+                    NewDmg += 1;
+                event.setNewDamage(NewDmg);
             }
         }
     }
@@ -211,11 +222,10 @@ public class DelabEvents {
     public static void ArmorDamageBonusEffect(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
             Entity direct = event.getSource().getDirectEntity();
-            Entity entity = event.getEntity();
-            if ((direct instanceof Player player && entity instanceof LivingEntity)) {
-                ItemStack hammer = player.getMainHandItem();
+            if ((direct instanceof LivingEntity direct_living)) {
+                ItemStack hammer = direct_living.getMainHandItem();
                 if (hammer.is(DelabTags.Items.HAMMER_ENCHANTABLE) &&
-                        DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, player)) {
+                        DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, direct_living)) {
                     float OrigDmg = event.getOriginalDamage();
                     float NewDmg = OrigDmg + 0.5F;
                     event.setNewDamage(NewDmg);
@@ -234,12 +244,47 @@ public class DelabEvents {
                     ItemStack bow = owner.getMainHandItem();
                     if (bow.is(DelabItems.ABOMINATION_BOW) && living.hasEffect(DelabMobEffects.IN_MUD)) {
                         float OrigDmg = event.getOriginalDamage();
-                        float NewDmg = OrigDmg + 0.5F;
-                        event.setNewDamage(1000);
+                        float NewDmg = OrigDmg + 2.0F;
+                        event.setNewDamage(NewDmg);
                     }
                 }
 
             }
+        }
+    }
+    @SubscribeEvent
+    public static void mudaurSpawn(EntityJoinLevelEvent event) {
+        Level level = event.getLevel();
+        if (level.isClientSide()) return;
+
+        var entity = event.getEntity();
+
+        if (!(entity instanceof Zombie)) return;
+
+        if (entity.getType() == DelabEntityTypes.MUDAUR.get()) return;
+        if (!(level instanceof ServerLevel serverLevel)) return;
+
+        BlockPos pos = entity.blockPosition();
+        if (!level.getBiome(pos).is(Tags.Biomes.IS_SWAMP)) return;
+        if (entity.tickCount > 0) return;
+
+        if (serverLevel.getRandom().nextFloat() < 0.8f) {
+            event.setCanceled(true);
+
+            Mob mudaur = DelabEntityTypes.MUDAUR.get().create(serverLevel);
+
+            if (mudaur == null) return;
+
+            mudaur.moveTo(entity.getX(), entity.getY(), entity.getZ(),
+                    entity.getYRot(), entity.getXRot());
+
+            mudaur.finalizeSpawn(serverLevel,
+                    serverLevel.getCurrentDifficultyAt(mudaur.blockPosition()),
+                    MobSpawnType.NATURAL,
+                    null
+            );
+
+            serverLevel.addFreshEntity(mudaur);
         }
     }
 
