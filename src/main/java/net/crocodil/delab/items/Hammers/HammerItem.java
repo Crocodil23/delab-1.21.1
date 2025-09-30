@@ -148,7 +148,6 @@ public class HammerItem extends PickaxeItem {
                             {
                                 BlockPos tmp = new BlockPos(pos.getX() + x, pos.getY(), pos.getZ() + z);
                                 BlockState blockState = level.getBlockState(tmp);
-                                System.out.println(blockState);
                                 if(!blockState.isAir())
                                 {
                                     QuakeParticle(level, blockState, tmp);
