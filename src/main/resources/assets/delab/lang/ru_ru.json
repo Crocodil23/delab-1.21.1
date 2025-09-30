@@ -48,10 +48,17 @@
 	"item.delab.mud_ball": "Шарик грязи",
 	"item.delab.abomination_bow": "Мерзостный лук",
 
+	"item.delab.mudaur_spawn_egg": "Яйцо призыва грязетавра",
+
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
+	"tooltip.delab.ctrl_down": "Зажмите §aCtrl§r чтобы узнать способность",
 	"tooltip.delab.dagger_tooltip":"Может наносить удары во второй руке, если в обоих руках кинжалы",
 	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
 	"tooltip.delab.spear_tooltip": "Можно метать",
+	"tooltip.delab.tiered_bow_tooltip": "Урон стрел повышен на %d%%",
+	"tooltip.delab.abomination_armor_tooltip": "При полном комплекте:\n+0.5 урона молотам\nКогда на цели эффект \"В грязи\" его время действия увеличивается 50%",
+	"tooltip.delab.abomination_hammer_tooltip": "Удар по земел также накладывает эффект  \"В грязи\" effect\nЕсди на цели есть эффект \"В грязи\"?, то урон увеличивается на 2",
+	"tooltip.delab.abomination_bow_tooltip": "Есди на цели есть эффект \"В грязи\", то урон увеличивается на 2",
 
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
 	"block.delab.alloys_furnace": "Печь для сплавов",
@@ -65,6 +72,7 @@
 	"enchantment.delab.head_hunter": "Охотник за головами",
 
 	"entity.delab.thrown_spear":"Копье",
+	"entity.delab.mudaur":"Грязетавр",
 
 	"effect.delab.shadow_strike": "Теневой удар",
 	"effect.delab.in_mud": "В грязи",

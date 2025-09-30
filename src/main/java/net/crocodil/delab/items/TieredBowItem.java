@@ -1,5 +1,7 @@
 package net.crocodil.delab.items;
 
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -51,10 +53,20 @@ public class TieredBowItem extends BowItem {
         if(tier == DelabToolTiers.ABOMINATION_INGOT)
             return 0.25F;
         return  0.0F;
-
     }
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {
         return this.tier.getRepairIngredient().test(repair) || super.isValidRepairItem(toRepair, repair);
+    }
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+    {
+        if(!Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.delab.shift_down"));
+        } else {
+            int bonus = (int) ((this.getTierBowDamageBonus() / 3) * 100);
+            tooltipComponents.add(Component.translatable("tooltip.delab.tiered_bow_tooltip", bonus));
+        }
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 
 }

@@ -4,11 +4,15 @@ import net.crocodil.delab.Delab;
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.items.Hammers.AbominationHammerItem;
 import net.crocodil.delab.items.Hammers.HammerItem;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class DelabItems
 {
@@ -55,8 +59,20 @@ public class DelabItems
                     .attributes(HammerItem.createAttributes(Tiers.NETHERITE, 5, -3.0F))));
 
     public  static final  DeferredItem<AbominationHammerItem> ABOMINATION_HAMMER = ITEMS.register("abomination_hammer",
-            () -> new AbominationHammerItem(Tiers.NETHERITE, new Item.Properties().fireResistant()
-                    .attributes(AbominationHammerItem.createAttributes(DelabToolTiers.ABOMINATION_INGOT, 5, -3.0F))));
+            () -> new AbominationHammerItem(DelabToolTiers.ABOMINATION_INGOT, new Item.Properties().fireResistant()
+                    .attributes(AbominationHammerItem.createAttributes(DelabToolTiers.ABOMINATION_INGOT, 5, -3.0F)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_hammer_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public  static final  DeferredItem<SpearItem> WOODEN_SPEAR = ITEMS.register("wooden_spear",
             () -> new SpearItem(Tiers.WOOD, new DaggerItem.Properties().attributes(SpearItem.createAttributes(Tiers.WOOD, 2, -2.6F))));
@@ -86,22 +102,81 @@ public class DelabItems
             ()-> new Item(new Item.Properties()));
 
     public  static final DeferredItem<TieredBowItem> ABOMINATION_BOW = ITEMS.register("abomination_bow",
-            ()-> new TieredBowItem(new Item.Properties(), DelabToolTiers.ABOMINATION_INGOT));
+            ()-> new TieredBowItem(new Item.Properties(), DelabToolTiers.ABOMINATION_INGOT){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_bow_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<ArmorItem> ABOMINATION_HELMET = ITEMS.register("abomination_helmet",
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<ArmorItem> ABOMINATION_CHESTPLATE = ITEMS.register("abomination_chestplate",
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<ArmorItem> ABOMINATION_LEGGINGS = ITEMS.register("abomination_leggings",
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
     public static final DeferredItem<ArmorItem> ABOMINATION_BOOTS = ITEMS.register("abomination_boots",
             () -> new ArmorItem(DelabArmorMaterials.ABOMINATION, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.abomination_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> MUDAUR_SPAWN_EGG = ITEMS.register("mudaur_spawn_egg",
             () -> new DeferredSpawnEggItem(DelabEntityTypes.MUDAUR, 0x874b0f, 7969893,
