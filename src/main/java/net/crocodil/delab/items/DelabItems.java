@@ -25,6 +25,14 @@ public class DelabItems
     public static final DeferredItem<Item> ABOMINATION_INGOT = ITEMS.register("abomination_ingot",
             ()-> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> FROZEN_FLESH = ITEMS.register("frozen_flesh",
+            ()-> new Item(new Item.Properties().food(DelabFoodProperties.FROZEN_FLESH)));
+
+    public static final DeferredItem<Item> FRESH_FLESH = ITEMS.register("fresh_flesh",
+            ()-> new Item(new Item.Properties().food(DelabFoodProperties.FRESH_FLESH)));
+
+
+
     public static final DeferredItem<MudBallItem> MUD_BALL = ITEMS.register("mud_ball",
             ()-> new MudBallItem(new Item.Properties().stacksTo(16)));
 

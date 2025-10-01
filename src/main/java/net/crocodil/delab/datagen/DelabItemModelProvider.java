@@ -18,6 +18,8 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.get());
         basicItem(DelabItems.ABOMINATION_DUST.get());
         basicItem(DelabItems.ABOMINATION_INGOT.get());
+        basicItem(DelabItems.FROZEN_FLESH.get());
+        basicItem(DelabItems.FRESH_FLESH.get());
         basicItem(DelabItems.MUD_BALL.get());
 
         basicItem(DelabItems.ABOMINATION_HELMET.get());
@@ -37,6 +39,6 @@ public class DelabItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 
-
     }
+
 }

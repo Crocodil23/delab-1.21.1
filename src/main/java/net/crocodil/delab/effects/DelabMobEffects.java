@@ -22,9 +22,9 @@ public class DelabMobEffects
             DeferredRegister.create(Registries.MOB_EFFECT, Delab.MODID);
 
     public static final Holder<MobEffect> SHADOW_STRIKE = DELAB_EFFECTS.register("shadow_strike",
-            () -> new ShadowStrikeEffect(MobEffectCategory.HARMFUL, 0));
+            () -> new ShadowStrikeEffect(MobEffectCategory.BENEFICIAL, 0));
     public static final Holder<MobEffect> IN_MUD = DELAB_EFFECTS.register("in_mud",
-            () -> new WithoutScaleMobEffect(MobEffectCategory.BENEFICIAL, 0x734222)
+            () -> new WithoutScaleMobEffect(MobEffectCategory.HARMFUL, 0x734222)
                     .addAttributeModifier(
                             Attributes.ATTACK_DAMAGE,
                             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "in_mud_damage"),
@@ -40,6 +40,8 @@ public class DelabMobEffects
                             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "in_mud_mining"),
                             -0.3F,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+    public static final Holder<MobEffect> MAGICAL_FROST = DELAB_EFFECTS.register("magical_frost",
+            () -> new MagicalFrostEffect(MobEffectCategory.HARMFUL, 0x649bc6));
 
 
     public static void register(IEventBus bus)

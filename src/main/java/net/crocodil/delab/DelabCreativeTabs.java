@@ -29,6 +29,9 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(DelabItems.RECHARGE_CRYSTAL);
 
+                        output.accept(DelabItems.FROZEN_FLESH);
+                        output.accept(DelabItems.FRESH_FLESH);
+
                         output.accept(DelabItems.WOODEN_DAGGER);
                         output.accept(DelabItems.STONE_DAGGER);
                         output.accept(DelabItems.IRON_DAGGER);

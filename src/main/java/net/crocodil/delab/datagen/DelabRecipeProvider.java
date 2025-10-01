@@ -6,9 +6,11 @@ import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.datagen.builder.AlloysFurnaceRecipeBuilder;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -131,6 +133,13 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
                 .save(out, Delab.MODID + ":abomination_hammer");
 
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.BOW),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.ABOMINATION_BOW.get())
+                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":abomination_bow");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_SPEAR)
                 .pattern("  A")
@@ -244,12 +253,36 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
                 .save(out, Delab.MODID + ":abomination_boots");
 
+       foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
+    }
 
-        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
-                .addIngredient(Items.IRON_INGOT)
-                .addIngredient(DelabItems.ABOMINATION_DUST)
-                .addIngredient(Items.SLIME_BALL)
-                .build(out);
+    private static String getItemName(Item item) {
+        return BuiltInRegistries.ITEM.getKey(item).getPath();
+    }
 
+    private static void foodCooking(Item input,Item result, RecipeOutput out)
+    {
+        String name = getItemName(result);
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F,
+                        200)
+                .unlockedBy("has_frozen_flesh", has(input))
+                .save(out, Delab.MODID + ":" + name + "_smelting");
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F,
+                        200)
+                .unlockedBy("has_frozen_flesh", has(input))
+                .save(out, Delab.MODID + ":" + name + "_smoking");
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F,
+                        200)
+                .unlockedBy("has_frozen_flesh", has(input))
+                .save(out, Delab.MODID + ":" + name + "_campfire_cooking");
     }
 }

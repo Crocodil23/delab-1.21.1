@@ -113,14 +113,21 @@ public class Delab {
 
             event.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
             event.accept(DelabItems.RECHARGE_CRYSTAL);
+
         }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)
         {
+            event.accept(DelabBlocks.ALLOYS_FURNACE);
             event.accept(DelabBlocks.SEA_WORKSHOP);
         }
         if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
         {
             event.accept(DelabItems.MUDAUR_SPAWN_EGG);
+        }
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+        {
+            event.accept(DelabItems.FROZEN_FLESH);
+            event.accept(DelabItems.FRESH_FLESH);
         }
     }
 

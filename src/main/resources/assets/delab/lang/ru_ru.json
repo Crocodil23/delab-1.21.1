@@ -8,6 +8,8 @@
 
 	"item.delab.abomination_dust": "Пыль мерзости",
 	"item.delab.abomination_ingot": "Слиток мерзости",
+	"item.delab.frozen_flesh": "Замороженная плоть",
+	"item.delab.fresh_flesh": "Свежая плоть",
     "item.delab.recharge_crystal": "Кристалл возобновления (WIP)",
 
 	"item.delab.adventure_upgrade_smithing_template": "Кузнечный шаблон",
@@ -76,6 +78,7 @@
 
 	"effect.delab.shadow_strike": "Теневой удар",
 	"effect.delab.in_mud": "В грязи",
+	"effect.delab.magical_Frost": "Магический холод",
 
 	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!",
 	"sounds.delab.earth_strike_sound": "Удар молота по земле"

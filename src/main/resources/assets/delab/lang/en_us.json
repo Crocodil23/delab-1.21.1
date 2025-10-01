@@ -8,6 +8,8 @@
 
 	"item.delab.abomination_dust": "Abomination Dust",
 	"item.delab.abomination_ingot": "Abomination Ingot",
+	"item.delab.frozen_flesh": "Frozen Fresh",
+	"item.delab.fresh_flesh": "Fresh Flesh",
     "item.delab.recharge_crystal": "Recharge Crystal (WIP)",
 
 	"item.delab.adventure_upgrade_smithing_template": "Smithing Template",
@@ -75,6 +77,7 @@
 
 	"effect.delab.shadow_strike": "Shadow Strike",
 	"effect.delab.in_mud": "In Mud",
+	"effect.delab.magical_Frost": "Magical Frost",
 
 	"sounds.delab.shadow_strike_sound": "Someone is hiding in the shadows!",
 	"sounds.delab.earth_strike_sound": "Hammer strikes the ground"
