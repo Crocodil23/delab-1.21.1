@@ -17,7 +17,9 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.RECHARGE_CRYSTAL.get());
         basicItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.get());
         basicItem(DelabItems.ABOMINATION_DUST.get());
+        basicItem(DelabItems.FROZEN_CORE.get());
         basicItem(DelabItems.ABOMINATION_INGOT.get());
+        basicItem(DelabItems.FROZEN_INGOT.get());
         basicItem(DelabItems.FROZEN_FLESH.get());
         basicItem(DelabItems.FRESH_FLESH.get());
         basicItem(DelabItems.MUD_BALL.get());
@@ -34,6 +36,7 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.DIAMOND_HAMMER.asItem());
         handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
         handheldItem(DelabItems.ABOMINATION_HAMMER.asItem());
+        handheldItem(DelabItems.FROZEN_AXE.asItem());
 
         withExistingParent(DelabItems.MUDAUR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 

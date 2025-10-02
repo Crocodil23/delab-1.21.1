@@ -29,6 +29,7 @@ public class DelabGlobalLootModifierProvider extends GlobalLootModifierProvider 
         addItemWithEnchantBonusFromEntity(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.asItem(), EntityType.DROWNED, 0.05F, 0.05F);
         addItemWithEnchantBonusFromEntity(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.asItem(), EntityType.BOGGED, 0.05F, 0.05F);
         addItemWithEnchantBonusFromEntity(DelabItems.ABOMINATION_DUST.asItem(), EntityType.BOGGED, 0.40F, 0.15F);
+        addItemWithEnchantBonusFromEntity(DelabItems.FROZEN_CORE.asItem(), EntityType.STRAY, 0.40F, 0.15F);
     }
     private void addItemWithEnchantBonusFromEntity(Item item, EntityType entityType, float base, float perLevelAfterFirst)
     {

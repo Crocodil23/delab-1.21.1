@@ -8,6 +8,8 @@
 
 	"item.delab.abomination_dust": "Abomination Dust",
 	"item.delab.abomination_ingot": "Abomination Ingot",
+	"item.delab.frozen_core": "Frozen Core",
+	"item.delab.frozen_ingot": "Frozen Ingot",
 	"item.delab.frozen_flesh": "Frozen Fresh",
 	"item.delab.fresh_flesh": "Fresh Flesh",
     "item.delab.recharge_crystal": "Recharge Crystal (WIP)",
@@ -18,7 +20,9 @@
 	"item.delab.smithing_template.adventure_upgrade.ingredients": "Alloys Tier I",
 	"item.delab.smithing_template.adventure_upgrade.adventure_upgrade.base_slot_description": "Add iron armor, weapon or tool",
 	"item.delab.smithing_template.adventure_upgrade.additions_slot_description": "Add alloy Tier I",
-	
+
+	"item.delab.frozen_axe": "Frozen Axe",
+
 	"item.delab.wooden_dagger": "Wooden Dagger",
 	"item.delab.stone_dagger": "Stone Dagger",
 	"item.delab.iron_dagger": "Iron Dagger",

@@ -211,6 +211,26 @@ public class DelabEvents {
         }
     }
     @SubscribeEvent
+    public static void FrozenAxeEvent(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            if (!isDamageBlocked(event.getContainer())) {
+                Entity direct = event.getSource().getDirectEntity();
+                if ((direct instanceof LivingEntity living)) {
+                    boolean canAdd = true;
+                    if(living.getMainHandItem().is(DelabItems.FROZEN_AXE) && direct instanceof Player player)
+                    {
+                        if(player.getAttackStrengthScale(0.5F) < 1)
+                            canAdd = false;
+                    }
+                    if(canAdd)
+                        DelabMobEffects.addMagicalFrostMobeEffect(event.getEntity(), living, 160);
+                }
+                if(event.getEntity().getTicksFrozen() >= 140)
+                    event.setNewDamage(getNewRealDamage(event.getContainer(), 2));
+            }
+        }
+    }
+    @SubscribeEvent
     public static void MudDamageBonusEvent(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
             if(!isDamageBlocked(event.getContainer())) {

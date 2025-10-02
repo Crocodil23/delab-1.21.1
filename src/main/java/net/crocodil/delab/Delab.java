@@ -97,6 +97,8 @@ public class Delab {
             event.accept(DelabItems.DIAMOND_SPEAR);
             event.accept(DelabItems.NETHERITE_SPEAR);
 
+            event.accept(DelabItems.FROZEN_AXE);
+
             event.accept(DelabItems.ABOMINATION_HELMET);
             event.accept(DelabItems.ABOMINATION_CHESTPLATE);
             event.accept(DelabItems.ABOMINATION_LEGGINGS);
@@ -109,6 +111,8 @@ public class Delab {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(DelabItems.ABOMINATION_DUST);
+            event.accept(DelabItems.FROZEN_CORE);
+            event.accept(DelabItems.FROZEN_INGOT);
             event.accept(DelabItems.ABOMINATION_INGOT);
 
             event.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);

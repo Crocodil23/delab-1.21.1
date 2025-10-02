@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.List;
 
@@ -22,7 +23,11 @@ public class DelabItems
             ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ABOMINATION_DUST = ITEMS.register("abomination_dust",
             ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FROZEN_CORE = ITEMS.register("frozen_core",
+            ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ABOMINATION_INGOT = ITEMS.register("abomination_ingot",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FROZEN_INGOT = ITEMS.register("frozen_ingot",
             ()-> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> FROZEN_FLESH = ITEMS.register("frozen_flesh",
@@ -32,12 +37,15 @@ public class DelabItems
             ()-> new Item(new Item.Properties().food(DelabFoodProperties.FRESH_FLESH)));
 
 
-
     public static final DeferredItem<MudBallItem> MUD_BALL = ITEMS.register("mud_ball",
             ()-> new MudBallItem(new Item.Properties().stacksTo(16)));
 
     public static final DeferredItem<Item> ADVENTURE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("adventure_upgrade_smithing_template",
             DelabSmithingTemplateItem::createAdventureUpgradeTemplate);
+
+    public  static final  DeferredItem<AxeItem> FROZEN_AXE = ITEMS.register("frozen_axe",
+            () -> new AxeItem(DelabToolTiers.FROZEN_INGOT, new
+                    Item.Properties().attributes(AxeItem.createAttributes(DelabToolTiers.FROZEN_INGOT, 6.0F, -3.1F))));
 
     public  static final  DeferredItem<DaggerItem> WOODEN_DAGGER = ITEMS.register("wooden_dagger",
             () -> new DaggerItem(Tiers.WOOD, new DaggerItem.Properties().attributes(DaggerItem.createAttributes(Tiers.WOOD, 1, -2F))));

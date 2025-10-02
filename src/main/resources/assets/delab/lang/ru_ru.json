@@ -8,6 +8,8 @@
 
 	"item.delab.abomination_dust": "Пыль мерзости",
 	"item.delab.abomination_ingot": "Слиток мерзости",
+	"item.delab.frozen_core": "Замороженное ядро",
+	"item.delab.frozen_ingot": "Замороженный слиток",
 	"item.delab.frozen_flesh": "Замороженная плоть",
 	"item.delab.fresh_flesh": "Свежая плоть",
     "item.delab.recharge_crystal": "Кристалл возобновления (WIP)",
@@ -18,7 +20,9 @@
 	"item.delab.smithing_template.adventure_upgrade.ingredients": "Сплавы Тир I",
 	"item.delab.smithing_template.adventure_upgrade.adventure_upgrade.base_slot_description": "Поместите железную броню, оружие или инструменты",
 	"item.delab.smithing_template.adventure_upgrade.additions_slot_description": "Поместите спалв Тира I",
-	
+
+	"item.delab.frozen_axe": "Замороженный топор",
+
 	"item.delab.wooden_dagger": "Деревянный кинжал",
 	"item.delab.stone_dagger": "Каменный кинжал",
 	"item.delab.iron_dagger": "Железный кинжал",

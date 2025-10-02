@@ -25,19 +25,33 @@ public class DelabArmorMaterials {
 
 
     public static final Holder<ArmorMaterial> ABOMINATION = ARMOR_MATERIALS.register("abomination", () -> new ArmorMaterial(
-            // defense map
             Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 5);
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
                 map.put(ArmorItem.Type.HELMET, 2);
             }),
-            12, // enchantment value
-            SoundEvents.ARMOR_EQUIP_IRON, // equip sound
-            () -> Ingredient.of(DelabItems.ABOMINATION_INGOT), // repair ingredient
+            12,
+            SoundEvents.ARMOR_EQUIP_IRON,
+            () -> Ingredient.of(DelabItems.ABOMINATION_INGOT),
             List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(Delab.MODID, "abomination"))),
-            0.0F, // toughness
-            0.0F  // knockback resistance
+            0.0F,
+            0.0F
+    ));
+
+    public static final Holder<ArmorMaterial> FROZEN = ARMOR_MATERIALS.register("frozen", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 5);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 2);
+            }),
+            12,
+            SoundEvents.ARMOR_EQUIP_IRON,
+            () -> Ingredient.of(DelabItems.FROZEN_INGOT),
+            List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(Delab.MODID, "frozen"))),
+            0.0F,
+            0.0F
     ));
 
     public static void register(IEventBus bus)

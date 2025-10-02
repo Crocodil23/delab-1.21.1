@@ -54,4 +54,11 @@ public class DelabMobEffects
             duration *= 1.5;
         living.addEffect(new MobEffectInstance(DelabMobEffects.IN_MUD, duration));
     }
+    public static void addMagicalFrostMobeEffect(LivingEntity living, LivingEntity source_living, int duration)
+    {
+        int amplifier = 0;
+        if (DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.FROZEN, source_living))
+            amplifier += 1;
+        living.addEffect(new MobEffectInstance(DelabMobEffects.MAGICAL_FROST, duration, amplifier));
+    }
 }

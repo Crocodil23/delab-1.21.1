@@ -25,7 +25,9 @@ public class DelabCreativeTabs
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(DelabItems.ABOMINATION_DUST);
+                        output.accept(DelabItems.FROZEN_CORE);
                         output.accept(DelabItems.ABOMINATION_INGOT);
+                        output.accept(DelabItems.FROZEN_INGOT);
                         output.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(DelabItems.RECHARGE_CRYSTAL);
 
@@ -53,6 +55,8 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.GOLDEN_SPEAR);
                         output.accept(DelabItems.DIAMOND_SPEAR);
                         output.accept(DelabItems.NETHERITE_SPEAR);
+
+                        output.accept(DelabItems.FROZEN_AXE);
 
                         output.accept(DelabItems.ABOMINATION_HELMET);
                         output.accept(DelabItems.ABOMINATION_CHESTPLATE);

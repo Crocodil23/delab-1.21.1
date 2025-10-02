@@ -1,4 +1,6 @@
-// 1.21.1	2025-10-01T16:19:25.589783	Recipes
+// 1.21.1	2025-10-02T11:02:04.5656139	Recipes
+51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
+7e5b9d23b3a080cdb7a78d84c55cdbabb180e56b data/delab/advancement/recipes/alloys/frozen_ingot.json
 f105e74642b396ae6bf45c65eb776687a77423e8 data/delab/advancement/recipes/combat/abomination_boots.json
 c2a8be38987659bc385f72721bfc00677ec3d236 data/delab/advancement/recipes/combat/abomination_bow.json
 84f2a3f7a4b33d4d007153c834e3bb91bd54c178 data/delab/advancement/recipes/combat/abomination_chestplate.json
@@ -8,6 +10,7 @@ eba8aa1072e30a7670f010372a8068299b159c38 data/delab/advancement/recipes/combat/a
 2323d4de78743a6628064a82d63d960e9813f6ed data/delab/advancement/recipes/combat/diamond_dagger.json
 3dc4443a94f35d1d142b6e754544e4680494c068 data/delab/advancement/recipes/combat/diamond_hammer.json
 310295dace625497aeeb322993d96713b44d04e0 data/delab/advancement/recipes/combat/diamond_spear.json
+ae89a69674bcecb6a46e3d7c39046f161f512925 data/delab/advancement/recipes/combat/frozen_axe.json
 d008e6d0215a0eff136261bb67f535498db146a6 data/delab/advancement/recipes/combat/golden_dagger.json
 b901d8c28f44583aead2f0070a1669133a301acc data/delab/advancement/recipes/combat/golden_hammer.json
 cdf50700937aed9a659998c4206988dabafc3bc3 data/delab/advancement/recipes/combat/golden_spear.json
@@ -36,6 +39,8 @@ e25ccf7024120fbf8ca5a40699e19deaa9e32d4d data/delab/recipe/abomination_bow.json
 5a4865d8b125ad2f385089b5646d306cc32f44a1 data/delab/recipe/abomination_helmet.json
 d5812d7c0e61d3c910de09a3f476204b5dae8bb2 data/delab/recipe/abomination_leggings.json
 17ce92190fbec0baa576efa8c2d4fda4cf232c2c data/delab/recipe/adventure_upgrade_smithing_template.json
+652a779ec698b135ea1aa65515c1487687b74058 data/delab/recipe/alloys/abomination_ingot.json
+f78af5e116e1bb94940224192e41cced9ace48f8 data/delab/recipe/alloys/frozen_ingot.json
 8904af5d092cc620cdb86401207d30417e6ec5fd data/delab/recipe/alloys_furnace.json
 900f52f96e8b32b034369f17e964f4403fc1e928 data/delab/recipe/diamond_dagger.json
 f3d09f10f088721eba283e2359cda29835881a3d data/delab/recipe/diamond_hammer.json
@@ -43,6 +48,7 @@ f3d09f10f088721eba283e2359cda29835881a3d data/delab/recipe/diamond_hammer.json
 a7058be2f48f7f06b390e1a35a6034437c44815d data/delab/recipe/fresh_flesh_campfire_cooking.json
 56ff6ec63f64e851c1ca90c4827015ffe0ec822c data/delab/recipe/fresh_flesh_smelting.json
 44d3ac48f9de79c72867e10a2a6bae6fb07fd4cf data/delab/recipe/fresh_flesh_smoking.json
+b286dbcd4b2a7ab3ba55b25937fe6a71024c8c6b data/delab/recipe/frozen_axe.json
 48667eaafc2d03188cc8705f9f51f1eeaa6adcb8 data/delab/recipe/golden_dagger.json
 0fc61aa018ca7aef7e98e61203a868d210fafe48 data/delab/recipe/golden_hammer.json
 a5fcaf343fdd52fb37125255f1680b4d82e941c5 data/delab/recipe/golden_spear.json

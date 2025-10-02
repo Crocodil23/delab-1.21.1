@@ -134,6 +134,14 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .save(out, Delab.MODID + ":abomination_hammer");
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_AXE),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_AXE.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.ABOMINATION_INGOT))
+                .save(out, Delab.MODID + ":frozen_axe");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(Items.BOW),
                         Ingredient.of(DelabItems.ABOMINATION_INGOT),
                         RecipeCategory.COMBAT,
@@ -254,6 +262,18 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .save(out, Delab.MODID + ":abomination_boots");
 
        foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
+
+       AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
+               .addIngredient(Items.IRON_INGOT)
+               .addIngredient(DelabItems.ABOMINATION_DUST)
+               .addIngredient(Items.SLIME_BALL)
+               .build(out);
+
+        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.FROZEN_INGOT.get())
+                .addIngredient(Items.IRON_INGOT)
+                .addIngredient(DelabItems.FROZEN_CORE)
+                .addIngredient(Items.SNOW_BLOCK)
+                .build(out);
     }
 
     private static String getItemName(Item item) {
