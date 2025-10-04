@@ -40,8 +40,11 @@ public class DelabMobEffects
                             ResourceLocation.fromNamespaceAndPath(Delab.MODID, "in_mud_mining"),
                             -0.3F,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
     public static final Holder<MobEffect> MAGICAL_FROST = DELAB_EFFECTS.register("magical_frost",
             () -> new MagicalFrostEffect(MobEffectCategory.HARMFUL, 0x649bc6));
+
+
 
 
     public static void register(IEventBus bus)
@@ -54,11 +57,14 @@ public class DelabMobEffects
             duration *= 1.5;
         living.addEffect(new MobEffectInstance(DelabMobEffects.IN_MUD, duration));
     }
+
     public static void addMagicalFrostMobeEffect(LivingEntity living, LivingEntity source_living, int duration)
     {
         int amplifier = 0;
         if (DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.FROZEN, source_living))
             amplifier += 1;
+
         living.addEffect(new MobEffectInstance(DelabMobEffects.MAGICAL_FROST, duration, amplifier));
     }
+
 }

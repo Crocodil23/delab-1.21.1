@@ -1,18 +1,14 @@
 package net.crocodil.delab.entity.Goals;
 
-import net.crocodil.delab.Delab;
-import net.crocodil.delab.entity.MudBall;
+import net.crocodil.delab.entity.projectails.balls.MudBall;
 import net.crocodil.delab.entity.Mudaur;
-import net.crocodil.delab.items.DelabItems;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.animal.SnowGolem;
-import net.minecraft.world.entity.monster.warden.Warden;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.phys.Vec3;
 
 import java.util.EnumSet;
 
@@ -54,6 +50,7 @@ public class MuduarRangeAttackGoal  extends Goal {
 
         this.mudaur.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
 
+        this.mudaur.playSound(SoundEvents.SNOWBALL_THROW);
         MudBall mudBall = new MudBall(this.mudaur.level(), this.mudaur);
         double d0 = target.getEyeY() - (double)1.1F;
         double d1 = target.getX() - this.mudaur.getX();

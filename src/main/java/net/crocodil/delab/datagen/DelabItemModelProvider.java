@@ -4,7 +4,10 @@ import net.crocodil.delab.Delab;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class DelabItemModelProvider extends ItemModelProvider {
@@ -23,11 +26,17 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.FROZEN_FLESH.get());
         basicItem(DelabItems.FRESH_FLESH.get());
         basicItem(DelabItems.MUD_BALL.get());
+        basicItem(DelabItems.FROZEN_BALL.get());
 
         basicItem(DelabItems.ABOMINATION_HELMET.get());
         basicItem(DelabItems.ABOMINATION_CHESTPLATE.get());
         basicItem(DelabItems.ABOMINATION_LEGGINGS.get());
         basicItem(DelabItems.ABOMINATION_BOOTS.get());
+
+        basicItem(DelabItems.FROZEN_HELMET.get());
+        basicItem(DelabItems.FROZEN_CHESTPLATE.get());
+        basicItem(DelabItems.FROZEN_LEGGINGS.get());
+        basicItem(DelabItems.FROZEN_BOOTS.get());
 
         handheldItem(DelabItems.WOODEN_HAMMER.asItem());
         handheldItem(DelabItems.STONE_HAMMER.asItem());
@@ -38,10 +47,9 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.ABOMINATION_HAMMER.asItem());
         handheldItem(DelabItems.FROZEN_AXE.asItem());
 
-        withExistingParent(DelabItems.MUDAUR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 
+        withExistingParent(DelabItems.MUDAUR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
-
 }

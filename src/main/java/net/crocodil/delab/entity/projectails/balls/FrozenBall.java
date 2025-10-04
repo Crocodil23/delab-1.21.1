@@ -1,6 +1,7 @@
-package net.crocodil.delab.entity;
+package net.crocodil.delab.entity.projectails.balls;
 
 import net.crocodil.delab.effects.DelabMobEffects;
+import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
@@ -15,21 +16,21 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
-public class MudBall extends ThrowableItemProjectile {
-    public MudBall(EntityType<? extends MudBall> entityType, Level level) {
+public class FrozenBall extends ThrowableItemProjectile {
+    public FrozenBall(EntityType<? extends FrozenBall> entityType, Level level) {
         super(entityType, level);
     }
 
-    public MudBall(Level level, LivingEntity shooter) {
-        super(DelabEntityTypes.MUD_BALL.get(), shooter, level);
+    public FrozenBall(Level level, LivingEntity shooter) {
+        super(DelabEntityTypes.FROZEN_BALL.get(), shooter, level);
     }
 
-    public MudBall(Level level, double x, double y, double z) {
-        super(DelabEntityTypes.MUD_BALL.get(), x, y, z, level);
+    public FrozenBall(Level level, double x, double y, double z) {
+        super(DelabEntityTypes.FROZEN_BALL.get(), x, y, z, level);
     }
 
     protected Item getDefaultItem() {
-        return DelabItems.MUD_BALL.get();
+        return DelabItems.FROZEN_BALL.get();
     }
 
     private ParticleOptions getParticle() {
@@ -60,7 +61,7 @@ public class MudBall extends ThrowableItemProjectile {
         if(entity instanceof LivingEntity living)
         {
             entity.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
-            DelabMobEffects.addMudInMudMobeEffect(living, (LivingEntity) this.getOwner(), 160);
+            DelabMobEffects.addMagicalFrostMobeEffect(living, (LivingEntity) this.getOwner(), 160);
         }
 
 

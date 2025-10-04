@@ -15,6 +15,7 @@ import net.crocodil.delab.items.Hammers.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -53,7 +54,7 @@ public class DelabEvents {
     private static float getNewRealDamage(DamageContainer container, float addDmg) {
         float origDmg = container.getOriginalDamage();
         float newDmg = container.getNewDamage();
-        return addDmg * (newDmg / origDmg);
+        return container.getNewDamage() + addDmg * (newDmg / origDmg);
     }
 
     @SubscribeEvent
@@ -217,11 +218,14 @@ public class DelabEvents {
                 Entity direct = event.getSource().getDirectEntity();
                 if ((direct instanceof LivingEntity living)) {
                     boolean canAdd = true;
-                    if(living.getMainHandItem().is(DelabItems.FROZEN_AXE) && direct instanceof Player player)
+                    if(living.getMainHandItem().is(DelabItems.FROZEN_AXE))
                     {
-                        if(player.getAttackStrengthScale(0.5F) < 1)
-                            canAdd = false;
+                        if(direct instanceof Player player)
+                            if(player.getAttackStrengthScale(0.5F) < 1)
+                                canAdd = false;
                     }
+                    else
+                        canAdd = false;
                     if(canAdd)
                         DelabMobEffects.addMagicalFrostMobeEffect(event.getEntity(), living, 160);
                 }
@@ -230,6 +234,7 @@ public class DelabEvents {
             }
         }
     }
+
     @SubscribeEvent
     public static void MudDamageBonusEvent(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
@@ -256,12 +261,17 @@ public class DelabEvents {
             if(!isDamageBlocked(event.getContainer())) {
                 Entity direct = event.getSource().getDirectEntity();
                 if ((direct instanceof LivingEntity direct_living)) {
-                    ItemStack hammer = direct_living.getMainHandItem();
-                    if (hammer.is(DelabTags.Items.HAMMER_ENCHANTABLE) &&
-                            DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, direct_living)) {
-                        float addDmg = 0.5F;
-                        event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
+                    ItemStack weapom = direct_living.getMainHandItem();
+                    float addDmg = 0F;
+                    if (weapom.is(ItemTags.AXES) &&
+                            DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.FROZEN, direct_living)) {
+                        addDmg += 0.5F;
                     }
+                    if (weapom.is(DelabTags.Items.HAMMER_ENCHANTABLE) &&
+                            DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, direct_living)) {
+                        addDmg += 0.5F;
+                    }
+                    event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
                 }
             }
         }
@@ -275,10 +285,18 @@ public class DelabEvents {
                 if(arrow.getOwner() instanceof LivingEntity owner)
                 {
                     ItemStack bow = owner.getMainHandItem();
-                    if (bow.is(DelabItems.ABOMINATION_BOW) && living.hasEffect(DelabMobEffects.IN_MUD)) {
-                        float addDmg =  2.0F;
-                        event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
+                    float addDmg = 0.0F;
+                    if (bow.is(DelabItems.ABOMINATION_BOW) && living.hasEffect(DelabMobEffects.IN_MUD))
+                        addDmg += 2.0F;
+
+                    else if(bow.is(DelabItems.FROZEN_BOW) && living.getTicksFrozen() >= 140) {
+                        addDmg += 2;
                     }
+
+                    if(addDmg > 0)
+                        event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
+                    System.out.println(event.getOriginalDamage());
+                    System.out.println(event.getNewDamage());
                 }
 
             }

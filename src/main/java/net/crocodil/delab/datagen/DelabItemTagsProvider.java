@@ -28,6 +28,9 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .add(DelabItems.ABOMINATION_INGOT.asItem())
                 .add(DelabItems.FROZEN_INGOT.asItem());
 
+        tag(ItemTags.AXES)
+                .add(DelabItems.FROZEN_AXE.asItem());
+
         tag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .add(DelabItems.WOODEN_DAGGER.asItem())
                 .add(DelabItems.STONE_DAGGER.asItem())

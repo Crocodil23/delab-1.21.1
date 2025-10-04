@@ -1,6 +1,7 @@
 package net.crocodil.delab.datagen;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.datagen.loot.DelabGlobalLootModifierProvider;
 import net.crocodil.delab.datagen.loot.DelabLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;

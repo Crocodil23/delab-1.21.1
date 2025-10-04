@@ -2,6 +2,7 @@ package net.crocodil.delab.events;
 
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.client.model.AbominationArmorModel;
+import net.crocodil.delab.client.model.FrozenArmorModel;
 import net.crocodil.delab.client.model.MudaurModel;
 import net.crocodil.delab.client.model.ThrowingSpearModel;
 import net.crocodil.delab.entity.DelabEntityTypes;
@@ -24,6 +25,8 @@ public class DelabBusEvents {
         event.registerLayerDefinition(ThrowingSpearModel.LAYER_LOCATION, ThrowingSpearModel::createBodyLayer);
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_OUTER, AbominationArmorModel::createOuterLayer);
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_INNER, AbominationArmorModel::createInnerLayer);
+        event.registerLayerDefinition(FrozenArmorModel.LAYER_LOCATION_OUTER, FrozenArmorModel::createOuterLayer);
+        event.registerLayerDefinition(FrozenArmorModel.LAYER_LOCATION_INNER, FrozenArmorModel::createInnerLayer);
         event.registerLayerDefinition(MudaurModel.MUDAUR_OUTER_LAYER, MudaurModel::createOuterLayer);
     }
 

@@ -1,13 +1,10 @@
 package net.crocodil.delab;
 
 import com.mojang.logging.LogUtils;
+import net.crocodil.delab.client.render.*;
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
-import net.crocodil.delab.client.render.AbominationClientExtensions;
-import net.crocodil.delab.client.render.MudaurRenderer;
-import net.crocodil.delab.client.render.SpearItemRenderer;
-import net.crocodil.delab.client.render.ThrowingSpearRenderer;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.gui.AlloysFurnace.AlloysFurnaceScreen;
 import net.crocodil.delab.gui.DelabMenuTypes;
@@ -104,7 +101,14 @@ public class Delab {
             event.accept(DelabItems.ABOMINATION_LEGGINGS);
             event.accept(DelabItems.ABOMINATION_BOOTS);
 
+            event.accept(DelabItems.FROZEN_HELMET);
+            event.accept(DelabItems.FROZEN_CHESTPLATE);
+            event.accept(DelabItems.FROZEN_LEGGINGS);
+            event.accept(DelabItems.FROZEN_BOOTS);
+
             event.accept(DelabItems.MUD_BALL);
+            event.accept(DelabItems.FROZEN_BALL);
+            event.accept(DelabItems.FROZEN_BOW);
             event.accept(DelabItems.ABOMINATION_BOW);
 
         }
@@ -112,8 +116,8 @@ public class Delab {
         {
             event.accept(DelabItems.ABOMINATION_DUST);
             event.accept(DelabItems.FROZEN_CORE);
-            event.accept(DelabItems.FROZEN_INGOT);
             event.accept(DelabItems.ABOMINATION_INGOT);
+            event.accept(DelabItems.FROZEN_INGOT);
 
             event.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
             event.accept(DelabItems.RECHARGE_CRYSTAL);
@@ -145,6 +149,7 @@ public class Delab {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(DelabEntityTypes.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
             EntityRenderers.register(DelabEntityTypes.MUD_BALL.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.FROZEN_BALL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(DelabEntityTypes.MUDAUR.get(), MudaurRenderer::new);
 
 
@@ -170,6 +175,12 @@ public class Delab {
                     DelabItems.ABOMINATION_HELMET,
                     DelabItems.ABOMINATION_LEGGINGS,
                     DelabItems.ABOMINATION_BOOTS);
+
+            event.registerItem(new FrozenClientExtentions(),
+                    DelabItems.FROZEN_CHESTPLATE,
+                    DelabItems.FROZEN_HELMET,
+                    DelabItems.FROZEN_LEGGINGS,
+                    DelabItems.FROZEN_BOOTS);
 
         }
         @SubscribeEvent

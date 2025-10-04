@@ -1,12 +1,14 @@
 package net.crocodil.delab.items;
 
-import net.crocodil.delab.entity.Spears.SpearMaterial;
-import net.crocodil.delab.entity.Spears.ThrowingSpear;
+import net.crocodil.delab.entity.projectails.Spears.SpearMaterial;
+import net.crocodil.delab.entity.projectails.Spears.ThrowingSpear;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -98,6 +100,7 @@ public class SpearItem extends TieredItem
                     else if(tier == Tiers.NETHERITE)
                         material = SpearMaterial.NETHERITE;
                     int PTlvl = DelabEnchantmentHelper.getEnchantmentLvl(level, DelabEnchantments.POWERFUL_THROW, stack);
+                    level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
                     ThrowingSpear throwingSpear = new ThrowingSpear(level, player, stack, tier.getAttackDamageBonus() + 3 + PTlvl, material);
                     throwingSpear.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F, 1.0F);
                     if (player.hasInfiniteMaterials()) {

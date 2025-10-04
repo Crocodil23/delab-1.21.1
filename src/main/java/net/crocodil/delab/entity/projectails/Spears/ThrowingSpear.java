@@ -1,4 +1,4 @@
-package net.crocodil.delab.entity.Spears;
+package net.crocodil.delab.entity.projectails.Spears;
 
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.items.DelabItems;

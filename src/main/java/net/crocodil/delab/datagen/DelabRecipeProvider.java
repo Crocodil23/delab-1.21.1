@@ -132,7 +132,6 @@ public class DelabRecipeProvider extends RecipeProvider {
                         DelabItems.ABOMINATION_HAMMER.get())
                 .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
                 .save(out, Delab.MODID + ":abomination_hammer");
-
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(Items.IRON_AXE),
                         Ingredient.of(DelabItems.FROZEN_INGOT),
@@ -148,6 +147,14 @@ public class DelabRecipeProvider extends RecipeProvider {
                         DelabItems.ABOMINATION_BOW.get())
                 .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
                 .save(out, Delab.MODID + ":abomination_bow");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.BOW),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_BOW.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
+                .save(out, Delab.MODID + ":frozen_bow");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_SPEAR)
                 .pattern("  A")
@@ -228,6 +235,12 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_abomination_dust", has(DelabItems.ABOMINATION_DUST))
                 .save(out);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.FROZEN_BALL, 8)
+                .requires(Items.SNOW_BLOCK)
+                .requires(DelabItems.FROZEN_CORE)
+                .unlockedBy("has_frozen_core", has(DelabItems.FROZEN_CORE))
+                .save(out);
+
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(Items.IRON_HELMET),
@@ -261,13 +274,47 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
                 .save(out, Delab.MODID + ":abomination_boots");
 
-       foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_HELMET),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_HELMET.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_HELMET))
+                .save(out, Delab.MODID + ":frozen_helmet");
 
-       AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
-               .addIngredient(Items.IRON_INGOT)
-               .addIngredient(DelabItems.ABOMINATION_DUST)
-               .addIngredient(Items.SLIME_BALL)
-               .build(out);
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_CHESTPLATE),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_CHESTPLATE.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
+                .save(out, Delab.MODID + ":frozen_chestplate");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_LEGGINGS),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_LEGGINGS.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
+                .save(out, Delab.MODID + ":frozen_leggings");
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(Items.IRON_BOOTS),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        DelabItems.FROZEN_BOOTS.get())
+                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
+                .save(out, Delab.MODID + ":frozen_boots");
+
+
+
+        foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
+
+        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
+                .addIngredient(Items.IRON_INGOT)
+                .addIngredient(DelabItems.ABOMINATION_DUST)
+                .addIngredient(Items.SLIME_BALL)
+                .build(out);
 
         AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.FROZEN_INGOT.get())
                 .addIngredient(Items.IRON_INGOT)
@@ -282,27 +329,28 @@ public class DelabRecipeProvider extends RecipeProvider {
 
     private static void foodCooking(Item input,Item result, RecipeOutput out)
     {
-        String name = getItemName(result);
+        String name_result = getItemName(result);
+        String name_input = getItemName(input);
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
                         RecipeCategory.FOOD,
                         result,
                         0.35F,
                         200)
-                .unlockedBy("has_frozen_flesh", has(input))
-                .save(out, Delab.MODID + ":" + name + "_smelting");
+                .unlockedBy("has_" + name_input, has(input))
+                .save(out, Delab.MODID + ":" + name_result + "_smelting");
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(input),
                         RecipeCategory.FOOD,
                         result,
                         0.35F,
                         200)
-                .unlockedBy("has_frozen_flesh", has(input))
-                .save(out, Delab.MODID + ":" + name + "_smoking");
+                .unlockedBy("has_" + name_input, has(input))
+                .save(out, Delab.MODID + ":" + name_result + "_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(input),
                         RecipeCategory.FOOD,
                         result,
                         0.35F,
                         200)
-                .unlockedBy("has_frozen_flesh", has(input))
-                .save(out, Delab.MODID + ":" + name + "_campfire_cooking");
+                .unlockedBy("has_" + name_input, has(input))
+                .save(out, Delab.MODID + ":" + name_result + "_campfire_cooking");
     }
 }

@@ -1,4 +1,4 @@
-package net.crocodil.delab.entity.Spears;
+package net.crocodil.delab.entity.projectails.Spears;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,12 +1,12 @@
 package net.crocodil.delab.entity;
 
 import net.crocodil.delab.Delab;
-import net.crocodil.delab.entity.Spears.ThrowingSpear;
-import net.minecraft.client.renderer.entity.ZombieRenderer;
+import net.crocodil.delab.entity.projectails.Spears.ThrowingSpear;
+import net.crocodil.delab.entity.projectails.balls.FrozenBall;
+import net.crocodil.delab.entity.projectails.balls.MudBall;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.monster.Zombie;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -23,6 +23,10 @@ public class DelabEntityTypes {
     public static final Supplier<EntityType<MudBall>> MUD_BALL =
             ENTITY_TYPES.register("mud_ball", () -> EntityType.Builder.<MudBall>of(MudBall::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("mud_ball"));
+
+    public static final Supplier<EntityType<FrozenBall>> FROZEN_BALL =
+            ENTITY_TYPES.register("frozen_ball", () -> EntityType.Builder.<FrozenBall>of(FrozenBall::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("frozen_ball"));
 
     public static final Supplier<EntityType<Mudaur>> MUDAUR =
             ENTITY_TYPES.register("mudaur", () -> EntityType.Builder.of(Mudaur::new, MobCategory.MONSTER)

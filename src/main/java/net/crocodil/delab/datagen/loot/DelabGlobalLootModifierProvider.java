@@ -1,4 +1,4 @@
-package net.crocodil.delab.datagen;
+package net.crocodil.delab.datagen.loot;
 
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.items.DelabItems;

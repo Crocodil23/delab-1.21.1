@@ -50,8 +50,15 @@
 	"item.delab.abomination_leggings": "Abomination leggins",
 	"item.delab.abomination_boots": "Abomination boots",
 
+	"item.delab.frozen_helmet": "Frozen Helmet",
+	"item.delab.frozen_chestplate": "Frozen Chestplate",
+	"item.delab.frozen_leggings": "Frozen Leggings",
+	"item.delab.frozen_boots": "Frozen Boots",
+
 	"item.delab.mud_ball": "Mudball",
+	"item.delab.frozen_ball": "Frozen Ball",
 	"item.delab.abomination_bow": "Abomination bow",
+	"item.delab.frozen_bow": "Frozen Ball",
 
 	"item.delab.mudaur_spawn_egg": "Mudaur Spawn Egg",
 
@@ -64,6 +71,9 @@
 	"tooltip.delab.abomination_armor_tooltip": "When fully equipped:\n+0.5 damage to hammers\nWhen you apply the \"In  Mud\" effect, its duration is increased by 50%",
 	"tooltip.delab.abomination_hammer_tooltip": "Slamming the ground also applies the \"In mud\" effect\nIf the target is under the \"In mud\" effect, the damage is increased by 2",
 	"tooltip.delab.abomination_bow_tooltip": "If the target is under the \"In mud\" effect, the damage is increased by 2",
+	"tooltip.delab.frozen_axe_tooltip": "A fully charged attack inflicts the \"Magical Frost\" effect.\nIf the target is frozen, the damage is increased by 2",
+	"tooltip.delab.frozen_bow_tooltip": "If the target is frozen, the damage is increased by 2",
+	"tooltip.delab.frozen_armor_tooltip": "When fully equipped:\n+0.5 damage to axes\nWhen you apply the \"Magic Frost\" effect, its amplifier is increased by 1",
 
 	"enchantment.delab.destroyer": "Destroyer",
 	"enchantment.delab.earth_strike": "Earth Strike",
@@ -77,6 +87,8 @@
 	"block.delab.alloys_furnace": "Alloys furnace",
 	
 	"entity.delab.thrown_spear":"Spear",
+	"entity.delab.mud_ball":"Шарик грязи",
+	"entity.delab.frozen_ball":"Ледяной шарик",
 	"entity.delab.mudaur":"Mudaur",
 
 	"effect.delab.shadow_strike": "Shadow Strike",

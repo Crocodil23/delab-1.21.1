@@ -55,7 +55,6 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.GOLDEN_SPEAR);
                         output.accept(DelabItems.DIAMOND_SPEAR);
                         output.accept(DelabItems.NETHERITE_SPEAR);
-
                         output.accept(DelabItems.FROZEN_AXE);
 
                         output.accept(DelabItems.ABOMINATION_HELMET);
@@ -63,7 +62,14 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.ABOMINATION_LEGGINGS);
                         output.accept(DelabItems.ABOMINATION_BOOTS);
 
+                        output.accept(DelabItems.FROZEN_HELMET);
+                        output.accept(DelabItems.FROZEN_CHESTPLATE);
+                        output.accept(DelabItems.FROZEN_LEGGINGS);
+                        output.accept(DelabItems.FROZEN_BOOTS);
+
                         output.accept(DelabItems.MUD_BALL);
+                        output.accept(DelabItems.FROZEN_BALL);
+                        output.accept(DelabItems.FROZEN_BOW);
                         output.accept(DelabItems.ABOMINATION_BOW);
 
 

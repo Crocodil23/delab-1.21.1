@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-02T11:02:04.5656139	Recipes
+// 1.21.1	2025-10-04T16:28:40.2818672	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
 7e5b9d23b3a080cdb7a78d84c55cdbabb180e56b data/delab/advancement/recipes/alloys/frozen_ingot.json
 f105e74642b396ae6bf45c65eb776687a77423e8 data/delab/advancement/recipes/combat/abomination_boots.json
@@ -11,6 +11,12 @@ eba8aa1072e30a7670f010372a8068299b159c38 data/delab/advancement/recipes/combat/a
 3dc4443a94f35d1d142b6e754544e4680494c068 data/delab/advancement/recipes/combat/diamond_hammer.json
 310295dace625497aeeb322993d96713b44d04e0 data/delab/advancement/recipes/combat/diamond_spear.json
 ae89a69674bcecb6a46e3d7c39046f161f512925 data/delab/advancement/recipes/combat/frozen_axe.json
+3f8e71db57480a3ee1c280fd702776eb417beba5 data/delab/advancement/recipes/combat/frozen_ball.json
+52061feeca487342a4213fac706339caf394ced5 data/delab/advancement/recipes/combat/frozen_boots.json
+6f65d7748afc343010119f6917b95a0396e2f47a data/delab/advancement/recipes/combat/frozen_bow.json
+32d4959a854bd18fe4a74c79fd9b9cb434b87805 data/delab/advancement/recipes/combat/frozen_chestplate.json
+ed593fe4a0c7a857a9b55534e12d85f60a3a2e5f data/delab/advancement/recipes/combat/frozen_helmet.json
+a50561e555407bec92546066e9329bebe8a37283 data/delab/advancement/recipes/combat/frozen_leggings.json
 d008e6d0215a0eff136261bb67f535498db146a6 data/delab/advancement/recipes/combat/golden_dagger.json
 b901d8c28f44583aead2f0070a1669133a301acc data/delab/advancement/recipes/combat/golden_hammer.json
 cdf50700937aed9a659998c4206988dabafc3bc3 data/delab/advancement/recipes/combat/golden_spear.json
@@ -49,6 +55,12 @@ a7058be2f48f7f06b390e1a35a6034437c44815d data/delab/recipe/fresh_flesh_campfire_
 56ff6ec63f64e851c1ca90c4827015ffe0ec822c data/delab/recipe/fresh_flesh_smelting.json
 44d3ac48f9de79c72867e10a2a6bae6fb07fd4cf data/delab/recipe/fresh_flesh_smoking.json
 b286dbcd4b2a7ab3ba55b25937fe6a71024c8c6b data/delab/recipe/frozen_axe.json
+507757d80bbb11880ad8e9e84a29493e18a5f558 data/delab/recipe/frozen_ball.json
+fbbd0a6ef486842c8f0004a4fec8a7857ea923ff data/delab/recipe/frozen_boots.json
+d51c055042dc4ae613ab9de47aff5c14a7557660 data/delab/recipe/frozen_bow.json
+d55ba4bdddc7a590f9875097437101361a15f25a data/delab/recipe/frozen_chestplate.json
+ff61f724c29c6ae1ad557e68c0754ff446eea59e data/delab/recipe/frozen_helmet.json
+4600ca462f5050518384267d834bd7d84053995c data/delab/recipe/frozen_leggings.json
 48667eaafc2d03188cc8705f9f51f1eeaa6adcb8 data/delab/recipe/golden_dagger.json
 0fc61aa018ca7aef7e98e61203a868d210fafe48 data/delab/recipe/golden_hammer.json
 a5fcaf343fdd52fb37125255f1680b4d82e941c5 data/delab/recipe/golden_spear.json

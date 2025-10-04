@@ -17,6 +17,7 @@ public class DelabItemProperties {
         createSpear(DelabItems.NETHERITE_SPEAR.get());
 
         createBow(DelabItems.ABOMINATION_BOW.get());
+        createBow(DelabItems.FROZEN_BOW.get());
     }
     private static void createSpear(Item item)
     {

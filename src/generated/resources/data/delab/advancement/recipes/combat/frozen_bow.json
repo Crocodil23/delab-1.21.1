@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_frozen_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delab:frozen_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delab:frozen_bow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_frozen_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delab:frozen_bow"
+    ]
+  }
+}

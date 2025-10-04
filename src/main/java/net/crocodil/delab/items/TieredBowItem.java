@@ -52,6 +52,8 @@ public class TieredBowItem extends BowItem {
     {
         if(tier == DelabToolTiers.ABOMINATION_INGOT)
             return 0.25F;
+        if(tier == DelabToolTiers.FROZEN_INGOT)
+            return 0.25F;
         return  0.0F;
     }
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {

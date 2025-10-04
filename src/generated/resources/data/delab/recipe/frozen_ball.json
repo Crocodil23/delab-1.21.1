@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:snow_block"
+    },
+    {
+      "item": "delab:frozen_core"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "delab:frozen_ball"
+  }
+}

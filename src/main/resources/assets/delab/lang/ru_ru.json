@@ -51,8 +51,15 @@
 	"item.delab.abomination_leggings": "Мерзостные поножи",
 	"item.delab.abomination_boots": "Мерзостные ботинки",
 
+	"item.delab.frozen_helmet": "Замороженный шлем",
+	"item.delab.frozen_chestplate": "Замороженный нагрудник",
+	"item.delab.frozen_leggings": "Замороженные поножи",
+	"item.delab.frozen_boots": "Замороженные ботинки",
+
 	"item.delab.mud_ball": "Шарик грязи",
+	"item.delab.frozen_ball": "Ледяной шарик",
 	"item.delab.abomination_bow": "Мерзостный лук",
+	"item.delab.frozen_bow": "Замороженный лук",
 
 	"item.delab.mudaur_spawn_egg": "Яйцо призыва грязетавра",
 
@@ -62,9 +69,12 @@
 	"tooltip.delab.hammer_tooltip":"Зажмите ПКМ и отпустите на блока, чтобы нанести урон по площади",
 	"tooltip.delab.spear_tooltip": "Можно метать",
 	"tooltip.delab.tiered_bow_tooltip": "Урон стрел повышен на %d%%",
-	"tooltip.delab.abomination_armor_tooltip": "При полном комплекте:\n+0.5 урона молотам\nКогда на цели эффект \"В грязи\" его время действия увеличивается 50%",
-	"tooltip.delab.abomination_hammer_tooltip": "Удар по земел также накладывает эффект  \"В грязи\" effect\nЕсди на цели есть эффект \"В грязи\"?, то урон увеличивается на 2",
-	"tooltip.delab.abomination_bow_tooltip": "Есди на цели есть эффект \"В грязи\", то урон увеличивается на 2",
+	"tooltip.delab.abomination_armor_tooltip": "При полном комплекте:\n+0.5 урона молотам\nКогда вы накладываете эффект \"В грязи\" его время действия увеличивается 50%",
+	"tooltip.delab.abomination_hammer_tooltip": "Удар по земле также накладывает эффект  \"В грязи\" \nЕсли на цели есть эффект \"В грязи\", то урон увеличивается на 2",
+	"tooltip.delab.abomination_bow_tooltip": "Если на цели есть эффект \"В грязи\", то урон увеличивается на 2",
+	"tooltip.delab.frozen_axe_tooltip": "Полностью заряженный удар накладывает эффект  \"Магический холод\" \nЕсли цель заморожена, то урон увеличивается на 2",
+	"tooltip.delab.frozen_bow_tooltip": "Если цель заморожена, то урон увеличивается на 2",
+	"tooltip.delab.frozen_armor_tooltip": "При полном комплекте:\n+0.5 урона топорам\nКогда вы накладываете эффект \"Магический холод\" его уровень увеличивается на 1",
 
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
 	"block.delab.alloys_furnace": "Печь для сплавов",
@@ -78,6 +88,8 @@
 	"enchantment.delab.head_hunter": "Охотник за головами",
 
 	"entity.delab.thrown_spear":"Копье",
+	"entity.delab.mud_ball":"Шарик грязи",
+	"entity.delab.frozen_ball":"Ледяной шарик",
 	"entity.delab.mudaur":"Грязетавр",
 
 	"effect.delab.shadow_strike": "Теневой удар",
