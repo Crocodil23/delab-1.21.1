@@ -53,6 +53,28 @@ public class DelabEntityLootTableProvider extends EntityLootSubProvider {
                                 .add(LootItem.lootTableItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE)))
         );
 
+        add(DelabEntityTypes.FROZEN_COWING.get(),
+                LootTable.lootTable()
+                        .withPool(LootPool.lootPool()
+                                .name("frozen_flesh")
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(DelabItems.FROZEN_FLESH)
+                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 2.0F)))
+                                        .apply(EnchantedCountIncreaseFunction.lootingMultiplier(this.registries, UniformGenerator.between(0.0F, 1.0F)))))
+                        .withPool(LootPool.lootPool()
+                                .name("frozen_core")
+                                .setRolls(ConstantValue.exactly(1))
+                                .when(LootItemKilledByPlayerCondition.killedByPlayer())
+                                .when(LootItemRandomChanceWithEnchantedBonusCondition.randomChanceAndLootingBoost(registries, 0.4F, 0.15F))
+                                .add(LootItem.lootTableItem(DelabItems.FROZEN_CORE)))
+                        .withPool(LootPool.lootPool()
+                                .name("adventure_upgrade_smithing_template")
+                                .setRolls(ConstantValue.exactly(1))
+                                .when(LootItemKilledByPlayerCondition.killedByPlayer())
+                                .when(LootItemRandomChanceWithEnchantedBonusCondition.randomChanceAndLootingBoost(registries, 0.05F, 0.05F))
+                                .add(LootItem.lootTableItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE)))
+        );
+
     }
 
     @Override

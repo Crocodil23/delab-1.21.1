@@ -131,6 +131,7 @@ public class Delab {
         if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
         {
             event.accept(DelabItems.MUDAUR_SPAWN_EGG);
+            event.accept(DelabItems.FROZEN_COWING_SPAWN_EGG);
         }
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
@@ -151,6 +152,7 @@ public class Delab {
             EntityRenderers.register(DelabEntityTypes.MUD_BALL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(DelabEntityTypes.FROZEN_BALL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(DelabEntityTypes.MUDAUR.get(), MudaurRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.FROZEN_COWING.get(), FrozenCowingRenderer::new);
 
 
             DelabItemProperties.CreateCustomProperties();

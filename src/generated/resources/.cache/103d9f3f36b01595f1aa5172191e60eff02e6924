@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-28T11:53:58.5628855	Registries
+// 1.21.1	2025-10-07T15:57:23.7613312	Registries
 dda1c1693cb89466e61f046fa69b7f7abac85abb data/delab/enchantment/cavalry_strike.json
 8d43b2e947b173e6674ced05e737501c7a263cd9 data/delab/enchantment/destroyer.json
 aa035df3ca8748e36b83c6b02c710556256eaa75 data/delab/enchantment/double_strike.json
@@ -6,3 +6,4 @@ aa035df3ca8748e36b83c6b02c710556256eaa75 data/delab/enchantment/double_strike.js
 35ebe2b5254f7dfd1038c162cb34583ea566e0b3 data/delab/enchantment/head_hunter.json
 5842fe59986ebbf9a095a910b1a833a6440dcaf3 data/delab/enchantment/powerful_throw.json
 c1161d7cdb17a05fc99c85b6f79eb625dfee4cce data/delab/enchantment/shadow_strike.json
+3cff39b6ded91c46f4682608064131bd25854d6b data/delab/neoforge/biome_modifier/frozen_cowing_spawn.json

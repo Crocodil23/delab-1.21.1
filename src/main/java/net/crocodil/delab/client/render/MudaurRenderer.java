@@ -2,6 +2,7 @@ package net.crocodil.delab.client.render;
 
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.client.model.MudaurModel;
+import net.crocodil.delab.client.render.layers.MudaurOuterLayer;
 import net.crocodil.delab.entity.Mudaur;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelLayers;

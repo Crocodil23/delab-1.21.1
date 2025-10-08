@@ -32,6 +32,10 @@ public class DelabEntityTypes {
             ENTITY_TYPES.register("mudaur", () -> EntityType.Builder.of(Mudaur::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.95F).eyeHeight(1.74F).build("mudaur"));
 
+    public static final Supplier<EntityType<FrozenCowing>> FROZEN_COWING =
+            ENTITY_TYPES.register("frozen_cowing", () -> EntityType.Builder.of(FrozenCowing::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.95F).eyeHeight(1.74F).build("frozen_cowing"));
+
 
     public static void register(IEventBus bus) {
         ENTITY_TYPES.register(bus);

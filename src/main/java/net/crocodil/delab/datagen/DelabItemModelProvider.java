@@ -51,5 +51,6 @@ public class DelabItemModelProvider extends ItemModelProvider {
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());
 
         withExistingParent(DelabItems.MUDAUR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(DelabItems.FROZEN_COWING_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }

@@ -7,6 +7,7 @@ import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.enchants.DelabEnchantmentHelper;
 import net.crocodil.delab.enchants.DelabEnchantments;
+import net.crocodil.delab.entity.FrozenCowing;
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.entity.Mudaur;
 import net.crocodil.delab.items.DelabArmorMaterials;
@@ -17,7 +18,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -27,7 +27,6 @@ import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.enchantment.effects.AllOf;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -250,6 +249,22 @@ public class DelabEvents {
                     else if(direct_living instanceof Mudaur)
                         addDmg += 1;
                     event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
+                }
+            }
+
+        }
+    }
+    @SubscribeEvent
+    public static void CowingJumpAttackBonusEvent(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            if(!isDamageBlocked(event.getContainer())) {
+                Entity direct = event.getSource().getDirectEntity();
+                if (direct instanceof FrozenCowing cowing) {
+                    if(cowing.getJumpAttackBonusTick() > 0) {
+                        System.out.println(1);
+                        event.setNewDamage(event.getNewDamage() * 2);
+                        cowing.setJumpAttackBonusTick(0);
+                    }
                 }
             }
 

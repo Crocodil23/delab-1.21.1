@@ -77,6 +77,7 @@ public class DelabCreativeTabs
                         output.accept(DelabBlocks.ALLOYS_FURNACE);
 
                         output.accept(DelabItems.MUDAUR_SPAWN_EGG);
+                        output.accept(DelabItems.FROZEN_COWING_SPAWN_EGG);
                     }).build());
 
 

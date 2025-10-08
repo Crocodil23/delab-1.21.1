@@ -3,6 +3,7 @@ package net.crocodil.delab.entity;
 import net.crocodil.delab.effects.DelabMobEffects;
 import net.crocodil.delab.entity.Goals.MuduarRangeAttackGoal;
 import net.crocodil.delab.items.DelabItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -11,17 +12,17 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import org.jetbrains.annotations.Nullable;
 
 public class Mudaur extends Zombie {
     private static final EntityDataAccessor<Boolean> THROWING =
@@ -33,6 +34,7 @@ public class Mudaur extends Zombie {
     public Mudaur(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
     }
+
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 22d)
@@ -77,14 +79,14 @@ public class Mudaur extends Zombie {
     @Override
     public void addAdditionalSaveData(CompoundTag compound) {
         super.addAdditionalSaveData(compound);
-        compound.putInt("RangaAttackCD", this.getRangeAttackCd());
+        compound.putInt("RangeAttackCD", this.getRangeAttackCd());
         compound.putBoolean("THROWING", this.isThrowing());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
-        this.entityData.set(RANGE_ATTACK_CD, compound.getInt("RangaAttackCD"));
+        this.entityData.set(RANGE_ATTACK_CD, compound.getInt("RangeAttackCD"));
         this.entityData.set(THROWING, compound.getBoolean("THROWING"));
     }
     public void tick()
@@ -105,7 +107,6 @@ public class Mudaur extends Zombie {
         {
             this.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
         }
-
         super.tick();
     }
     @Override
@@ -162,5 +163,12 @@ public class Mudaur extends Zombie {
     }
 
 
+    public static boolean checkMudaurSpawnRules(EntityType<? extends Monster> type, ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
+        return level.getDifficulty() != Difficulty.PEACEFUL &&
+                (MobSpawnType.ignoresLightRequirements(spawnType)
+                        || isDarkEnoughToSpawn(level, pos, random))
+                && checkMobSpawnRules(type, level, spawnType, pos, random)
+                && level.canSeeSky(pos);
+    }
 
 }

@@ -295,6 +295,11 @@ public class DelabItems
     public static final DeferredItem<Item> MUDAUR_SPAWN_EGG = ITEMS.register("mudaur_spawn_egg",
             () -> new DeferredSpawnEggItem(DelabEntityTypes.MUDAUR, 0x874b0f, 7969893,
                     new Item.Properties()));
+    public static final DeferredItem<Item> FROZEN_COWING_SPAWN_EGG = ITEMS.register("frozen_cowing_spawn_egg",
+            () -> new DeferredSpawnEggItem(DelabEntityTypes.FROZEN_COWING, 4470310, 14543594,
+                    new Item.Properties()));
+
+
     public static void register(IEventBus bus)
     {
         ITEMS.register(bus);

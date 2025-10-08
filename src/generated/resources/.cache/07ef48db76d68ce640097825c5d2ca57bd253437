@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-04T16:28:40.2808666	Item Models: delab
+// 1.21.1	2025-10-07T13:16:20.5980033	Item Models: delab
 dbfaf402fa0b8f3b803ab7096bf6fedd7f944b79 assets/delab/models/item/abomination_boots.json
 3a9c69dc8f52870d002e390ed110cf1c67cffcfc assets/delab/models/item/abomination_chestplate.json
 91ed397b7146a3f526819f9c392dd3937ac60ac3 assets/delab/models/item/abomination_dust.json
@@ -15,6 +15,7 @@ b5b16a757df0fd5c987a2012941dd5ae6d45565c assets/delab/models/item/frozen_axe.jso
 4c4500457d0f975c20cb77ddc7891f756b2d692f assets/delab/models/item/frozen_boots.json
 308a76da4dc3e11f0c7828777af4c146d6d235e8 assets/delab/models/item/frozen_chestplate.json
 623b524c5c6bc7e4412486cf6ed7ad66fbbcbd1a assets/delab/models/item/frozen_core.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/delab/models/item/frozen_cowing_spawn_egg.json
 bdfe3587b63bf589412aa7caa4c05276c312e851 assets/delab/models/item/frozen_flesh.json
 e7259bf5df3830c56ee29e8aa2b6298452e8d992 assets/delab/models/item/frozen_helmet.json
 349116eacbbeed387c51c1ddbfc6213a1bd2d301 assets/delab/models/item/frozen_ingot.json

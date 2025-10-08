@@ -4,7 +4,7 @@
     "language.code":"ru_ru",
     "author":"_Crocodil_",
 
-	"creativemodetab.delab_tab":"D.E.L.A.B.",
+	"creativetab.delab.delab_tab":"D.E.L.A.B.",
 
 	"item.delab.abomination_dust": "Пыль мерзости",
 	"item.delab.abomination_ingot": "Слиток мерзости",
@@ -62,6 +62,7 @@
 	"item.delab.frozen_bow": "Замороженный лук",
 
 	"item.delab.mudaur_spawn_egg": "Яйцо призыва грязетавра",
+	"item.delab.frozen_cowing_spawn": "Яйцо призыва замершего коровяга",
 
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
 	"tooltip.delab.ctrl_down": "Зажмите §aCtrl§r чтобы узнать способность",
@@ -91,6 +92,7 @@
 	"entity.delab.mud_ball":"Шарик грязи",
 	"entity.delab.frozen_ball":"Ледяной шарик",
 	"entity.delab.mudaur":"Грязетавр",
+	"entity.delab.frozen_cowing":"Замерзший коровяг",
 
 	"effect.delab.shadow_strike": "Теневой удар",
 	"effect.delab.in_mud": "В грязи",

@@ -1,4 +1,5 @@
-// 1.21.1	2025-09-27T18:26:14.2352907	Loot Tables
+// 1.21.1	2025-10-07T13:16:20.5990038	Loot Tables
 806d0d17f46d11fa3c016c315949dccc3eec337d data/delab/loot_table/blocks/alloys_furnace.json
 ac01b119e1a98ba081a5ec51370228759c215a3c data/delab/loot_table/blocks/sea_workshop.json
+82af68fa6ff7fa816952be3a3263c1b85c10a72b data/delab/loot_table/entities/frozen_cowing.json
 2ddfd453f2672d79eea12ccfe7621d48f22b7bc4 data/delab/loot_table/entities/mudaur.json
