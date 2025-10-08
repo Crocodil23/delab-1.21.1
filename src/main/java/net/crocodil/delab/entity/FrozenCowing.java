@@ -167,7 +167,6 @@ public class FrozenCowing extends Monster {
     @Override
     public void tick() {
         super.tick();
-        System.out.println(this.entityData.get(LEAPING));
         if(isLeap())
             leapTick++;
         else

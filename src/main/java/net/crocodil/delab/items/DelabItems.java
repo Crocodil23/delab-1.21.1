@@ -28,10 +28,22 @@ public class DelabItems
     public static final DeferredItem<Item> FROZEN_CORE = ITEMS.register("frozen_core",
             ()-> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> HARD_LEAF = ITEMS.register("hard_leaf",
+            ()-> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> EVIL_SPITTER_SEED = ITEMS.register("evil_spitter_seed",
+            ()-> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> FURIOUS_SPIRIT = ITEMS.register("furious_spirit",
+            ()-> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> ABOMINATION_INGOT = ITEMS.register("abomination_ingot",
             ()-> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> FROZEN_INGOT = ITEMS.register("frozen_ingot",
+            ()-> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> WILD_INGOT = ITEMS.register("wild_ingot",
             ()-> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> FROZEN_FLESH = ITEMS.register("frozen_flesh",
@@ -39,6 +51,12 @@ public class DelabItems
 
     public static final DeferredItem<Item> FRESH_FLESH = ITEMS.register("fresh_flesh",
             ()-> new Item(new Item.Properties().food(DelabFoodProperties.FRESH_FLESH)));
+
+    public static final DeferredItem<Item> ANCIENT_TOFU = ITEMS.register("ancient_tofu",
+            ()-> new Item(new Item.Properties().food(DelabFoodProperties.ANCIENT_TOFU)));
+
+    public static final DeferredItem<Item> DEFENDER_OFFERING = ITEMS.register("defender_offering",
+            ()-> new Item(new Item.Properties().stacksTo(1).food(DelabFoodProperties.DEFENDER_OFFERING)));
 
 
     public static final DeferredItem<MudBallItem> MUD_BALL = ITEMS.register("mud_ball",

@@ -12,6 +12,12 @@
 	"item.delab.frozen_ingot": "Замороженный слиток",
 	"item.delab.frozen_flesh": "Замороженная плоть",
 	"item.delab.fresh_flesh": "Свежая плоть",
+	"item.delab.hard_leaf": "Жесткий лист",
+	"item.delab.evil_spitter_seed": "Семя злобоплюя",
+	"item.delab.furious_spirit": "Дух ярости",
+	"item.delab.wild_ingot": "Дикий слиток",
+	"item.delab.ancient_tofu": "Древний тофу",
+	"item.delab.defender_offering": "Подношение защитника",
     "item.delab.recharge_crystal": "Кристалл возобновления (WIP)",
 
 	"item.delab.adventure_upgrade_smithing_template": "Кузнечный шаблон",
@@ -62,7 +68,7 @@
 	"item.delab.frozen_bow": "Замороженный лук",
 
 	"item.delab.mudaur_spawn_egg": "Яйцо призыва грязетавра",
-	"item.delab.frozen_cowing_spawn": "Яйцо призыва замершего коровяга",
+	"item.delab.frozen_cowing_spawn_egg": "Яйцо призыва замершего коровяга",
 
 	"tooltip.delab.shift_down": "Зажмите §eShift§r для больших деталей",
 	"tooltip.delab.ctrl_down": "Зажмите §aCtrl§r чтобы узнать способность",
@@ -97,6 +103,7 @@
 	"effect.delab.shadow_strike": "Теневой удар",
 	"effect.delab.in_mud": "В грязи",
 	"effect.delab.magical_Frost": "Магический холод",
+	"effect.delab.angry": "Злость",
 
 	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!",
 	"sounds.delab.earth_strike_sound": "Удар молота по земле"

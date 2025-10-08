@@ -241,6 +241,14 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_frozen_core", has(DelabItems.FROZEN_CORE))
                 .save(out);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelabItems.DEFENDER_OFFERING, 1)
+                .requires(Items.BOWL)
+                .requires(DelabItems.HARD_LEAF)
+                .requires(DelabItems.EVIL_SPITTER_SEED)
+                .requires(DelabItems.ANCIENT_TOFU)
+                .unlockedBy("has_ancient_tofu", has(DelabItems.ANCIENT_TOFU))
+                .save(out);
+
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(Items.IRON_HELMET),
@@ -320,6 +328,12 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .addIngredient(Items.IRON_INGOT)
                 .addIngredient(DelabItems.FROZEN_CORE)
                 .addIngredient(Items.SNOW_BLOCK)
+                .build(out);
+
+        AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.WILD_INGOT.get())
+                .addIngredient(Items.IRON_INGOT)
+                .addIngredient(DelabItems.FURIOUS_SPIRIT)
+                .addIngredient(DelabItems.HARD_LEAF)
                 .build(out);
     }
 

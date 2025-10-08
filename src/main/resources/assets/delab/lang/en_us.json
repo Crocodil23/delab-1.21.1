@@ -12,6 +12,12 @@
 	"item.delab.frozen_ingot": "Frozen Ingot",
 	"item.delab.frozen_flesh": "Frozen Fresh",
 	"item.delab.fresh_flesh": "Fresh Flesh",
+	"item.delab.hard_leaf": "Hard Leaf",
+	"item.delab.evil_spitter_seed": "Evil Spitter Seed",
+	"item.delab.furious_spirit": "Furious Spirit",
+	"item.delab.wild_ingot": "Wild Ingot",
+	"item.delab.ancient_tofu": "Ancient Tofu",
+	"item.delab.defender_offering": "Defenders Offering",
     "item.delab.recharge_crystal": "Recharge Crystal (WIP)",
 
 	"item.delab.adventure_upgrade_smithing_template": "Smithing Template",
@@ -61,7 +67,7 @@
 	"item.delab.frozen_bow": "Frozen Ball",
 
 	"item.delab.mudaur_spawn_egg": "Mudaur Spawn Egg",
-	"item.delab.frozen_cowing_spawn": "Frozen Cowing Spawn Egg",
+	"item.delab.frozen_cowing_spawn_egg": "Frozen Cowing Spawn Egg",
 
 	"tooltip.delab.shift_down": "Press §eShift§r for more details",
 	"tooltip.delab.ctrl_down": "Press §aCtrl§r to know the ability",
@@ -96,6 +102,7 @@
 	"effect.delab.shadow_strike": "Shadow Strike",
 	"effect.delab.in_mud": "In Mud",
 	"effect.delab.magical_Frost": "Magical Frost",
+	"effect.delab.angry": "Angry",
 
 	"sounds.delab.shadow_strike_sound": "Someone is hiding in the shadows!",
 	"sounds.delab.earth_strike_sound": "Hammer strikes the ground"

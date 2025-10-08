@@ -26,13 +26,20 @@ public class DelabCreativeTabs
 
                         output.accept(DelabItems.ABOMINATION_DUST);
                         output.accept(DelabItems.FROZEN_CORE);
+                        output.accept(DelabItems.HARD_LEAF);
+                        output.accept(DelabItems.FURIOUS_SPIRIT);
                         output.accept(DelabItems.ABOMINATION_INGOT);
                         output.accept(DelabItems.FROZEN_INGOT);
+                        output.accept(DelabItems.WILD_INGOT);
                         output.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(DelabItems.RECHARGE_CRYSTAL);
 
+
                         output.accept(DelabItems.FROZEN_FLESH);
                         output.accept(DelabItems.FRESH_FLESH);
+                        output.accept(DelabItems.ANCIENT_TOFU);
+                        output.accept(DelabItems.DEFENDER_OFFERING);
+
 
                         output.accept(DelabItems.WOODEN_DAGGER);
                         output.accept(DelabItems.STONE_DAGGER);
@@ -71,6 +78,9 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.FROZEN_BALL);
                         output.accept(DelabItems.FROZEN_BOW);
                         output.accept(DelabItems.ABOMINATION_BOW);
+
+
+                        output.accept(DelabItems.EVIL_SPITTER_SEED);
 
 
                         output.accept(DelabBlocks.SEA_WORKSHOP);

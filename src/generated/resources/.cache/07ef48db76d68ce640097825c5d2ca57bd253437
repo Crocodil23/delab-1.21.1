@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-07T13:16:20.5980033	Item Models: delab
+// 1.21.1	2025-10-08T12:03:32.1018396	Item Models: delab
 dbfaf402fa0b8f3b803ab7096bf6fedd7f944b79 assets/delab/models/item/abomination_boots.json
 3a9c69dc8f52870d002e390ed110cf1c67cffcfc assets/delab/models/item/abomination_chestplate.json
 91ed397b7146a3f526819f9c392dd3937ac60ac3 assets/delab/models/item/abomination_dust.json
@@ -8,7 +8,10 @@ d6632bd3b5923cf910229744266a787ed746010b assets/delab/models/item/abomination_he
 236c254e5f5acb80f7a2907715772f14d533922f assets/delab/models/item/abomination_leggings.json
 e771df5adfb71e98ccda86ae8b8919c62e2c5e49 assets/delab/models/item/adventure_upgrade_smithing_template.json
 222a77fd1cab3cf6eb75719e4583a5e67a7bc300 assets/delab/models/item/alloys_furnace.json
+09e78c501c68cb32570a309a037ae5db74567f61 assets/delab/models/item/ancient_tofu.json
+e6d533c18597da82f8bdc006015503450b4eb2ce assets/delab/models/item/defender_offering.json
 5de2141e081649299dd8b4d7648bc0b0a43906eb assets/delab/models/item/diamond_hammer.json
+7d52b9355b2bb5b7166a1a0db9e5fc90a12e5db7 assets/delab/models/item/evil_spitter_seed.json
 1f519e22e505b630e4c03ff8089da4362190dd09 assets/delab/models/item/fresh_flesh.json
 b5b16a757df0fd5c987a2012941dd5ae6d45565c assets/delab/models/item/frozen_axe.json
 005bc274ab6e1f3b36a17217e94fb6eac9afaadc assets/delab/models/item/frozen_ball.json
@@ -20,11 +23,14 @@ bdfe3587b63bf589412aa7caa4c05276c312e851 assets/delab/models/item/frozen_flesh.j
 e7259bf5df3830c56ee29e8aa2b6298452e8d992 assets/delab/models/item/frozen_helmet.json
 349116eacbbeed387c51c1ddbfc6213a1bd2d301 assets/delab/models/item/frozen_ingot.json
 87048889780616e5101f37a0fd70fa4473a1940c assets/delab/models/item/frozen_leggings.json
+f7030b7ac8388f86a1839b6fbf5f604a07bc3032 assets/delab/models/item/furious_spirit.json
 b06db785d1ba5b53b6eeca8eae26fad0b3067cb6 assets/delab/models/item/golden_hammer.json
+be93547660ebee0503fa07b8332fcf2a91253adb assets/delab/models/item/hard_leaf.json
 d4c11e5f0ae907bb1e08ee4abe5b02ff04421f63 assets/delab/models/item/iron_hammer.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/delab/models/item/mudaur_spawn_egg.json
 f6a59ba5326bad3d4330e0c3e829d89969ea87a5 assets/delab/models/item/mud_ball.json
 d5531e901966d829a268fc8aadc6db6ebd226aed assets/delab/models/item/netherite_hammer.json
 8f19d2303421f87b15d54b956e7350aab27eece1 assets/delab/models/item/recharge_crystal.json
 0bc26785a02960c507d01c122bdddfaaa43be059 assets/delab/models/item/stone_hammer.json
+f6e6415afd7b8c4ac1de75a195aae28a2730737b assets/delab/models/item/wild_ingot.json
 260672779c2690525dd56725401e1eafe3631345 assets/delab/models/item/wooden_hammer.json

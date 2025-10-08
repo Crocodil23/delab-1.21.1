@@ -26,7 +26,8 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
 
         tag(DelabTags.Items.ALLOYS_TIER_1)
                 .add(DelabItems.ABOMINATION_INGOT.asItem())
-                .add(DelabItems.FROZEN_INGOT.asItem());
+                .add(DelabItems.FROZEN_INGOT.asItem())
+                .add(DelabItems.WILD_INGOT.asItem());
 
         tag(ItemTags.AXES)
                 .add(DelabItems.FROZEN_AXE.asItem());

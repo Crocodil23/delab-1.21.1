@@ -1,6 +1,7 @@
-// 1.21.1	2025-10-04T16:28:40.2818672	Recipes
+// 1.21.1	2025-10-08T12:03:32.1038399	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
 7e5b9d23b3a080cdb7a78d84c55cdbabb180e56b data/delab/advancement/recipes/alloys/frozen_ingot.json
+39a41807da7b3aa63e59da59e5f129a41dc54d8c data/delab/advancement/recipes/alloys/wild_ingot.json
 f105e74642b396ae6bf45c65eb776687a77423e8 data/delab/advancement/recipes/combat/abomination_boots.json
 c2a8be38987659bc385f72721bfc00677ec3d236 data/delab/advancement/recipes/combat/abomination_bow.json
 84f2a3f7a4b33d4d007153c834e3bb91bd54c178 data/delab/advancement/recipes/combat/abomination_chestplate.json
@@ -33,6 +34,7 @@ ad0f05f6cd46955041911e28639ef46d10f2187f data/delab/advancement/recipes/combat/s
 084670e4599148743927812fecb3287749394325 data/delab/advancement/recipes/combat/wooden_dagger.json
 a8840ff4699cf9dbc8bb33ed6a4f5c9aceabe4a8 data/delab/advancement/recipes/combat/wooden_hammer.json
 3a042cf2ed08911041871bc1798f43dfe823ab46 data/delab/advancement/recipes/combat/wooden_spear.json
+4b73b38433972d865a5f2ad41da8bb53a0429875 data/delab/advancement/recipes/food/defender_offering.json
 a44c91fccf0ece35ce0f94b3fde12f4ba61fff4c data/delab/advancement/recipes/food/fresh_flesh_campfire_cooking.json
 b56e4007534684876838a5540936df56e0598edc data/delab/advancement/recipes/food/fresh_flesh_smelting.json
 78a3d26f2c1ba6c9b0bf1f13288aa2b587068afe data/delab/advancement/recipes/food/fresh_flesh_smoking.json
@@ -47,7 +49,9 @@ d5812d7c0e61d3c910de09a3f476204b5dae8bb2 data/delab/recipe/abomination_leggings.
 17ce92190fbec0baa576efa8c2d4fda4cf232c2c data/delab/recipe/adventure_upgrade_smithing_template.json
 652a779ec698b135ea1aa65515c1487687b74058 data/delab/recipe/alloys/abomination_ingot.json
 f78af5e116e1bb94940224192e41cced9ace48f8 data/delab/recipe/alloys/frozen_ingot.json
+d990be2e6e65b70c8aecdc55dcec1159755b7348 data/delab/recipe/alloys/wild_ingot.json
 8904af5d092cc620cdb86401207d30417e6ec5fd data/delab/recipe/alloys_furnace.json
+c37a7a6c8d47c716714ca507a95e938e8de4b6e9 data/delab/recipe/defender_offering.json
 900f52f96e8b32b034369f17e964f4403fc1e928 data/delab/recipe/diamond_dagger.json
 f3d09f10f088721eba283e2359cda29835881a3d data/delab/recipe/diamond_hammer.json
 3c5f6ea783893a641734aca2696fdb5747cfcdc1 data/delab/recipe/diamond_spear.json

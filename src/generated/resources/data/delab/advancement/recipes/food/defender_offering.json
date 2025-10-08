@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ancient_tofu": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delab:ancient_tofu"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delab:defender_offering"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ancient_tofu"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delab:defender_offering"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "delab:hard_leaf"
+    },
+    {
+      "item": "delab:evil_spitter_seed"
+    },
+    {
+      "item": "delab:ancient_tofu"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delab:defender_offering"
+  }
+}

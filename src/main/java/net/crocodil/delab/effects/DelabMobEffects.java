@@ -44,6 +44,11 @@ public class DelabMobEffects
     public static final Holder<MobEffect> MAGICAL_FROST = DELAB_EFFECTS.register("magical_frost",
             () -> new MagicalFrostEffect(MobEffectCategory.HARMFUL, 0x649bc6));
 
+    public static final Holder<MobEffect> ANGRY = DELAB_EFFECTS.register("angry",
+            () -> new AngryMobEffect(MobEffectCategory.NEUTRAL, 0x9b2d30));
+
+
+
 
 
 

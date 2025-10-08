@@ -4,10 +4,7 @@ import net.crocodil.delab.Delab;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.items.DelabItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class DelabItemModelProvider extends ItemModelProvider {
@@ -21,10 +18,16 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE.get());
         basicItem(DelabItems.ABOMINATION_DUST.get());
         basicItem(DelabItems.FROZEN_CORE.get());
+        basicItem(DelabItems.HARD_LEAF.get());
+        basicItem(DelabItems.EVIL_SPITTER_SEED.get());
+        basicItem(DelabItems.FURIOUS_SPIRIT.get());
         basicItem(DelabItems.ABOMINATION_INGOT.get());
         basicItem(DelabItems.FROZEN_INGOT.get());
+        basicItem(DelabItems.WILD_INGOT.get());
         basicItem(DelabItems.FROZEN_FLESH.get());
         basicItem(DelabItems.FRESH_FLESH.get());
+        basicItem(DelabItems.ANCIENT_TOFU.get());
+        basicItem(DelabItems.DEFENDER_OFFERING.get());
         basicItem(DelabItems.MUD_BALL.get());
         basicItem(DelabItems.FROZEN_BALL.get());
 

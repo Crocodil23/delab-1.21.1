@@ -116,8 +116,11 @@ public class Delab {
         {
             event.accept(DelabItems.ABOMINATION_DUST);
             event.accept(DelabItems.FROZEN_CORE);
+            event.accept(DelabItems.HARD_LEAF);
+            event.accept(DelabItems.FURIOUS_SPIRIT);
             event.accept(DelabItems.ABOMINATION_INGOT);
             event.accept(DelabItems.FROZEN_INGOT);
+            event.accept(DelabItems.WILD_INGOT);
 
             event.accept(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE);
             event.accept(DelabItems.RECHARGE_CRYSTAL);
@@ -137,6 +140,12 @@ public class Delab {
         {
             event.accept(DelabItems.FROZEN_FLESH);
             event.accept(DelabItems.FRESH_FLESH);
+            event.accept(DelabItems.ANCIENT_TOFU);
+            event.accept(DelabItems.DEFENDER_OFFERING);
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+        {
+            event.accept(DelabItems.EVIL_SPITTER_SEED);
         }
     }
 
