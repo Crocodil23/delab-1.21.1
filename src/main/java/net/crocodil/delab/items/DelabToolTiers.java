@@ -22,4 +22,12 @@ public class DelabToolTiers {
             18,
             () -> Ingredient.of(DelabItems.FROZEN_INGOT));
 
+    public static final Tier WILD_INGOT = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
+            313,
+            7.5F,
+            2.5F,
+            18,
+            () -> Ingredient.of(DelabItems.WILD_INGOT));
+
 }

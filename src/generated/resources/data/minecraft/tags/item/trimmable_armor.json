@@ -3,7 +3,11 @@
     "delab:abomination_boots",
     "delab:abomination_chestplate",
     "delab:abomination_leggings",
-    "delab:abomination_helmet"
+    "delab:abomination_helmet",
+    "delab:frozen_helmet",
+    "delab:frozen_chestplate",
+    "delab:frozen_leggings",
+    "delab:frozen_boots"
   ],
   "values": []
 }

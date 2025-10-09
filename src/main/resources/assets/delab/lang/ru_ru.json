@@ -28,6 +28,7 @@
 	"item.delab.smithing_template.adventure_upgrade.additions_slot_description": "Поместите спалв Тира I",
 
 	"item.delab.frozen_axe": "Замороженный топор",
+	"item.delab.wild_katana": "Дикая Катана",
 
 	"item.delab.wooden_dagger": "Деревянный кинжал",
 	"item.delab.stone_dagger": "Каменный кинжал",
@@ -35,6 +36,7 @@
 	"item.delab.golden_dagger": "Золотой кинжал",
 	"item.delab.diamond_dagger": "Алмазный кинжал",
 	"item.delab.netherite_dagger": "Незеритовый кинжал",
+	"item.delab.wild_wakizashi": "Дикий вакидзаси ",
 	
 	"item.delab.wooden_spear": "Деревянное копьё",
 	"item.delab.stone_spear": "Каменное копьё",
@@ -82,6 +84,8 @@
 	"tooltip.delab.frozen_axe_tooltip": "Полностью заряженный удар накладывает эффект  \"Магический холод\" \nЕсли цель заморожена, то урон увеличивается на 2",
 	"tooltip.delab.frozen_bow_tooltip": "Если цель заморожена, то урон увеличивается на 2",
 	"tooltip.delab.frozen_armor_tooltip": "При полном комплекте:\n+0.5 урона топорам\nКогда вы накладываете эффект \"Магический холод\" его уровень увеличивается на 1",
+	"tooltip.delab.wild_katana_tooltip": "Полностью заряженный удар накладывает эффект  \"Комбо\"\nКаждый уровень комбо увеличвает урон на 0.5\nМаксимальный уровень комбо 4",
+	"tooltip.delab.wild_wakizashi_tooltip": "Находясь в правой руке повышает максимальный уровень комбо на 1",
 
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
 	"block.delab.alloys_furnace": "Печь для сплавов",
@@ -104,6 +108,7 @@
 	"effect.delab.in_mud": "В грязи",
 	"effect.delab.magical_Frost": "Магический холод",
 	"effect.delab.angry": "Злость",
+	"effect.delab.combo": "Комбо",
 
 	"sounds.delab.shadow_strike_sound": "Кто-то скрылся в тенях!",
 	"sounds.delab.earth_strike_sound": "Удар молота по земле"

@@ -84,6 +84,21 @@ public class DelabItems
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }
             });
+    public  static final  DeferredItem<SwordItem> WILD_KATANA = ITEMS.register("wild_katana",
+            () -> new SwordItem(DelabToolTiers.WILD_INGOT, new
+                    Item.Properties().attributes(SwordItem.createAttributes(DelabToolTiers.WILD_INGOT, 3.0F, -2.4F)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_katana_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
 
     public  static final  DeferredItem<DaggerItem> WOODEN_DAGGER = ITEMS.register("wooden_dagger",
@@ -97,7 +112,23 @@ public class DelabItems
     public  static final  DeferredItem<DaggerItem> DIAMOND_DAGGER = ITEMS.register("diamond_dagger",
             () -> new DaggerItem(Tiers.DIAMOND, new Item.Properties().attributes(DaggerItem.createAttributes(Tiers.DIAMOND, 1, -2F))));
     public  static final  DeferredItem<DaggerItem> NETHERITE_DAGGER = ITEMS.register("netherite_dagger",
-            () -> new DaggerItem(Tiers.NETHERITE, new Item.Properties().fireResistant().attributes(DaggerItem.createAttributes(Tiers.NETHERITE, 1, -2.4F))));
+            () -> new DaggerItem(Tiers.NETHERITE, new Item.Properties().fireResistant().attributes(DaggerItem.createAttributes(Tiers.NETHERITE, 1, -2.0F))));
+
+    public  static final  DeferredItem<DaggerItem> WILD_WAKIZASHI = ITEMS.register("wild_wakizashi",
+            () -> new DaggerItem(DelabToolTiers.WILD_INGOT, new
+                    Item.Properties().attributes(DaggerItem.createAttributes(DelabToolTiers.WILD_INGOT, 1.0F, -2.0F)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_wakizashi_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public  static final  DeferredItem<HammerItem> WOODEN_HAMMER = ITEMS.register("wooden_hammer",
             () -> new HammerItem(Tiers.WOOD, new DaggerItem.Properties().attributes(HammerItem.createAttributes(Tiers.WOOD, 5, -3.0F))));

@@ -32,13 +32,17 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.AXES)
                 .add(DelabItems.FROZEN_AXE.asItem());
 
+        tag(ItemTags.SWORDS)
+                .add(DelabItems.WILD_KATANA.asItem());
+
         tag(DelabTags.Items.DAGGER_ENCHANTABLE)
                 .add(DelabItems.WOODEN_DAGGER.asItem())
                 .add(DelabItems.STONE_DAGGER.asItem())
                 .add(DelabItems.IRON_DAGGER.asItem())
                 .add(DelabItems.GOLDEN_DAGGER.asItem())
                 .add(DelabItems.DIAMOND_DAGGER.asItem())
-                .add(DelabItems.NETHERITE_DAGGER.asItem());
+                .add(DelabItems.NETHERITE_DAGGER.asItem())
+                .add(DelabItems.WILD_WAKIZASHI.asItem());
 
         tag(DelabTags.Items.HAMMER_ENCHANTABLE)
                 .add(DelabItems.WOODEN_HAMMER.asItem())
@@ -86,19 +90,32 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
         tag(DelabTags.Items.LOYALTY_ENCHANTABLE)
                 .addTag(DelabTags.Items.SPEAR_ENCHANTABLE)
                 .add(Items.TRIDENT);
+
         tag(ItemTags.HEAD_ARMOR)
-                .add(DelabItems.ABOMINATION_HELMET.get());
+                .add(DelabItems.ABOMINATION_HELMET.get())
+                .add(DelabItems.FROZEN_HELMET.get());
+
         tag(ItemTags.CHEST_ARMOR)
-                .add(DelabItems.ABOMINATION_CHESTPLATE.get());
+                .add(DelabItems.ABOMINATION_CHESTPLATE.get())
+                .add(DelabItems.FROZEN_CHESTPLATE.get());
+
         tag(ItemTags.LEG_ARMOR)
-                .add(DelabItems.ABOMINATION_LEGGINGS.get());
+                .add(DelabItems.ABOMINATION_LEGGINGS.get())
+                .add(DelabItems.FROZEN_LEGGINGS.get());
+
         tag(ItemTags.FOOT_ARMOR)
-                .add(DelabItems.ABOMINATION_BOOTS.get());
+                .add(DelabItems.ABOMINATION_BOOTS.get())
+                .add(DelabItems.FROZEN_BOOTS.get());
+
         tag(ItemTags.TRIMMABLE_ARMOR)
                 .remove(DelabItems.ABOMINATION_BOOTS.get())
                 .remove(DelabItems.ABOMINATION_CHESTPLATE.get())
                 .remove(DelabItems.ABOMINATION_LEGGINGS.get())
-                .remove(DelabItems.ABOMINATION_HELMET.get());
+                .remove(DelabItems.ABOMINATION_HELMET.get())
+                .remove(DelabItems.FROZEN_HELMET.get())
+                .remove(DelabItems.FROZEN_CHESTPLATE.get())
+                .remove(DelabItems.FROZEN_LEGGINGS.get())
+                .remove(DelabItems.FROZEN_BOOTS.get());
 
     }
 }

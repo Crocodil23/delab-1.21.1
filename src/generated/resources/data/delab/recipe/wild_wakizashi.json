@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "delab:frozen_ingot"
+  },
+  "base": {
+    "item": "delab:iron_dagger"
+  },
+  "result": {
+    "count": 1,
+    "id": "delab:wild_wakizashi"
+  },
+  "template": {
+    "item": "delab:adventure_upgrade_smithing_template"
+  }
+}

@@ -47,8 +47,8 @@ public class DelabMobEffects
     public static final Holder<MobEffect> ANGRY = DELAB_EFFECTS.register("angry",
             () -> new AngryMobEffect(MobEffectCategory.NEUTRAL, 0x9b2d30));
 
-
-
+    public static final Holder<MobEffect> COMBO = DELAB_EFFECTS.register("combo",
+            () -> new AngryMobEffect(MobEffectCategory.BENEFICIAL, 0xFFFFFF));
 
 
 

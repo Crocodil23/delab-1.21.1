@@ -49,6 +49,7 @@ public class DelabItemModelProvider extends ItemModelProvider {
         handheldItem(DelabItems.NETHERITE_HAMMER.asItem());
         handheldItem(DelabItems.ABOMINATION_HAMMER.asItem());
         handheldItem(DelabItems.FROZEN_AXE.asItem());
+        handheldItem(DelabItems.WILD_KATANA.asItem());
 
 
         simpleBlockItem(DelabBlocks.ALLOYS_FURNACE.get());

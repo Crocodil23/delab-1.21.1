@@ -94,6 +94,8 @@ public class Delab {
             event.accept(DelabItems.DIAMOND_SPEAR);
             event.accept(DelabItems.NETHERITE_SPEAR);
 
+            event.accept(DelabItems.WILD_KATANA);
+            event.accept(DelabItems.WILD_WAKIZASHI);
             event.accept(DelabItems.FROZEN_AXE);
 
             event.accept(DelabItems.ABOMINATION_HELMET);

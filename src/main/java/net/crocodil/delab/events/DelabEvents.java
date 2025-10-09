@@ -18,6 +18,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -233,7 +234,43 @@ public class DelabEvents {
             }
         }
     }
+    @SubscribeEvent
+    public static void ComboEvent(LivingDamageEvent.Pre event) {
+        if (!event.getEntity().level().isClientSide) {
+            if (!isDamageBlocked(event.getContainer())) {
+                Entity direct = event.getSource().getDirectEntity();
+                if ((direct instanceof LivingEntity living)) {
+                    boolean canAdd = true;
+                    if(living.getMainHandItem().is(DelabItems.WILD_KATANA))
+                    {
+                        if(direct instanceof Player player)
+                            if(player.getAttackStrengthScale(0.5F) < 1)
+                                canAdd = false;
+                    }
+                    else
+                        canAdd = false;
+                    if(canAdd)
+                    {
+                        int amplifier = -1;
+                        if(living.hasEffect(DelabMobEffects.COMBO))
+                        {
+                            amplifier = living.getEffect(DelabMobEffects.COMBO).getAmplifier();
+                            event.setNewDamage(getNewRealDamage(event.getContainer(), 0.5F * (amplifier+1)));
+                        }
+                        int max = 4;
+                        if(living.getOffhandItem().is(DelabItems.WILD_WAKIZASHI))
+                            max += 1;
+                        if(amplifier >= max)
+                            amplifier = max - 1;
+                        living.addEffect(new MobEffectInstance(DelabMobEffects.COMBO, 30, amplifier + 1));
+                    }
+                    else
+                        living.removeEffect(DelabMobEffects.COMBO);
+                }
 
+            }
+        }
+    }
     @SubscribeEvent
     public static void MudDamageBonusEvent(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
@@ -291,8 +328,9 @@ public class DelabEvents {
             }
         }
     }
+
     @SubscribeEvent
-    public static void AbominationBowDamageBonus(LivingDamageEvent.Pre event) {
+    public static void BowDamageBonus(LivingDamageEvent.Pre event) {
         if (!event.getEntity().level().isClientSide) {
             Entity direct = event.getSource().getDirectEntity();
             LivingEntity living = event.getEntity();
@@ -310,8 +348,6 @@ public class DelabEvents {
 
                     if(addDmg > 0)
                         event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));
-                    System.out.println(event.getOriginalDamage());
-                    System.out.println(event.getNewDamage());
                 }
 
             }
@@ -352,5 +388,4 @@ public class DelabEvents {
             serverLevel.addFreshEntity(mudaur);
         }
     }
-
 }

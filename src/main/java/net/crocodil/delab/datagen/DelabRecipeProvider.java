@@ -5,11 +5,14 @@ import net.crocodil.delab.DelabTags;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.datagen.builder.AlloysFurnaceRecipeBuilder;
 import net.crocodil.delab.items.DelabItems;
+import net.minecraft.advancements.Criterion;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -24,190 +27,70 @@ public class DelabRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(RecipeOutput out) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_DAGGER)
-                .pattern("A")
-                .pattern("B")
-                .define('A', ItemTags.PLANKS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_stick", has(Items.STICK))
+
+        spearCraft(ItemTags.PLANKS, DelabItems.WOODEN_SPEAR.get(), out);
+        spearCraft(ItemTags.STONE_TOOL_MATERIALS, DelabItems.STONE_SPEAR.get(), out);
+        spearCraft(Items.IRON_INGOT, DelabItems.IRON_SPEAR.get(), out);
+        spearCraft(Items.GOLD_INGOT, DelabItems.GOLDEN_SPEAR.get(), out);
+        spearCraft(Items.DIAMOND, DelabItems.DIAMOND_SPEAR.get(), out);
+
+        daggerCraft(ItemTags.PLANKS, DelabItems.WOODEN_DAGGER.get(), out);
+        daggerCraft(ItemTags.STONE_TOOL_MATERIALS, DelabItems.STONE_DAGGER.get(), out);
+        daggerCraft(Items.IRON_INGOT, DelabItems.IRON_DAGGER.get(), out);
+        daggerCraft(Items.GOLD_INGOT, DelabItems.GOLDEN_DAGGER.get(), out);
+        daggerCraft(Items.DIAMOND, DelabItems.DIAMOND_DAGGER.get(), out);
+
+        hammerCraft(ItemTags.PLANKS, DelabItems.WOODEN_HAMMER.get(), out);
+        hammerCraft(ItemTags.STONE_TOOL_MATERIALS, DelabItems.STONE_HAMMER.get(), out);
+        hammerCraft(Items.IRON_INGOT, DelabItems.IRON_HAMMER.get(), out);
+        hammerCraft(Items.GOLD_INGOT, DelabItems.GOLDEN_HAMMER.get(), out);
+        hammerCraft(Items.DIAMOND, DelabItems.DIAMOND_HAMMER.get(), out);
+
+        netheriteSmithing(DelabItems.DIAMOND_DAGGER.get(), DelabItems.NETHERITE_DAGGER.get(), out);
+        netheriteSmithing(DelabItems.DIAMOND_HAMMER.get(), DelabItems.NETHERITE_HAMMER.get(), out);
+        netheriteSmithing(DelabItems.DIAMOND_SPEAR.get(), DelabItems.NETHERITE_SPEAR.get(), out);
+
+        abominationSmithing(DelabItems.IRON_HAMMER.get(), DelabItems.ABOMINATION_HAMMER.get(), out);
+        abominationSmithing(Items.BOW, DelabItems.ABOMINATION_BOW.get(), out);
+        abominationSmithing(Items.IRON_HELMET, DelabItems.ABOMINATION_HELMET.get(), out);
+        abominationSmithing(Items.IRON_CHESTPLATE, DelabItems.ABOMINATION_CHESTPLATE.get(), out);
+        abominationSmithing(Items.IRON_LEGGINGS, DelabItems.ABOMINATION_LEGGINGS.get(), out);
+        abominationSmithing(Items.IRON_BOOTS, DelabItems.ABOMINATION_BOOTS.get(), out);
+
+        frozenSmithing(Items.IRON_AXE, DelabItems.FROZEN_AXE.get(), out);
+        frozenSmithing(Items.BOW, DelabItems.FROZEN_BOW.get(), out);
+        frozenSmithing(Items.IRON_HELMET, DelabItems.FROZEN_HELMET.get(), out);
+        frozenSmithing(Items.IRON_CHESTPLATE, DelabItems.FROZEN_CHESTPLATE.get(), out);
+        frozenSmithing(Items.IRON_LEGGINGS, DelabItems.FROZEN_LEGGINGS.get(), out);
+        frozenSmithing(Items.IRON_BOOTS, DelabItems.FROZEN_BOOTS.get(), out);
+
+        frozenSmithing(Items.IRON_SWORD, DelabItems.WILD_KATANA.get(), out);
+        frozenSmithing(DelabItems.IRON_DAGGER.get(), DelabItems.WILD_WAKIZASHI.get(), out);
+
+
+        foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelabItems.DEFENDER_OFFERING, 1)
+                .requires(Items.BOWL)
+                .requires(DelabItems.HARD_LEAF)
+                .requires(DelabItems.EVIL_SPITTER_SEED)
+                .requires(DelabItems.ANCIENT_TOFU)
+                .unlockedBy("has_ancient_tofu", has(DelabItems.ANCIENT_TOFU))
                 .save(out);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_DAGGER)
-                .pattern("A")
-                .pattern("B")
-                .define('A', ItemTags.STONE_TOOL_MATERIALS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.MUD_BALL, 8)
+                .requires(Items.MUD)
+                .requires(DelabItems.ABOMINATION_DUST)
+                .unlockedBy("has_abomination_dust", has(DelabItems.ABOMINATION_DUST))
                 .save(out);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_DAGGER)
-                .pattern("A")
-                .pattern("B")
-                .define('A', Items.IRON_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.FROZEN_BALL, 8)
+                .requires(Items.SNOW_BLOCK)
+                .requires(DelabItems.FROZEN_CORE)
+                .unlockedBy("has_frozen_core", has(DelabItems.FROZEN_CORE))
                 .save(out);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_DAGGER)
-                .pattern("A")
-                .pattern("B")
-                .define('A', Items.GOLD_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_DAGGER)
-                .pattern("A")
-                .pattern("B")
-                .define('A', Items.DIAMOND)
-                .define('B', Items.STICK)
-                .unlockedBy("has_diamond", has(Items.DIAMOND))
-                .save(out);
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.of(DelabItems.DIAMOND_DAGGER.get()),
-                Ingredient.of(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                DelabItems.NETHERITE_DAGGER.get())
-                .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
-                .save(out, Delab.MODID + ":netherite_dagger");
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_HAMMER)
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern(" B ")
-                .define('A', ItemTags.PLANKS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_stick", has(Items.STICK))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_HAMMER)
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern(" B ")
-                .define('A', ItemTags.STONE_TOOL_MATERIALS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_HAMMER)
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern(" B ")
-                .define('A', Items.IRON_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_HAMMER)
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern(" B ")
-                .define('A', Items.GOLD_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_HAMMER)
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern(" B ")
-                .define('A', Items.DIAMOND)
-                .define('B', Items.STICK)
-                .unlockedBy("has_diamond", has(Items.DIAMOND))
-                .save(out);
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(DelabItems.DIAMOND_HAMMER.get()),
-                        Ingredient.of(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.NETHERITE_HAMMER.get())
-                .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
-                .save(out, Delab.MODID + ":netherite_hammer");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(DelabItems.IRON_HAMMER.get()),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_HAMMER.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_hammer");
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_AXE),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_AXE.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":frozen_axe");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.BOW),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_BOW.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_bow");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.BOW),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_BOW.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
-                .save(out, Delab.MODID + ":frozen_bow");
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.WOODEN_SPEAR)
-                .pattern("  A")
-                .pattern(" B ")
-                .pattern("B  ")
-                .define('A', ItemTags.PLANKS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_stick", has(Items.STICK))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.STONE_SPEAR)
-                .pattern("  A")
-                .pattern(" B ")
-                .pattern("B  ")
-                .define('A', ItemTags.STONE_TOOL_MATERIALS)
-                .define('B', Items.STICK)
-                .unlockedBy("has_planks", has(ItemTags.STONE_TOOL_MATERIALS))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.IRON_SPEAR)
-                .pattern("  A")
-                .pattern(" B ")
-                .pattern("B  ")
-                .define('A', Items.IRON_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.GOLDEN_SPEAR)
-                .pattern("  A")
-                .pattern(" B ")
-                .pattern("B  ")
-                .define('A', Items.GOLD_INGOT)
-                .define('B', Items.STICK)
-                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
-                .save(out);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DelabItems.DIAMOND_SPEAR)
-                .pattern("  A")
-                .pattern(" B ")
-                .pattern("B  ")
-                .define('A', Items.DIAMOND)
-                .define('B', Items.STICK)
-                .unlockedBy("has_diamond", has(Items.DIAMOND))
-                .save(out);
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(DelabItems.DIAMOND_SPEAR.get()),
-                        Ingredient.of(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.NETHERITE_SPEAR.get())
-                .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
-                .save(out, Delab.MODID + ":netherite_spear");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, DelabBlocks.ALLOYS_FURNACE)
                 .pattern("ACA")
@@ -229,94 +112,6 @@ public class DelabRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_adventure_upgrade_smithing_template", has(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE))
                 .save(out);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.MUD_BALL, 8)
-                .requires(Items.MUD)
-                .requires(DelabItems.ABOMINATION_DUST)
-                .unlockedBy("has_abomination_dust", has(DelabItems.ABOMINATION_DUST))
-                .save(out);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, DelabItems.FROZEN_BALL, 8)
-                .requires(Items.SNOW_BLOCK)
-                .requires(DelabItems.FROZEN_CORE)
-                .unlockedBy("has_frozen_core", has(DelabItems.FROZEN_CORE))
-                .save(out);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DelabItems.DEFENDER_OFFERING, 1)
-                .requires(Items.BOWL)
-                .requires(DelabItems.HARD_LEAF)
-                .requires(DelabItems.EVIL_SPITTER_SEED)
-                .requires(DelabItems.ANCIENT_TOFU)
-                .unlockedBy("has_ancient_tofu", has(DelabItems.ANCIENT_TOFU))
-                .save(out);
-
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_HELMET),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_HELMET.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_helmet");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_CHESTPLATE),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_CHESTPLATE.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_chestplate");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_LEGGINGS),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_LEGGINGS.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_leggings");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_BOOTS),
-                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.ABOMINATION_BOOTS.get())
-                .unlocks("has_abomination_ingot", has(DelabItems.ABOMINATION_INGOT))
-                .save(out, Delab.MODID + ":abomination_boots");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_HELMET),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_HELMET.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_HELMET))
-                .save(out, Delab.MODID + ":frozen_helmet");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_CHESTPLATE),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_CHESTPLATE.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
-                .save(out, Delab.MODID + ":frozen_chestplate");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_LEGGINGS),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_LEGGINGS.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
-                .save(out, Delab.MODID + ":frozen_leggings");
-
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(Items.IRON_BOOTS),
-                        Ingredient.of(DelabItems.FROZEN_INGOT),
-                        RecipeCategory.COMBAT,
-                        DelabItems.FROZEN_BOOTS.get())
-                .unlocks("has_frozen_ingot", has(DelabItems.FROZEN_INGOT))
-                .save(out, Delab.MODID + ":frozen_boots");
-
-
-
-        foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);
 
         AlloysFurnaceRecipeBuilder.alloysFurnaceRecipe(DelabItems.ABOMINATION_INGOT.get())
                 .addIngredient(Items.IRON_INGOT)
@@ -339,6 +134,139 @@ public class DelabRecipeProvider extends RecipeProvider {
 
     private static String getItemName(Item item) {
         return BuiltInRegistries.ITEM.getKey(item).getPath();
+    }
+
+    private static String getItemTagsName(TagKey<Item> tag)
+    {
+        String name = "";
+        if(tag == ItemTags.PLANKS)
+            name = getItemName(Items.STICK);
+        else if(tag == ItemTags.STONE_TOOL_MATERIALS)
+            name = getItemName(Items.COBBLESTONE);
+        return name;
+    }
+
+    private static Criterion<InventoryChangeTrigger.TriggerInstance> getUnlocked(TagKey<Item> tag)
+    {
+        if(tag == ItemTags.PLANKS)
+            return has(Items.STICK);
+        else return has(tag);
+    }
+
+    private static void spearCraft(Item material, Item spear, RecipeOutput out)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, spear)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_" + getItemName(material), has(material))
+                .save(out);
+    }
+
+    private static void spearCraft(TagKey<Item> material, Item spear, RecipeOutput out)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, spear)
+                .pattern("  A")
+                .pattern(" B ")
+                .pattern("B  ")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_" + getItemTagsName(material), getUnlocked(material))
+                .save(out);
+    }
+
+    private static void daggerCraft(Item material, Item dagger, RecipeOutput out)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, dagger)
+                .pattern("A")
+                .pattern("B")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_" + getItemName(material), has(material))
+                .save(out);
+    }
+
+    private static void daggerCraft(TagKey<Item> material, Item dagger, RecipeOutput out)
+    {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, dagger)
+                .pattern("A")
+                .pattern("B")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_" + getItemTagsName(material), getUnlocked(material))
+                .save(out);
+    }
+
+    private static void hammerCraft(Item material, Item hammer, RecipeOutput out)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, hammer)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern(" B ")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_"+getItemName(material), has(material))
+                .save(out);
+    }
+
+    private static void hammerCraft(TagKey<Item> material, Item hammer, RecipeOutput out)
+    {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, hammer)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern(" B ")
+                .define('A', material)
+                .define('B', Items.STICK)
+                .unlockedBy("has_"+getItemTagsName(material), getUnlocked(material))
+                .save(out);
+    }
+
+    private static void netheriteSmithing(Item item, Item upgrade, RecipeOutput out)
+    {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(item),
+                        Ingredient.of(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        upgrade)
+                .unlocks("has_" + getItemName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+                .save(out, Delab.MODID + ":" + getItemName(upgrade));
+    }
+
+    private static void abominationSmithing(Item item, Item upgrade, RecipeOutput out)
+    {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(item),
+                        Ingredient.of(DelabItems.ABOMINATION_INGOT),
+                        RecipeCategory.COMBAT,
+                        upgrade)
+                .unlocks("has_" + getItemName(DelabItems.ABOMINATION_INGOT), has((DelabItems.ABOMINATION_INGOT)))
+                .save(out, Delab.MODID + ":" + getItemName(upgrade));
+    }
+
+    private static void frozenSmithing(Item item, Item upgrade, RecipeOutput out)
+    {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(item),
+                        Ingredient.of(DelabItems.FROZEN_INGOT),
+                        RecipeCategory.COMBAT,
+                        upgrade)
+                .unlocks("has_" + getItemName(DelabItems.FROZEN_INGOT), has((DelabItems.FROZEN_INGOT)))
+                .save(out, Delab.MODID + ":" + getItemName(upgrade));
+    }
+
+    private static void wildSmithing(Item item, Item upgrade, RecipeOutput out)
+    {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(DelabItems.ADVENTURE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(item),
+                        Ingredient.of(DelabItems.WILD_INGOT),
+                        RecipeCategory.COMBAT,
+                        upgrade)
+                .unlocks("has_" + getItemName(DelabItems.WILD_INGOT), has((DelabItems.WILD_INGOT)))
+                .save(out, Delab.MODID + ":" + getItemName(upgrade));
     }
 
     private static void foodCooking(Item input,Item result, RecipeOutput out)
