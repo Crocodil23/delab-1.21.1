@@ -108,6 +108,11 @@ public class Delab {
             event.accept(DelabItems.FROZEN_LEGGINGS);
             event.accept(DelabItems.FROZEN_BOOTS);
 
+            event.accept(DelabItems.WILD_HELMET);
+            event.accept(DelabItems.WILD_CHESTPLATE);
+            event.accept(DelabItems.WILD_LEGGINGS);
+            event.accept(DelabItems.WILD_BOOTS);
+
             event.accept(DelabItems.MUD_BALL);
             event.accept(DelabItems.FROZEN_BALL);
             event.accept(DelabItems.FROZEN_BOW);
@@ -194,6 +199,12 @@ public class Delab {
                     DelabItems.FROZEN_HELMET,
                     DelabItems.FROZEN_LEGGINGS,
                     DelabItems.FROZEN_BOOTS);
+
+            event.registerItem(new WildClientExtensions(),
+                    DelabItems.WILD_CHESTPLATE,
+                    DelabItems.WILD_HELMET,
+                    DelabItems.WILD_LEGGINGS,
+                    DelabItems.WILD_BOOTS);
 
         }
         @SubscribeEvent

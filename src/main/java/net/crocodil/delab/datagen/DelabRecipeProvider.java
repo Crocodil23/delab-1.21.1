@@ -64,8 +64,13 @@ public class DelabRecipeProvider extends RecipeProvider {
         frozenSmithing(Items.IRON_LEGGINGS, DelabItems.FROZEN_LEGGINGS.get(), out);
         frozenSmithing(Items.IRON_BOOTS, DelabItems.FROZEN_BOOTS.get(), out);
 
-        frozenSmithing(Items.IRON_SWORD, DelabItems.WILD_KATANA.get(), out);
-        frozenSmithing(DelabItems.IRON_DAGGER.get(), DelabItems.WILD_WAKIZASHI.get(), out);
+        wildSmithing(Items.IRON_SWORD, DelabItems.WILD_KATANA.get(), out);
+        wildSmithing(DelabItems.IRON_DAGGER.get(), DelabItems.WILD_WAKIZASHI.get(), out);
+        wildSmithing(Items.IRON_HELMET, DelabItems.WILD_HELMET.get(), out);
+        wildSmithing(Items.IRON_CHESTPLATE, DelabItems.WILD_CHESTPLATE.get(), out);
+        wildSmithing(Items.IRON_LEGGINGS, DelabItems.WILD_LEGGINGS.get(), out);
+        wildSmithing(Items.IRON_BOOTS, DelabItems.WILD_BOOTS.get(), out);
+
 
 
         foodCooking(DelabItems.FROZEN_FLESH.get(), DelabItems.FRESH_FLESH.get(), out);

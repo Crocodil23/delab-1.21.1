@@ -260,6 +260,8 @@ public class DelabEvents {
                         int max = 4;
                         if(living.getOffhandItem().is(DelabItems.WILD_WAKIZASHI))
                             max += 1;
+                        if(DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.WILD, living))
+                            max += 1;
                         if(amplifier >= max)
                             amplifier = max - 1;
                         living.addEffect(new MobEffectInstance(DelabMobEffects.COMBO, 30, amplifier + 1));
@@ -321,6 +323,10 @@ public class DelabEvents {
                     }
                     if (weapom.is(DelabTags.Items.HAMMER_ENCHANTABLE) &&
                             DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.ABOMINATION, direct_living)) {
+                        addDmg += 0.5F;
+                    }
+                    if (weapom.is(ItemTags.SWORDS) &&
+                            DelabArmorMaterials.isFullSetOff(DelabArmorMaterials.WILD, direct_living)) {
                         addDmg += 0.5F;
                     }
                     event.setNewDamage(getNewRealDamage(event.getContainer(), addDmg));

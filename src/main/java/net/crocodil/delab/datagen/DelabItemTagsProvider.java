@@ -93,19 +93,23 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.HEAD_ARMOR)
                 .add(DelabItems.ABOMINATION_HELMET.get())
-                .add(DelabItems.FROZEN_HELMET.get());
+                .add(DelabItems.FROZEN_HELMET.get())
+                .add(DelabItems.WILD_HELMET.get());
 
         tag(ItemTags.CHEST_ARMOR)
                 .add(DelabItems.ABOMINATION_CHESTPLATE.get())
-                .add(DelabItems.FROZEN_CHESTPLATE.get());
+                .add(DelabItems.FROZEN_CHESTPLATE.get())
+                .add(DelabItems.WILD_CHESTPLATE.get());
 
         tag(ItemTags.LEG_ARMOR)
                 .add(DelabItems.ABOMINATION_LEGGINGS.get())
-                .add(DelabItems.FROZEN_LEGGINGS.get());
+                .add(DelabItems.FROZEN_LEGGINGS.get())
+                .add(DelabItems.WILD_LEGGINGS.get());
 
         tag(ItemTags.FOOT_ARMOR)
                 .add(DelabItems.ABOMINATION_BOOTS.get())
-                .add(DelabItems.FROZEN_BOOTS.get());
+                .add(DelabItems.FROZEN_BOOTS.get())
+                .add(DelabItems.WILD_BOOTS.get());
 
         tag(ItemTags.TRIMMABLE_ARMOR)
                 .remove(DelabItems.ABOMINATION_BOOTS.get())
@@ -115,7 +119,12 @@ public class DelabItemTagsProvider extends ItemTagsProvider {
                 .remove(DelabItems.FROZEN_HELMET.get())
                 .remove(DelabItems.FROZEN_CHESTPLATE.get())
                 .remove(DelabItems.FROZEN_LEGGINGS.get())
-                .remove(DelabItems.FROZEN_BOOTS.get());
+                .remove(DelabItems.FROZEN_BOOTS.get())
+                .remove(DelabItems.WILD_HELMET.get())
+                .remove(DelabItems.WILD_CHESTPLATE.get())
+                .remove(DelabItems.WILD_LEGGINGS.get())
+                .remove(DelabItems.WILD_BOOTS.get());
+
 
     }
 }

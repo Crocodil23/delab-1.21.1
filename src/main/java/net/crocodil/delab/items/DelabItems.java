@@ -341,6 +341,69 @@ public class DelabItems
                 }
             });
 
+    public static final DeferredItem<ArmorItem> WILD_HELMET = ITEMS.register("wild_helmet",
+            () -> new ArmorItem(DelabArmorMaterials.WILD, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
+
+    public static final DeferredItem<ArmorItem> WILD_CHESTPLATE = ITEMS.register("wild_chestplate",
+            () -> new ArmorItem(DelabArmorMaterials.WILD, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
+
+    public static final DeferredItem<ArmorItem> WILD_LEGGINGS = ITEMS.register("wild_leggings",
+            () -> new ArmorItem(DelabArmorMaterials.WILD, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
+    public static final DeferredItem<ArmorItem> WILD_BOOTS = ITEMS.register("wild_boots",
+            () -> new ArmorItem(DelabArmorMaterials.WILD, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19)))
+            {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
+                {
+                    if(!Screen.hasControlDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.ctrl_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.delab.wild_armor_tooltip"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
+
     public static final DeferredItem<Item> MUDAUR_SPAWN_EGG = ITEMS.register("mudaur_spawn_egg",
             () -> new DeferredSpawnEggItem(DelabEntityTypes.MUDAUR, 0x874b0f, 7969893,
                     new Item.Properties()));

@@ -28,10 +28,14 @@ public class DelabBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ThrowingSpearModel.LAYER_LOCATION, ThrowingSpearModel::createBodyLayer);
+
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_OUTER, AbominationArmorModel::createOuterLayer);
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_INNER, AbominationArmorModel::createInnerLayer);
         event.registerLayerDefinition(FrozenArmorModel.LAYER_LOCATION_OUTER, FrozenArmorModel::createOuterLayer);
         event.registerLayerDefinition(FrozenArmorModel.LAYER_LOCATION_INNER, FrozenArmorModel::createInnerLayer);
+        event.registerLayerDefinition(WildArmorModel.LAYER_LOCATION_OUTER, WildArmorModel::createOuterLayer);
+        event.registerLayerDefinition(WildArmorModel.LAYER_LOCATION_INNER, WildArmorModel::createInnerLayer);
+
         event.registerLayerDefinition(MudaurModel.MUDAUR_OUTER_LAYER, MudaurModel::createOuterLayer);
         event.registerLayerDefinition(FrozenCowingModel.LAYER_LOCATION, FrozenCowingModel::createMainLayer);
         event.registerLayerDefinition(FrozenCowingModel.LAYER_LOCATION_OUTER, FrozenCowingModel::createOuterLayer);

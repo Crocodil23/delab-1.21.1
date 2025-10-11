@@ -4,11 +4,11 @@
     "item": "delab:wild_ingot"
   },
   "base": {
-    "item": "minecraft:iron_sword"
+    "item": "minecraft:iron_boots"
   },
   "result": {
     "count": 1,
-    "id": "delab:wild_katana"
+    "id": "delab:wild_boots"
   },
   "template": {
     "item": "delab:adventure_upgrade_smithing_template"

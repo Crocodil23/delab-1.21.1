@@ -63,6 +63,11 @@
 	"item.delab.frozen_leggings": "Frozen Leggings",
 	"item.delab.frozen_boots": "Frozen Boots",
 
+	"item.delab.wild_helmet": "Wild Helmet",
+	"item.delab.wild_chestplate": "Wild Chestplate",
+	"item.delab.wild_leggings": "Wild Leggings",
+	"item.delab.wild_boots": "Wild Boots",
+
 	"item.delab.mud_ball": "Mudball",
 	"item.delab.frozen_ball": "Frozen Ball",
 	"item.delab.abomination_bow": "Abomination bow",
@@ -85,6 +90,7 @@
 	"tooltip.delab.frozen_armor_tooltip": "When fully equipped:\n+0.5 damage to axes\nWhen you apply the \"Magic Frost\" effect, its amplifier is increased by 1",
 	"tooltip.delab.wild_katana_tooltip": "A fully charged attack grants you the \"Combo\" effect\nEach combo level increases damage by 0.5\nThe maximum combo level is 4",
 	"tooltip.delab.wild_wakizashi_tooltip": "When in the right hand, increases the maximum combo level by 1",
+	"tooltip.delab.wild_armor_tooltip": "When fully equipped:\n+0.5 damage to swords\nIncreases the maximum combo level by 1",
 
 	"enchantment.delab.destroyer": "Destroyer",
 	"enchantment.delab.earth_strike": "Earth Strike",

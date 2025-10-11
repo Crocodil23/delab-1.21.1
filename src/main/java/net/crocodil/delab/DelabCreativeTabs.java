@@ -77,6 +77,11 @@ public class DelabCreativeTabs
                         output.accept(DelabItems.FROZEN_LEGGINGS);
                         output.accept(DelabItems.FROZEN_BOOTS);
 
+                        output.accept(DelabItems.WILD_HELMET);
+                        output.accept(DelabItems.WILD_CHESTPLATE);
+                        output.accept(DelabItems.WILD_LEGGINGS);
+                        output.accept(DelabItems.WILD_BOOTS);
+
                         output.accept(DelabItems.MUD_BALL);
                         output.accept(DelabItems.FROZEN_BALL);
                         output.accept(DelabItems.FROZEN_BOW);

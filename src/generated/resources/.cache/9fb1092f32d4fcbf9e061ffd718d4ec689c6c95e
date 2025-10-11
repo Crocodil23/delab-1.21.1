@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-09T11:14:35.1890323	Recipes
+// 1.21.1	2025-10-11T18:22:40.5303336	Recipes
 51005b0cd6f6184177607e35709bb0c285e51afd data/delab/advancement/recipes/alloys/abomination_ingot.json
 7e5b9d23b3a080cdb7a78d84c55cdbabb180e56b data/delab/advancement/recipes/alloys/frozen_ingot.json
 39a41807da7b3aa63e59da59e5f129a41dc54d8c data/delab/advancement/recipes/alloys/wild_ingot.json
@@ -31,8 +31,12 @@ f463bd96f6df7ccdee734d8120ce2626d0c5e5d8 data/delab/advancement/recipes/combat/n
 0e032073e7729d352cdd19329acd62f389a363d1 data/delab/advancement/recipes/combat/stone_dagger.json
 1b311339f0ff7393fe65b86f0cfa492bfc01837b data/delab/advancement/recipes/combat/stone_hammer.json
 b61d39a9944f1786c490abdda6ea88a86ff1abcb data/delab/advancement/recipes/combat/stone_spear.json
-2c26cd930f8bca05ecd6ca80d6d63663e1c3fc90 data/delab/advancement/recipes/combat/wild_katana.json
-e7f8918805a3327ad0ea2e9989b13197eec5aca7 data/delab/advancement/recipes/combat/wild_wakizashi.json
+de7a2034b965f81ffb8fe6ee6da3ca0e32a78831 data/delab/advancement/recipes/combat/wild_boots.json
+a2e90979527ffcf249c4a23c8607e89f7e3a34cd data/delab/advancement/recipes/combat/wild_chestplate.json
+8bd0578f1223241f892daed4b3646dfcd261f348 data/delab/advancement/recipes/combat/wild_helmet.json
+5617a58832ea0a4acb8303598286a207610b2fa1 data/delab/advancement/recipes/combat/wild_katana.json
+930c38c092678923fee7d010ca58ae6dfe4039cb data/delab/advancement/recipes/combat/wild_leggings.json
+95731c18722108901a0a5ff69d92f82f2c966605 data/delab/advancement/recipes/combat/wild_wakizashi.json
 084670e4599148743927812fecb3287749394325 data/delab/advancement/recipes/combat/wooden_dagger.json
 a8840ff4699cf9dbc8bb33ed6a4f5c9aceabe4a8 data/delab/advancement/recipes/combat/wooden_hammer.json
 3a042cf2ed08911041871bc1798f43dfe823ab46 data/delab/advancement/recipes/combat/wooden_spear.json
@@ -80,8 +84,12 @@ e7408b8d83ca66b51fd601e05ac5013f5faf43b1 data/delab/recipe/mud_ball.json
 81196083f9340445b883165fcd78f3395c7ca701 data/delab/recipe/stone_dagger.json
 c39eea6144aa8ba43ba2c14fa30bed2c436da19d data/delab/recipe/stone_hammer.json
 75d1aef71eefd5c70277a23d45438756eb3aa57e data/delab/recipe/stone_spear.json
-643c82f4b2847daa0eae2f6683f1baea2d3d4c6e data/delab/recipe/wild_katana.json
-9937af99a9dfed37d1297b5f332d776a70381296 data/delab/recipe/wild_wakizashi.json
+bf58afa3fe822a7665958610b4e8c4d09e85b994 data/delab/recipe/wild_boots.json
+0c984de86d7dfa1d5102c076cca99096bc22057a data/delab/recipe/wild_chestplate.json
+5bc12bb5ae34bfe7fc3681a22e99376163145a63 data/delab/recipe/wild_helmet.json
+6af3134b30bd7a40951084ea605004a2e9abfd1c data/delab/recipe/wild_katana.json
+978e1d9f93cf328a78aff28d262b2327918666c4 data/delab/recipe/wild_leggings.json
+27406ea0761c16108f89e4c7d464023c8025f173 data/delab/recipe/wild_wakizashi.json
 84bfe4ed92706088204d39206004659b180a5fd9 data/delab/recipe/wooden_dagger.json
 4cf978805471c76d609ca4c9d88dd49d85fd5cbf data/delab/recipe/wooden_hammer.json
 02cb1a69a6f718d302811ad9298f4ca6437c17bd data/delab/recipe/wooden_spear.json

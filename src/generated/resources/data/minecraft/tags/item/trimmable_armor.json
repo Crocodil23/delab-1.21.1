@@ -7,7 +7,11 @@
     "delab:frozen_helmet",
     "delab:frozen_chestplate",
     "delab:frozen_leggings",
-    "delab:frozen_boots"
+    "delab:frozen_boots",
+    "delab:wild_helmet",
+    "delab:wild_chestplate",
+    "delab:wild_leggings",
+    "delab:wild_boots"
   ],
   "values": []
 }

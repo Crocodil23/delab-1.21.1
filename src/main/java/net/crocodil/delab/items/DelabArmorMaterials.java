@@ -54,6 +54,21 @@ public class DelabArmorMaterials {
             0.0F
     ));
 
+    public static final Holder<ArmorMaterial> WILD = ARMOR_MATERIALS.register("wild", () -> new ArmorMaterial(
+            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 5);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 2);
+            }),
+            12,
+            SoundEvents.ARMOR_EQUIP_IRON,
+            () -> Ingredient.of(DelabItems.WILD_INGOT),
+            List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(Delab.MODID, "wild"))),
+            0.0F,
+            0.0F
+    ));
+
     public static void register(IEventBus bus)
     {
         ARMOR_MATERIALS.register(bus);

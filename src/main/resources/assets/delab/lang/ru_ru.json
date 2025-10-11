@@ -64,6 +64,11 @@
 	"item.delab.frozen_leggings": "Замороженные поножи",
 	"item.delab.frozen_boots": "Замороженные ботинки",
 
+	"item.delab.wild_helmet": "Дикий шлем",
+	"item.delab.wild_chestplate": "Дикий нагрудник",
+	"item.delab.wild_leggings": "Дикие поножи",
+	"item.delab.wild_boots": "Дикие ботинки",
+
 	"item.delab.mud_ball": "Шарик грязи",
 	"item.delab.frozen_ball": "Ледяной шарик",
 	"item.delab.abomination_bow": "Мерзостный лук",
@@ -86,6 +91,7 @@
 	"tooltip.delab.frozen_armor_tooltip": "При полном комплекте:\n+0.5 урона топорам\nКогда вы накладываете эффект \"Магический холод\" его уровень увеличивается на 1",
 	"tooltip.delab.wild_katana_tooltip": "Полностью заряженный удар накладывает эффект  \"Комбо\"\nКаждый уровень комбо увеличвает урон на 0.5\nМаксимальный уровень комбо 4",
 	"tooltip.delab.wild_wakizashi_tooltip": "Находясь в правой руке повышает максимальный уровень комбо на 1",
+	"tooltip.delab.wild_armor_tooltip": "При полном комплекте:\n+0.5 урона мечам\nПовышает максимальный уровень комбо на 1",
 
 	"block.delab.sea_workshop": "Морская мастерская (WIP)",
 	"block.delab.alloys_furnace": "Печь для сплавов",

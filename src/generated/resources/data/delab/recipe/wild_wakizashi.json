@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "delab:frozen_ingot"
+    "item": "delab:wild_ingot"
   },
   "base": {
     "item": "delab:iron_dagger"

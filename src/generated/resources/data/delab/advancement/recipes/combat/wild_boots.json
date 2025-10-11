@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "delab:wild_wakizashi"
+        "recipe": "delab:wild_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "delab:wild_wakizashi"
+      "delab:wild_boots"
     ]
   }
 }

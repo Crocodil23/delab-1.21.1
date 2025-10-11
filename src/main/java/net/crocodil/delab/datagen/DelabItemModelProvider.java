@@ -41,6 +41,11 @@ public class DelabItemModelProvider extends ItemModelProvider {
         basicItem(DelabItems.FROZEN_LEGGINGS.get());
         basicItem(DelabItems.FROZEN_BOOTS.get());
 
+        basicItem(DelabItems.WILD_HELMET.get());
+        basicItem(DelabItems.WILD_CHESTPLATE.get());
+        basicItem(DelabItems.WILD_LEGGINGS.get());
+        basicItem(DelabItems.WILD_BOOTS.get());
+
         handheldItem(DelabItems.WOODEN_HAMMER.asItem());
         handheldItem(DelabItems.STONE_HAMMER.asItem());
         handheldItem(DelabItems.IRON_HAMMER.asItem());

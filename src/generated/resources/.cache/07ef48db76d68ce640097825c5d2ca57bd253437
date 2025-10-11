@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-08T16:26:38.8638721	Item Models: delab
+// 1.21.1	2025-10-11T18:02:48.1344741	Item Models: delab
 dbfaf402fa0b8f3b803ab7096bf6fedd7f944b79 assets/delab/models/item/abomination_boots.json
 3a9c69dc8f52870d002e390ed110cf1c67cffcfc assets/delab/models/item/abomination_chestplate.json
 91ed397b7146a3f526819f9c392dd3937ac60ac3 assets/delab/models/item/abomination_dust.json
@@ -32,6 +32,10 @@ f6a59ba5326bad3d4330e0c3e829d89969ea87a5 assets/delab/models/item/mud_ball.json
 d5531e901966d829a268fc8aadc6db6ebd226aed assets/delab/models/item/netherite_hammer.json
 8f19d2303421f87b15d54b956e7350aab27eece1 assets/delab/models/item/recharge_crystal.json
 0bc26785a02960c507d01c122bdddfaaa43be059 assets/delab/models/item/stone_hammer.json
+7a71753446cfb421598d895227df3916eebbc55c assets/delab/models/item/wild_boots.json
+c6f1a679d1fe5cd1b2c17ac5a4fe2888e3acb387 assets/delab/models/item/wild_chestplate.json
+ab578a3abf61921a841f1afa8712ba4c4d146c80 assets/delab/models/item/wild_helmet.json
 f6e6415afd7b8c4ac1de75a195aae28a2730737b assets/delab/models/item/wild_ingot.json
 4b6d3b323a8ecf189917e76174015c4839413681 assets/delab/models/item/wild_katana.json
+0f93a8994a3fb799cfb921f39ac556e95a697f3b assets/delab/models/item/wild_leggings.json
 260672779c2690525dd56725401e1eafe3631345 assets/delab/models/item/wooden_hammer.json
