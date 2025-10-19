@@ -2,18 +2,12 @@ package net.crocodil.delab.events;
 
 import net.crocodil.delab.Delab;
 import net.crocodil.delab.client.model.*;
+import net.crocodil.delab.entity.EvilSpitter;
 import net.crocodil.delab.entity.FrozenCowing;
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.entity.Mudaur;
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -28,6 +22,7 @@ public class DelabBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ThrowingSpearModel.LAYER_LOCATION, ThrowingSpearModel::createBodyLayer);
+        event.registerLayerDefinition(EvilSpitterBulletModel.LAYER_LOCATION, EvilSpitterBulletModel::createBodyLayer);
 
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_OUTER, AbominationArmorModel::createOuterLayer);
         event.registerLayerDefinition(AbominationArmorModel.LAYER_LOCATION_INNER, AbominationArmorModel::createInnerLayer);
@@ -39,12 +34,14 @@ public class DelabBusEvents {
         event.registerLayerDefinition(MudaurModel.MUDAUR_OUTER_LAYER, MudaurModel::createOuterLayer);
         event.registerLayerDefinition(FrozenCowingModel.LAYER_LOCATION, FrozenCowingModel::createMainLayer);
         event.registerLayerDefinition(FrozenCowingModel.LAYER_LOCATION_OUTER, FrozenCowingModel::createOuterLayer);
+        event.registerLayerDefinition(EvilSpitterModel.LAYER_LOCATION, EvilSpitterModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(DelabEntityTypes.MUDAUR.get(), Mudaur.createAttributes().build());
         event.put(DelabEntityTypes.FROZEN_COWING.get(), FrozenCowing.createAttributes().build());
+        event.put(DelabEntityTypes.EVIL_SPITTER.get(), EvilSpitter.createAttributes().build());
     }
     @SubscribeEvent
     public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
@@ -52,6 +49,11 @@ public class DelabBusEvents {
                 Mudaur::checkMudaurSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(DelabEntityTypes.FROZEN_COWING.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 FrozenCowing::checkCowingSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+        event.register(DelabEntityTypes.EVIL_SPITTER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                EvilSpitter::checkEvilSpitterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+
     }
 
 

@@ -96,6 +96,7 @@ public class DelabCreativeTabs
 
                         output.accept(DelabItems.MUDAUR_SPAWN_EGG);
                         output.accept(DelabItems.FROZEN_COWING_SPAWN_EGG);
+                        output.accept(DelabItems.EVIL_SPITTER_SPAWN_EGG);
                     }).build());
 
 

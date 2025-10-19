@@ -1,6 +1,7 @@
 package net.crocodil.delab.entity;
 
 import net.crocodil.delab.Delab;
+import net.crocodil.delab.entity.projectails.EvilSpitterBullet;
 import net.crocodil.delab.entity.projectails.Spears.ThrowingSpear;
 import net.crocodil.delab.entity.projectails.balls.FrozenBall;
 import net.crocodil.delab.entity.projectails.balls.MudBall;
@@ -28,6 +29,11 @@ public class DelabEntityTypes {
             ENTITY_TYPES.register("frozen_ball", () -> EntityType.Builder.<FrozenBall>of(FrozenBall::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("frozen_ball"));
 
+    public static final Supplier<EntityType<EvilSpitterBullet>> EVIL_SPITTER_BULLET =
+            ENTITY_TYPES.register("evil_spitter_bullet", () -> EntityType.Builder.<EvilSpitterBullet>of(EvilSpitterBullet::new, MobCategory.MISC)
+                    .sized(0.25f, 0.25f).eyeHeight(0.13F).clientTrackingRange(4).updateInterval(20).build("evil_spitter_bullet"));
+
+
     public static final Supplier<EntityType<Mudaur>> MUDAUR =
             ENTITY_TYPES.register("mudaur", () -> EntityType.Builder.of(Mudaur::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.95F).eyeHeight(1.74F).build("mudaur"));
@@ -35,6 +41,10 @@ public class DelabEntityTypes {
     public static final Supplier<EntityType<FrozenCowing>> FROZEN_COWING =
             ENTITY_TYPES.register("frozen_cowing", () -> EntityType.Builder.of(FrozenCowing::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.95F).eyeHeight(1.74F).build("frozen_cowing"));
+
+    public static final Supplier<EntityType<EvilSpitter>> EVIL_SPITTER =
+            ENTITY_TYPES.register("evil_spitter", () -> EntityType.Builder.of(EvilSpitter::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.1F).eyeHeight(0.85F).build("evil_spitter"));
 
 
     public static void register(IEventBus bus) {

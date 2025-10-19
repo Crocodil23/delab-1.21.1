@@ -20,6 +20,8 @@ import java.util.List;
 public class DelabBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> FROZEN_COWING_SPAWN = registerKey("frozen_cowing_spawn");
+    public static final ResourceKey<BiomeModifier> EVIL_SPITTER_SPAWN = registerKey("evil_spitter_spawn");
+    public static final ResourceKey<BiomeModifier> EVIL_SPITTER_SPAWN_SUB = registerKey("evil_spitter_spawn_sub");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // CF -> PF -> BM
@@ -34,6 +36,15 @@ public class DelabBiomeModifiers {
                         biomes.getOrThrow(Biomes.ICE_SPIKES),
                         biomes.getOrThrow(Biomes.FROZEN_RIVER)),
                 List.of(new MobSpawnSettings.SpawnerData(DelabEntityTypes.FROZEN_COWING.get(), 80, 2, 4))));
+
+        context.register(EVIL_SPITTER_SPAWN, new BiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.SPARSE_JUNGLE),
+                        biomes.getOrThrow(Biomes.BAMBOO_JUNGLE)),
+                List.of(new MobSpawnSettings.SpawnerData(DelabEntityTypes.EVIL_SPITTER.get(), 100, 1, 1))));
+
+        context.register(EVIL_SPITTER_SPAWN_SUB, new BiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.JUNGLE)),
+                List.of(new MobSpawnSettings.SpawnerData(DelabEntityTypes.EVIL_SPITTER.get(), 400, 1, 1))));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

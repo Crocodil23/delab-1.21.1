@@ -2,6 +2,9 @@ package net.crocodil.delab;
 
 import com.mojang.logging.LogUtils;
 import net.crocodil.delab.client.render.*;
+import net.crocodil.delab.client.render.extentions.AbominationClientExtensions;
+import net.crocodil.delab.client.render.extentions.FrozenClientExtentions;
+import net.crocodil.delab.client.render.extentions.WildClientExtensions;
 import net.crocodil.delab.entity.DelabEntityTypes;
 import net.crocodil.delab.blocks.DelabBlocks;
 import net.crocodil.delab.blocks.entityes.DelabBlockEntityes;
@@ -142,6 +145,7 @@ public class Delab {
         {
             event.accept(DelabItems.MUDAUR_SPAWN_EGG);
             event.accept(DelabItems.FROZEN_COWING_SPAWN_EGG);
+            event.accept(DelabItems.EVIL_SPITTER_SPAWN_EGG);
         }
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
@@ -167,12 +171,13 @@ public class Delab {
             EntityRenderers.register(DelabEntityTypes.THROWING_SPEAR.get(), ThrowingSpearRenderer::new);
             EntityRenderers.register(DelabEntityTypes.MUD_BALL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(DelabEntityTypes.FROZEN_BALL.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(DelabEntityTypes.EVIL_SPITTER_BULLET.get(), EvilSpitterBulletRender::new);
+
             EntityRenderers.register(DelabEntityTypes.MUDAUR.get(), MudaurRenderer::new);
             EntityRenderers.register(DelabEntityTypes.FROZEN_COWING.get(), FrozenCowingRenderer::new);
-
+            EntityRenderers.register(DelabEntityTypes.EVIL_SPITTER.get(), EvilSpitterRenderer::new);
 
             DelabItemProperties.CreateCustomProperties();
-
 
         }
         @SubscribeEvent

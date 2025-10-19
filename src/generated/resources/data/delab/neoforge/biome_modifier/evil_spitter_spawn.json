@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle"
+  ],
+  "spawners": {
+    "type": "delab:evil_spitter",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 100
+  }
+}

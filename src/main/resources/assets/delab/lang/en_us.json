@@ -70,11 +70,12 @@
 
 	"item.delab.mud_ball": "Mudball",
 	"item.delab.frozen_ball": "Frozen Ball",
-	"item.delab.abomination_bow": "Abomination bow",
-	"item.delab.frozen_bow": "Frozen Ball",
+	"item.delab.abomination_bow": "Abomination Bow",
+	"item.delab.frozen_bow": "Frozen Bow",
 
 	"item.delab.mudaur_spawn_egg": "Mudaur Spawn Egg",
 	"item.delab.frozen_cowing_spawn_egg": "Frozen Cowing Spawn Egg",
+	"item.delab.evil_spitter_spawn_egg": "Evil Spitter Spawn Egg",
 
 	"tooltip.delab.shift_down": "Press §eShift§r for more details",
 	"tooltip.delab.ctrl_down": "Press §aCtrl§r to know the ability",
@@ -104,10 +105,14 @@
 	"block.delab.alloys_furnace": "Alloys furnace",
 	
 	"entity.delab.thrown_spear":"Spear",
-	"entity.delab.mud_ball":"Шарик грязи",
-	"entity.delab.frozen_ball":"Ледяной шарик",
+	"entity.delab.mud_ball":"Mudball",
+	"entity.delab.frozen_ball":"Ice Ball",
+	"entity.delab.evil_spitter_bullet":"Evil Spitter Bullet",
+
 	"entity.delab.mudaur":"Mudaur",
 	"entity.delab.frozen_cowing":"Frozen Cowing",
+	"entity.delab.evil_spitter":"Evil Spitter",
+
 
 	"effect.delab.shadow_strike": "Shadow Strike",
 	"effect.delab.in_mud": "In Mud",

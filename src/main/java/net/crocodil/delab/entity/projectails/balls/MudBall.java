@@ -60,7 +60,7 @@ public class MudBall extends ThrowableItemProjectile {
         Entity entity = result.getEntity();
         if(entity instanceof LivingEntity living)
         {
-            entity.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
+            living.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
             DelabMobEffects.addMudInMudMobeEffect(living, (LivingEntity) this.getOwner(), 160);
         }
 

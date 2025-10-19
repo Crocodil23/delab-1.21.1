@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-11T18:02:48.1344741	Item Models: delab
+// 1.21.1	2025-10-18T09:11:16.4090169	Item Models: delab
 dbfaf402fa0b8f3b803ab7096bf6fedd7f944b79 assets/delab/models/item/abomination_boots.json
 3a9c69dc8f52870d002e390ed110cf1c67cffcfc assets/delab/models/item/abomination_chestplate.json
 91ed397b7146a3f526819f9c392dd3937ac60ac3 assets/delab/models/item/abomination_dust.json
@@ -12,6 +12,7 @@ e771df5adfb71e98ccda86ae8b8919c62e2c5e49 assets/delab/models/item/adventure_upgr
 e6d533c18597da82f8bdc006015503450b4eb2ce assets/delab/models/item/defender_offering.json
 5de2141e081649299dd8b4d7648bc0b0a43906eb assets/delab/models/item/diamond_hammer.json
 7d52b9355b2bb5b7166a1a0db9e5fc90a12e5db7 assets/delab/models/item/evil_spitter_seed.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/delab/models/item/evil_spitter_spawn_egg.json
 1f519e22e505b630e4c03ff8089da4362190dd09 assets/delab/models/item/fresh_flesh.json
 b5b16a757df0fd5c987a2012941dd5ae6d45565c assets/delab/models/item/frozen_axe.json
 005bc274ab6e1f3b36a17217e94fb6eac9afaadc assets/delab/models/item/frozen_ball.json

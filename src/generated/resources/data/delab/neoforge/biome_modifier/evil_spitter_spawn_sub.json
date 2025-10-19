@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "minecraft:jungle",
+  "spawners": {
+    "type": "delab:evil_spitter",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 400
+  }
+}

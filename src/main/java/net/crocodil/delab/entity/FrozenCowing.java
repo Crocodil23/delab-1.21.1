@@ -47,8 +47,6 @@ public class FrozenCowing extends Monster {
                 .add(Attributes.MAX_HEALTH, 22d)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.ATTACK_DAMAGE, (double)-2.0F)
-                .add(Attributes.ARMOR, (double)2.0F)
-                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
                 .add(Attributes.FOLLOW_RANGE, 35D);
     }
 
